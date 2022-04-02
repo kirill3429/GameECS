@@ -5,8 +5,11 @@ namespace Client
 {
     struct Weapon
     {
+        public AttackType attackType;
+        public int projectilePrefabNumber;
+        public float attackSpeed;
         public Transform weaponTransform;
-        public Transform bulletSocket;
+        public Transform weaponSocket;
         public EcsEntity ownerEntity;
         public float magazineAmmo;
         public float currentAmmo;

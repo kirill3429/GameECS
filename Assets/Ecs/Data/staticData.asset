@@ -16,3 +16,5 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+  bulletPrefabs:
+  - {fileID: 4584607951747425361, guid: 16f0f591258d5ad4f89a334200588e14, type: 3}

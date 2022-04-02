@@ -16,12 +16,18 @@ namespace Client
             {
                 EcsEntity weaponEntity = world.NewEntity();
                 ref var objectLink = ref weaponEntity.Get<ObjectLink>();
-                ref var stats = ref weaponEntity.Get<Weapon>();
+                ref var weapon = ref weaponEntity.Get<Weapon>();
                 ref var name = ref weaponEntity.Get<Name>();
                 ref var damage = ref weaponEntity.Get<Damage>();
                 weaponEntity.Get<Dropped>();
 
+                weapon.projectilePrefabNumber = 0;
+                weapon.attackType = AttackType.rangeProjectile;
+                
                 objectLink.Object = i;
+                weapon.weaponSocket = objectLink.Object.transform.GetChild(0).transform;
+                weapon.weaponTransform = objectLink.Object.transform;
+                weapon.attackSpeed = 100;
                 objectLink.Object.AddComponent<EntityLink>().entity = weaponEntity;
             }
 

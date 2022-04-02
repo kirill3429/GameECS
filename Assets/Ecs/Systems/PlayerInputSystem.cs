@@ -21,7 +21,7 @@ namespace Client
                 playerInput.movementInput = new Vector2(playerInput.horizontal, playerInput.vertical);
                 playerInput.moveAmount = Mathf.Clamp01(Mathf.Abs(playerInput.horizontal) + Mathf.Abs(playerInput.vertical));
 
-                playerInput.shooting = Input.GetMouseButtonDown(0);
+                playerInput.attack = Input.GetMouseButtonDown(0);
                 playerInput.switchWeapon = Input.GetKeyDown(KeyCode.Q);
 
                 Ray ray = sceneData.mainCamera.ScreenPointToRay(Input.mousePosition);

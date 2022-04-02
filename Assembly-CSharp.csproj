@@ -53,32 +53,41 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Ecs\Systems\SwitchWeaponSystem.cs" />
     <Compile Include="Assets\Ecs\Data\SceneData.cs" />
     <Compile Include="Assets\Ecs\Components\Equipment.cs" />
     <Compile Include="Assets\Ecs\Systems\WeaponGetSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\WeaponInitSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\EventGeneratorSystem.cs" />
     <Compile Include="Assets\Ecs\Systems\PlayerMoveSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\Reloading.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\SwitchWeaponEvent.cs" />
     <Compile Include="Assets\Ecs\Components\Movable.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\AttackEvent.cs" />
+    <Compile Include="Assets\Ecs\Systems\AttackSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\Active.cs" />
     <Compile Include="Assets\Ecs\Data\StaticData.cs" />
     <Compile Include="Assets\Ecs\Systems\PlayerInputSystem.cs" />
     <Compile Include="Assets\Ecs\Components\PlayerTag.cs" />
     <Compile Include="Assets\Ecs\Components\AnimatorComponent.cs" />
     <Compile Include="Assets\Ecs\Systems\PickUpSystem.cs" />
     <Compile Include="Assets\Ecs\Components\InputHandlerComponent.cs" />
-    <Compile Include="Assets\Ecs\OtherScripts\EntityLink.cs" />
-    <Compile Include="Assets\Ecs\EcsStartup.cs" />
-    <Compile Include="Assets\Ecs\Components\ObjectLink.cs" />
-    <Compile Include="Assets\Ecs\Systems\PlayerInitSystem.cs" />
-    <Compile Include="Assets\Ecs\Components\WeaponPickUpEvent.cs" />
-    <Compile Include="Assets\Ecs\OtherScripts\WeaponHolder.cs" />
-    <Compile Include="Assets\Ecs\Systems\WeaponInitSystem.cs" />
-    <Compile Include="Assets\Ecs\Components\Health.cs" />
-    <Compile Include="Assets\Ecs\Systems\ShootSystem.cs" />
-    <Compile Include="Assets\Ecs\Components\Weapon.cs" />
-    <Compile Include="Assets\Ecs\Components\Name.cs" />
-    <Compile Include="Assets\Ecs\Components\Damage.cs" />
-    <Compile Include="Assets\Ecs\Systems\PlayerActiveWeapon.cs" />
     <Compile Include="Assets\Ecs\Components\Dropped.cs" />
-    <Compile Include="Assets\Ecs\Components\Active.cs" />
+    <Compile Include="Assets\Ecs\OtherScripts\EntityLink.cs" />
+    <Compile Include="Assets\Ecs\Components\ProjectilePrefab.cs" />
+    <Compile Include="Assets\Ecs\EcsStartup.cs" />
+    <Compile Include="Assets\Ecs\Components\Damage.cs" />
+    <Compile Include="Assets\Ecs\Components\ObjectLink.cs" />
+    <Compile Include="Assets\Ecs\Components\Name.cs" />
+    <Compile Include="Assets\Ecs\Components\Weapon.cs" />
+    <Compile Include="Assets\Ecs\Systems\PlayerInitSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\SpawnProjectile.cs" />
+    <Compile Include="Assets\Ecs\Components\Health.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\WeaponPickUpEvent.cs" />
+    <Compile Include="Assets\Ecs\Systems\SpawnProjectileSystem.cs" />
+    <Compile Include="Assets\Ecs\OtherScripts\WeaponHolder.cs" />
+    <Compile Include="Assets\Ecs\Components\Projectile.cs" />
+    <Compile Include="Assets\Ecs\Systems\ProjectileMoveSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PistolAnimsetPro\HowToInstall.txt" />

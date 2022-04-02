@@ -33,11 +33,18 @@ namespace Client
                 .Add(new PlayerMoveSystem())
                 .Add(new PickUpSystem())
                 .Add(new WeaponGetSystem())
+                .Add(new EventGeneratorSystem())
+                .Add(new SwitchWeaponSystem())
+                .Add(new AttackSystem())
+                .Add(new ProjectileSpawnSystem())
+                .Add(new ProjectileMoveSystem())
 
                 .OneFramePhysics()
 
                 // register one-frame components (order is important), for example:
-                // .OneFrame<TestComponent1> ()
+                .OneFrame<SwitchWeaponEvent> ()
+                .OneFrame<AttackEvent> ()
+                .OneFrame<SpawnProjectile> ()
                 // .OneFrame<TestComponent2> ()
 
                 // inject service instances here (order doesn't important), for example:

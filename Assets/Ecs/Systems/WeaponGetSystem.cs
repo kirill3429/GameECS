@@ -15,7 +15,8 @@ namespace Client
             {
                 ref var eventInfo = ref filter.Get1(i);
                 ref var equipment = ref eventInfo.newOwnerEntity.Get<Equipment>();
-
+                
+                
                 if (equipment.mainWeapon == EcsEntity.Null)
                 {
                     Debug.Log("Главное оружие не занято");
@@ -55,6 +56,7 @@ namespace Client
             info.WeaponTransform.gameObject.GetComponent<Collider>().enabled = false;
             info.WeaponTransform.gameObject.GetComponent<Animator>().enabled = false;
             info.WeaponTransform.forward = equipp.weaponHolder.forward;
+            info.weaponEntity.Get<Weapon>().ownerEntity = info.newOwnerEntity;
         }
     }
 }

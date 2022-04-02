@@ -26,7 +26,7 @@ namespace Client
                 ref var anim = ref filter.Get4(i);
 
                 #region Rotation
-                if (Vector2.Distance(player.transform.position, input.mouse) > 0.3f)
+                if (Vector2.Distance(player.transform.position, input.mouse) > 0.5f)
                     player.transform.forward = input.mouse - player.transform.position;
                 #endregion
 

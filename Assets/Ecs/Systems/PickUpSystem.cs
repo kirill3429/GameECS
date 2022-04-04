@@ -19,7 +19,6 @@ namespace Client
                     eventInfo.weaponEntity = eventData.collider.GetComponent<EntityLink>().entity; ;
                     eventInfo.WeaponTransform = eventData.collider.transform;
                     eventInfo.newOwnerEntity = eventData.senderGameObject.GetComponent<EntityLink>().entity;
-
                 }
 
             }

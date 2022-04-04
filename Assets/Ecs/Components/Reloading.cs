@@ -2,6 +2,10 @@ namespace Client
 {
     struct Reloading
     {
-        public float timer;
+        public Weapon weaponEntity;
+        public float reloadingTime;
+        public float startTime;
+
     }
+
 }

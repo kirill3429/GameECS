@@ -19,16 +19,17 @@ namespace Client
                     ref var weapon = ref eventInfo.weapon.Get<Weapon>();
                     if (weapon.attackType == AttackType.rangeProjectile)
                     {
-                        //if (weapon.currentAmmo > 0)
-                        //{
-                        EcsEntity projectile = eventInfo.weapon.Copy();
-                        projectile.Get<SpawnProjectile>().direction = eventInfo.mousePos;
-                        projectile.Del<Name>();
-                        projectile.Del<ObjectLink>();
-                        eventInfo.eventSender.Get<AnimatorComponent>().animator.SetTrigger(AnimatorComponent.fireHash);
+                        if (weapon.currentAmmo > 0 && !eventInfo.weapon.Has<Reloading>())
+                        {
+                            weapon.currentAmmo--;
+                            EcsEntity projectile = eventInfo.weapon.Copy();
+                            projectile.Get<SpawnProjectile>().direction = eventInfo.mousePos;
+                            projectile.Del<Name>();
+                            projectile.Del<ObjectLink>();
+                            eventInfo.eventSender.Get<AnimatorComponent>().animator.SetTrigger(AnimatorComponent.fireHash);
 
-                        // }
-                        // else eventInfo.eventSender.Get<Reloading>();
+                        }
+                        else eventInfo.weapon.Get<Reloading>();
                     }
                     else if (weapon.attackType == AttackType.rangeRay)
                     {

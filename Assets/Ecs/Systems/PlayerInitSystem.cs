@@ -9,6 +9,7 @@ namespace Client
 
         public void Init()
         {
+
             EcsEntity playerEntity = world.NewEntity();
             ref var player = ref playerEntity.Get<PlayerTag>();
             ref var move = ref playerEntity.Get<Movable>();

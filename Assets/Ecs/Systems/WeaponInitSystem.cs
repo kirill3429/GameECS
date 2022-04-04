@@ -20,6 +20,7 @@ namespace Client
                 ref var name = ref weaponEntity.Get<Name>();
                 ref var damage = ref weaponEntity.Get<Damage>();
                 weaponEntity.Get<Dropped>();
+                weaponEntity.Get<Reloadable>();
 
                 weapon.projectilePrefabNumber = 0;
                 weapon.attackType = AttackType.rangeProjectile;
@@ -27,7 +28,9 @@ namespace Client
                 objectLink.Object = i;
                 weapon.weaponSocket = objectLink.Object.transform.GetChild(0).transform;
                 weapon.weaponTransform = objectLink.Object.transform;
-                weapon.attackSpeed = 100;
+                weapon.currentAmmo = 500;
+                weapon.magazineAmmo = 500;
+                weapon.attackSpeed = 80;
                 objectLink.Object.AddComponent<EntityLink>().entity = weaponEntity;
             }
 

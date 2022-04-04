@@ -17,11 +17,11 @@ namespace Client
                 ref var objectLink = ref eventEntity.Get<ObjectLink>();
                 ref var direction = ref filter.Get1(i).direction;
                 direction.y = 3.5f;
-                Vector3 dir = weapon.ownerEntity.Get<ObjectLink>().Object.transform.position;
-                dir.y = 3.5f;
+                direction.z -= 1.4f;
                 eventEntity.Get<Projectile>();
                 objectLink.Object = GameObject.Instantiate(staticData.bulletPrefabs[weapon.projectilePrefabNumber], weapon.weaponSocket.position, weapon.weaponSocket.rotation);
-                objectLink.Object.transform.forward = direction - dir;
+                objectLink.Object.transform.LookAt(direction);
+                
             }
         }
 

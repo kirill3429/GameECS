@@ -8,6 +8,7 @@ namespace Client
         public AttackType attackType;
         public int projectilePrefabNumber;
         public float attackSpeed;
+        public float reloadTime;
         public Transform weaponTransform;
         public Transform weaponSocket;
         public EcsEntity ownerEntity;

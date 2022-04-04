@@ -38,6 +38,8 @@ namespace Client
                 .Add(new AttackSystem())
                 .Add(new ProjectileSpawnSystem())
                 .Add(new ProjectileMoveSystem())
+                .Add(new CameraInitSystem())
+                .Add(new CameraSystem())
 
                 .OneFramePhysics()
 

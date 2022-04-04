@@ -27,7 +27,11 @@ namespace Client
 
                 #region Rotation
                 if (Vector2.Distance(player.transform.position, input.mouse) > 0.5f)
-                    player.transform.forward = input.mouse - player.transform.position;
+                {
+                    input.mouseDot = input.mouse - player.transform.position;
+                    player.transform.forward = input.mouseDot;
+                }
+                Debug.DrawRay(player.transform.position, input.mouseDot);
                 #endregion
 
                 #region Moving

@@ -16,8 +16,9 @@ namespace Client
                 ref var bulletEntity = ref filter.GetEntity(i);
                 ref var weapon = ref bulletEntity.Get<Weapon>();
                 ref var projectile = ref bulletEntity.Get<ObjectLink>().Object;
+                var rb = projectile.GetComponent<Rigidbody>();
 
-                projectile.transform.Translate(Vector3.forward * delta * weapon.attackSpeed);
+                rb.velocity = (projectile.transform.forward * weapon.attackSpeed);
                 
             }
         }

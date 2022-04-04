@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: staticData
   m_EditorClassIdentifier: 
   playerMoveSpeed: 3
+  threshold: 5
   layerMask:
     serializedVersion: 2
     m_Bits: 64

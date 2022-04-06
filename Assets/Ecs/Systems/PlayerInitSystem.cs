@@ -4,7 +4,7 @@ namespace Client
 {
     sealed class PlayerInitSystem : IEcsInitSystem
     {
-        readonly StaticData staticData;
+        readonly StaticPlayerData staticData;
         readonly EcsWorld world = null;
 
         public void Init()

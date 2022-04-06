@@ -12,11 +12,13 @@ namespace Client
         EcsSystems _fixedSystems;
 
         public SceneData sceneData;
-        public StaticData staticData;
+        public StaticPlayerData staticPlayerData;
+        public AllPrefabsData prefabsData;
+        public AllWaveData allWaveData;
+        RuntimeData runtimeData = new RuntimeData();
+        
         void Start()
         {
-            // void can be switched to IEnumerator for support coroutines.
-
             _world = new EcsWorld();
             _systems = new EcsSystems(_world);
             _fixedSystems = new EcsSystems(_world);
@@ -40,6 +42,10 @@ namespace Client
                 .Add(new ProjectileMoveSystem())
                 .Add(new CameraInitSystem())
                 .Add(new CameraSystem())
+                //.Add(new EnemyPrefabsInitSystem())
+                //.Add(new SpawnerInitSystem())
+                //.Add(new EnemySpawnEventGenerator())
+                //.Add(new EnemySpawnSystem())
 
                 .OneFramePhysics()
 
@@ -51,7 +57,11 @@ namespace Client
 
                 // inject service instances here (order doesn't important), for example:
                 .Inject(sceneData)
-                .Inject(staticData)
+                .Inject(staticPlayerData)
+                .Inject(prefabsData)
+                .Inject(allWaveData)
+                .Inject(runtimeData)
+                
 
                 // .Inject (new NavMeshSupport ())
                 .Init();

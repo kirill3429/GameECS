@@ -7,7 +7,7 @@ namespace Client
     {
 
         readonly SceneData sceneData;
-        readonly StaticData staticData;
+        readonly StaticPlayerData staticData;
         readonly EcsWorld _world = null;
         readonly EcsFilter<InputHandlerComponent, PlayerTag> filter = null;
         void IEcsRunSystem.Run()

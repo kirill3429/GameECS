@@ -5,7 +5,7 @@ namespace Client
 {
     sealed class ProjectileSpawnSystem : IEcsRunSystem
     {
-        readonly StaticData staticData;
+        readonly AllPrefabsData allPrefabsData;
         readonly EcsWorld world = null;
         readonly EcsFilter<SpawnProjectile> filter = null;
         public void Run()
@@ -19,7 +19,7 @@ namespace Client
                 direction.y = 3.5f;
                 direction.z -= 1.4f;
                 eventEntity.Get<Projectile>();
-                objectLink.Object = GameObject.Instantiate(staticData.bulletPrefabs[weapon.projectilePrefabNumber], weapon.weaponSocket.position, weapon.weaponSocket.rotation);
+                objectLink.Object = GameObject.Instantiate(allPrefabsData.bulletPrefabs[weapon.projectilePrefabNumber], weapon.weaponSocket.position, weapon.weaponSocket.rotation);
                 objectLink.Object.transform.LookAt(direction);
                 
             }

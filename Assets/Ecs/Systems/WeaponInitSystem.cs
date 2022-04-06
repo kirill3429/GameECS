@@ -4,7 +4,6 @@ namespace Client
 {
     sealed class WeaponInitSystem : IEcsInitSystem
     {
-        readonly StaticData staticData;
         readonly EcsWorld world = null;
 
         public void Init()

@@ -158,6 +158,7 @@ QualitySettings:
     excludedTargetPlatforms:
     - WebGL
     - Standalone
+    - Android
   - serializedVersion: 2
     name: Very High
     pixelLightCount: 3
@@ -231,10 +232,11 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 0}
+    customRenderPipeline: {fileID: 11400000, guid: 95685cca3a7d5a64b8793befe7c442e0, type: 2}
     excludedTargetPlatforms:
     - Standalone
     - WebGL
+    - Android
   m_PerPlatformDefaultQuality:
     Android: 2
     Lumin: 5

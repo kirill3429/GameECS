@@ -39,11 +39,11 @@ namespace Client
                 alpha = ToRadians(alpha);
 
                 movable.moveDirection.x = Mathf.Lerp(movable.moveDirection.x, input.horizontal * Mathf.Cos(alpha) + input.vertical * Mathf.Sin(alpha), 0.1f);
-                movable.moveDirection.y = Mathf.Lerp(movable.moveDirection.y, -input.horizontal * Mathf.Sin(alpha) + input.vertical * Mathf.Cos(alpha), 0.1f);
+                movable.moveDirection.z = Mathf.Lerp(movable.moveDirection.z, -input.horizontal * Mathf.Sin(alpha) + input.vertical * Mathf.Cos(alpha), 0.1f);
 
                 anim.animator.SetFloat(inputMagnitude, input.moveAmount);
                 anim.animator.SetFloat(horizontal, movable.moveDirection.x * movable.moveSpeed);
-                anim.animator.SetFloat(vertical, movable.moveDirection.y * movable.moveSpeed);
+                anim.animator.SetFloat(vertical, movable.moveDirection.z * movable.moveSpeed);
                 #endregion
             }
 

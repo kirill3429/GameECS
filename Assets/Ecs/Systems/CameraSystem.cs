@@ -23,7 +23,7 @@ namespace Client
                 Vector3 targetPos = (camera.playerTransform.position + mouseInput) / 2;
 
                 targetPos.x = Mathf.Clamp(targetPos.x, -camera.threshold + camera.playerTransform.position.x, camera.threshold + camera.playerTransform.position.x);
-                targetPos.z = Mathf.Clamp(targetPos.z, -camera.threshold*2 + camera.playerTransform.position.z, camera.threshold + camera.playerTransform.position.z*2);
+                targetPos.z = Mathf.Clamp(targetPos.z, -camera.threshold + camera.playerTransform.position.z, camera.threshold + camera.playerTransform.position.z);
 
                 camera.targetTransform.position = targetPos;
             }

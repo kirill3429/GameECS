@@ -53,16 +53,10 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\BzKovSoft\RagdollHelper\Editor\ColliderController.cs" />
-    <Compile Include="Assets\BzKovSoft\RagdollHelper\Editor\ColliderHelper.cs" />
-    <Compile Include="Assets\BzKovSoft\RagdollHelper\Editor\BoneHelper.cs" />
-    <Compile Include="Assets\BzKovSoft\RagdollHelper\Editor\RigidController.cs" />
-    <Compile Include="Assets\BzKovSoft\RagdollHelper\Editor\JointController.cs" />
-    <Compile Include="Assets\BzKovSoft\RagdollHelper\Editor\Ragdoller.cs" />
-    <Compile Include="Assets\BzKovSoft\RagdollHelper\Editor\WeightCalculator.cs" />
-    <Compile Include="Assets\BzKovSoft\RagdollHelper\Editor\RagdollProperties.cs" />
-    <Compile Include="Assets\BzKovSoft\RagdollHelper\Editor\RagdollController.cs" />
-    <Compile Include="Assets\BzKovSoft\RagdollHelper\Editor\RagdollPart.cs" />
+    <Compile Include="Assets\FImpossible Creations\Shared Tools\Editor\Inspector And Scene Tools\Property Drawers\FPD_SuffixDrawer.cs" />
+    <Compile Include="Assets\FImpossible Creations\Shared Tools\Editor\Property Drawers\FPD_FixedCurveWindowDrawer.cs" />
+    <Compile Include="Assets\FImpossible Creations\Shared Tools\Editor\Property Drawers\FPD_HeaderDrawer.cs" />
+    <Compile Include="Assets\FImpossible Creations\Editor\Plugins - Editor - Animating\Leaning Animator\LeaningAnimator.Editor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

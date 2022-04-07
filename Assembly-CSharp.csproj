@@ -79,9 +79,12 @@
     <Compile Include="Assets\Ecs\Components\PlayerTag.cs" />
     <Compile Include="Assets\Ecs\Components\AnimatorComponent.cs" />
     <Compile Include="Assets\Ecs\Systems\PickUpSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\EnemyPrefabsInitSystem.cs" />
     <Compile Include="Assets\Ecs\Systems\ProjectileMoveSystem.cs" />
+    <Compile Include="Assets\Ecs\Data\scripts\RuntimeData.cs" />
     <Compile Include="Assets\Ecs\Components\InputHandlerComponent.cs" />
     <Compile Include="Assets\Ecs\Data\scripts\AllWaveData.cs" />
+    <Compile Include="Assets\Ecs\Systems\WaveDataInitSystem.cs" />
     <Compile Include="Assets\Ecs\Systems\ReloadingSystem.cs" />
     <Compile Include="Assets\Ecs\Systems\CameraInitSystem.cs" />
     <Compile Include="Assets\Ecs\Components\Spawner.cs" />
@@ -103,9 +106,9 @@
     <Compile Include="Assets\Ecs\Systems\SpawnProjectileSystem.cs" />
     <Compile Include="Assets\Ecs\OtherScripts\WeaponHolder.cs" />
     <Compile Include="Assets\Ecs\Components\Projectile.cs" />
-    <Compile Include="Assets\Ecs\Systems\WaveDataInitSystem.cs" />
-    <Compile Include="Assets\Ecs\Data\scripts\RuntimeData.cs" />
-    <Compile Include="Assets\Ecs\Systems\EnemyPrefabsInitSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\RigidBodyComponent.cs" />
+    <Compile Include="Assets\Ecs\Systems\EnemyInputSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\EnemyMoveSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PistolAnimsetPro\HowToInstall.txt" />

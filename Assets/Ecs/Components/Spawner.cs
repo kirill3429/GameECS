@@ -8,5 +8,7 @@ namespace Client
         public int maxEnemies;
         public bool isWork;
         public int spawnDelay;
+        public float timer;
+        public float lastSpawnTime;
     }
 }

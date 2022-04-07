@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29c1c692cf89d8246a76ec7089d42c65, type: 3}
   m_Name: AllWaves
   m_EditorClassIdentifier: 
-  waves:
-  - {fileID: 11400000, guid: ec7a9f8c032491940a29d1575a9bff90, type: 2}
-  - {fileID: 11400000, guid: da26310bdf1d8954689f12fdeb9fe25d, type: 2}
+  waves: []

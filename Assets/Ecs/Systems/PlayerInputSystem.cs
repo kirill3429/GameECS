@@ -18,7 +18,7 @@ namespace Client
 
                 playerInput.horizontal = Input.GetAxisRaw("Horizontal");
                 playerInput.vertical = Input.GetAxisRaw("Vertical");
-                playerInput.movementInput = new Vector2(playerInput.horizontal, playerInput.vertical);
+                playerInput.movementInput = new Vector3(playerInput.horizontal,0 , playerInput.vertical);
                 playerInput.moveAmount = Mathf.Clamp01(Mathf.Abs(playerInput.horizontal) + Mathf.Abs(playerInput.vertical));
 
                 playerInput.attack = Input.GetMouseButtonDown(0);

@@ -4,7 +4,7 @@ namespace Client
 {
     struct Movable
     {
-        public Vector2 moveDirection;
+        public Vector3 moveDirection;
         public float moveSpeed;
     }
 }

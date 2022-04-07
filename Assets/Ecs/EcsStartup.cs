@@ -42,10 +42,12 @@ namespace Client
                 .Add(new ProjectileMoveSystem())
                 .Add(new CameraInitSystem())
                 .Add(new CameraSystem())
-                //.Add(new EnemyPrefabsInitSystem())
-                //.Add(new SpawnerInitSystem())
-                //.Add(new EnemySpawnEventGenerator())
-                //.Add(new EnemySpawnSystem())
+                .Add(new EnemyPrefabsInitSystem())
+                .Add(new SpawnerInitSystem())
+                .Add(new EnemySpawnEventGenerator())
+                .Add(new EnemySpawnSystem())
+                .Add(new EnemyInputSystem())
+                .Add(new EnemyMoveSystem())
 
                 .OneFramePhysics()
 
@@ -53,6 +55,7 @@ namespace Client
                 .OneFrame<SwitchWeaponEvent> ()
                 .OneFrame<AttackEvent> ()
                 .OneFrame<SpawnProjectile> ()
+                .OneFrame<EnemySpawnEvent> ()
                 // .OneFrame<TestComponent2> ()
 
                 // inject service instances here (order doesn't important), for example:

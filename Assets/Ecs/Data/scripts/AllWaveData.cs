@@ -1,7 +1,8 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [CreateAssetMenu]
 public class AllWaveData : ScriptableObject
 {
-    public WaveData[] waves;
+    public List<WaveData> waves;
 }

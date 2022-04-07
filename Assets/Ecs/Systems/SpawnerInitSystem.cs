@@ -15,8 +15,10 @@ namespace Client
             spawner.maxEnemies = staticData.maxEnemies;
             spawner.currentEnemies = 0;
             runtimeData.waveNumber = 0;
-            spawner.isWork = false;
+            spawner.isWork = true;
             spawner.playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+            spawner.timer = 1;
+            spawner.lastSpawnTime = Time.time;
         }
     }
 }

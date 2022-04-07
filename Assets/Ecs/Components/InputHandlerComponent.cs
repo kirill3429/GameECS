@@ -11,7 +11,7 @@ namespace Client
         public bool switchWeapon;
         public Vector3 mouse;
         public Vector3 mouseDot;
-        public Vector2 movementInput;
+        public Vector3 movementInput;
         
     }
 }

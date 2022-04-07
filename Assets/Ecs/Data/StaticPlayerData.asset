@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: StaticPlayerData
   m_EditorClassIdentifier: 
   playerMoveSpeed: 3
-  threshold: 2
-  enemySpawnRadius: 0
-  maxEnemies: 10
+  threshold: 15
+  enemySpawnRadius: 100
+  maxEnemies: 1
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+  spawnDispersion: 400

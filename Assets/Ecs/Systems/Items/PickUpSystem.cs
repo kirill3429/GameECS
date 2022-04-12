@@ -16,11 +16,12 @@ namespace Client
                 {
                     if (eventData.senderGameObject.CompareTag("Player") && eventData.collider.gameObject.CompareTag("Weapon"))
                     {
-                        if (eventData.collider.GetComponent<EntityLink>().entity.Has<Dropped>())
+                        var colliderEntity = eventData.collider.GetComponent<EntityLink>().entity;
+                        if (colliderEntity.Has<Dropped>() && !colliderEntity.Has<UnAvaible>())
                         {
                             EcsEntity weaponPickUpEvent = world.NewEntity();
                             ref var eventInfo = ref weaponPickUpEvent.Get<WeaponPickUpEvent>();
-                            eventInfo.weaponEntity = eventData.collider.GetComponent<EntityLink>().entity;
+                            eventInfo.weaponEntity = colliderEntity;
                             eventInfo.WeaponTransform = eventData.collider.transform;
                             eventInfo.newOwnerEntity = eventData.senderGameObject.GetComponent<EntityLink>().entity;
                         }

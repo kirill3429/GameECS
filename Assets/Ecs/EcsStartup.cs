@@ -35,9 +35,8 @@ namespace Client
                 .Add(new PlayerMoveSystem())
                 .Add(new PickUpSystem())
                 .Add(new WeaponGetSystem())
-                .Add(new DropWeaponSystem())
                 .Add(new EventGeneratorSystem())
-                
+                .Add(new DropWeaponSystem())
 
 
                 .Add(new CameraInitSystem())
@@ -61,6 +60,7 @@ namespace Client
                 // register one-frame components (order is important), for example:
                 .OneFrame<HitEvent> ()
                 .OneFrame<AttackEvent> ()
+                .OneFrame<WeaponDropEvent>()
                 .OneFrame<SpawnProjectile> ()
                 .OneFrame<EnemySpawnEvent> ()
                 // .OneFrame<TestComponent2> ()
@@ -85,7 +85,8 @@ namespace Client
                 .Add(new EnemySpawnEventGenerator())
                 
                 .Add(new DeathSystem())
-                .OneFrame<WeaponDropEvent>()
+                .Add(new AvaibleSystem())
+                
                 .OneFrame<SwitchWeaponEvent>()
                 
 

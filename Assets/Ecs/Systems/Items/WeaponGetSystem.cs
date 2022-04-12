@@ -32,10 +32,7 @@ namespace Client
                     Debug.Log("Главное оружие занято");
                     equipment.secondWeapon = eventInfo.weaponEntity;
                     WeaponGet(ref eventInfo, ref equipment);
-                    if (equipment.mainWeapon == EcsEntity.Null)
-                    {
-                        equipment.secondWeapon.Get<Active>();
-                    }
+                    eventInfo.WeaponTransform.gameObject.SetActive(false);
                 }
                 else
                 {

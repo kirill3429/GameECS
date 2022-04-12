@@ -69,6 +69,7 @@
     <Compile Include="Assets\Ecs\Systems\Items\ReloadingSystem.cs" />
     <Compile Include="Assets\Ecs\Components\Reloading.cs" />
     <Compile Include="Assets\Ecs\Components\Events\SwitchWeaponEvent.cs" />
+    <Compile Include="Assets\Ecs\Systems\Items\DropWeaponSystem.cs" />
     <Compile Include="Assets\Ecs\Components\Movable.cs" />
     <Compile Include="Assets\Ecs\Systems\Enemy\EnemySpawnEventGenerator.cs" />
     <Compile Include="Assets\Ecs\Components\Events\AttackEvent.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Ecs\Components\PlayerTag.cs" />
     <Compile Include="Assets\Ecs\Components\AnimatorComponent.cs" />
     <Compile Include="Assets\Ecs\Data\scripts\RuntimeData.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\WeaponDropEvent.cs" />
     <Compile Include="Assets\Ecs\Components\InputHandlerComponent.cs" />
     <Compile Include="Assets\Ecs\Data\scripts\AllWaveData.cs" />
     <Compile Include="Assets\Ecs\Systems\Spawner\WaveDataInitSystem.cs" />
@@ -117,8 +119,8 @@
     <Compile Include="Assets\Ecs\Components\Events\WeaponPickUpEvent.cs" />
     <Compile Include="Assets\Ecs\OtherScripts\WeaponHolder.cs" />
     <Compile Include="Assets\Ecs\Components\Projectile.cs" />
-    <Compile Include="Assets\Ecs\Components\Events\WeaponDropEvent.cs" />
-    <Compile Include="Assets\Ecs\Systems\Items\DropWeaponSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\UnAvaible.cs" />
+    <Compile Include="Assets\Ecs\Systems\Items\AvaibleSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PistolAnimsetPro\HowToInstall.txt" />

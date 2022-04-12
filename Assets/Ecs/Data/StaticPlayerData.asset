@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMoveSpeed: 3
   threshold: 15
-  enemySpawnRadius: 100
+  enemySpawnRadius: 20
   maxEnemies: 1
   layerMask:
     serializedVersion: 2
     m_Bits: 64
-  spawnDispersion: 400
+  spawnDispersion: 10

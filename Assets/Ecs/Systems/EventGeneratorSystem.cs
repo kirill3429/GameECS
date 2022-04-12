@@ -32,9 +32,14 @@ namespace Client
                         attackEvent.eventSender = eventSender;
                         attackEvent.weapon = equip.mainWeapon;
                     }
+                }
+                // DROP WEAPON EVENT
 
-
-
+                if (input.dropWeapon)
+                {
+                    var eventEntity = world.NewEntity();
+                    ref var dropEvent = ref eventEntity.Get<WeaponDropEvent>();
+                    dropEvent.eventSender = filter.GetEntity(i);
 
                 }
             }

@@ -35,24 +35,31 @@ namespace Client
                 .Add(new PlayerMoveSystem())
                 .Add(new PickUpSystem())
                 .Add(new WeaponGetSystem())
+                .Add(new DropWeaponSystem())
                 .Add(new EventGeneratorSystem())
-                .Add(new SwitchWeaponSystem())
-                .Add(new AttackSystem())
-                .Add(new ProjectileSpawnSystem())
-                .Add(new ProjectileMoveSystem())
+                
+
+
                 .Add(new CameraInitSystem())
                 .Add(new CameraSystem())
                 .Add(new EnemyPrefabsInitSystem())
                 .Add(new SpawnerInitSystem())
-                .Add(new EnemySpawnEventGenerator())
+                
                 .Add(new EnemySpawnSystem())
                 .Add(new EnemyInputSystem())
-                .Add(new EnemyMoveSystem())
+                .Add(new EnemyAttackChecker())
+
+                .Add(new AttackSystem())
+                .Add(new ProjectileSpawnSystem())
+
+                .Add(new ProjectileHitEventSystem())
+                .Add(new ProjectileHitSystem())
+
 
                 .OneFramePhysics()
 
                 // register one-frame components (order is important), for example:
-                .OneFrame<SwitchWeaponEvent> ()
+                .OneFrame<HitEvent> ()
                 .OneFrame<AttackEvent> ()
                 .OneFrame<SpawnProjectile> ()
                 .OneFrame<EnemySpawnEvent> ()
@@ -69,7 +76,24 @@ namespace Client
                 // .Inject (new NavMeshSupport ())
                 .Init();
             _fixedSystems
+                
+                
+                
+                .Add(new SwitchWeaponSystem())
+                .Add(new ProjectileMoveSystem())
+                .Add(new EnemyMoveSystem())
+                .Add(new EnemySpawnEventGenerator())
+                
+                .Add(new DeathSystem())
+                .OneFrame<WeaponDropEvent>()
+                .OneFrame<SwitchWeaponEvent>()
+                
 
+                .Inject(sceneData)
+                .Inject(staticPlayerData)
+                .Inject(prefabsData)
+                .Inject(allWaveData)
+                .Inject(runtimeData)
 
                 .Init();
         }

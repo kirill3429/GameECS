@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefabs:
   - {fileID: 4584607951747425361, guid: 16f0f591258d5ad4f89a334200588e14, type: 3}
+  - {fileID: 2588300917983697536, guid: d1c18d64b0019b544af0530c8b61912b, type: 3}
   enemiesPrefabs:
   - {fileID: 7355745405685541923, guid: caf154edf51d15f4f8951f8926b4267b, type: 3}
   - {fileID: 7238350203197957672, guid: f17a34c40f02c2e48b8b40e5fa0fc41b, type: 3}
   - {fileID: 3897915548112452566, guid: d5420805ff6a70e458267fa3463279f4, type: 3}
   weaponPrefabs:
   - {fileID: 1484736755971046145, guid: ea85e48c94b3bb44b8fde3ebe1fa830c, type: 3}
+  hitEffectPrefabs:
+  - {fileID: 2929978251653852446, guid: 0e404661ff7c1854b94d4bfe321a2e34, type: 3}

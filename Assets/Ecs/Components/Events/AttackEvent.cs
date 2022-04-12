@@ -8,10 +8,4 @@ namespace Client
         public EcsEntity weapon;
         public Vector3 mousePos;
     }
-    enum AttackType
-    {
-        melee,
-        rangeProjectile,
-        rangeRay
-    }
 }

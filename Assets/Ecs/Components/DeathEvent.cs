@@ -1,0 +1,8 @@
+
+namespace Client
+{
+    struct DeathEvent
+    {
+    }
+
+}

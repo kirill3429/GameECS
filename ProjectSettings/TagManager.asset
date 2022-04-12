@@ -7,19 +7,21 @@ TagManager:
   - Weapon
   - Projectile
   - CameraTarget
+  - Enemy
+  - EnemyAttackCollider
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - EnemyAttackCollider
   - Water
   - UI
   - Ground
   - Projectile
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - EnemyProjectile
+  - HitEffect
   - 
   - 
   - 

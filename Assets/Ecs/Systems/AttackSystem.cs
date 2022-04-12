@@ -1,4 +1,4 @@
-
+using UnityEngine;
 using Leopotam.Ecs;
 
 namespace Client
@@ -8,8 +8,10 @@ namespace Client
 
         readonly EcsWorld world = null;
         readonly EcsFilter<AttackEvent> filter = null;
+        private float currentTime;
         public void Run()
         {
+            currentTime = Time.time;
             foreach (var i in filter)
             {
                 ref var eventInfo = ref filter.Get1(i);
@@ -17,7 +19,8 @@ namespace Client
                 if (eventInfo.weapon != EcsEntity.Null)
                 {
                     ref var weapon = ref eventInfo.weapon.Get<Weapon>();
-                    if (weapon.attackType == AttackType.rangeProjectile)
+                    
+                    if (currentTime - weapon.lastAttack > weapon.delayBetweenAttack)
                     {
                         if (weapon.currentAmmo > 0 && !eventInfo.weapon.Has<Reloading>())
                         {
@@ -27,18 +30,14 @@ namespace Client
                             projectile.Del<Name>();
                             projectile.Del<ObjectLink>();
                             eventInfo.eventSender.Get<AnimatorComponent>().animator.SetTrigger(AnimatorComponent.fireHash);
+                            weapon.lastAttack = currentTime;
+                            weapon.projectileStartTime = currentTime;
 
                         }
                         else eventInfo.weapon.Get<Reloading>();
                     }
-                    else if (weapon.attackType == AttackType.rangeRay)
-                    {
 
-                    }
-                    else if (weapon.attackType == AttackType.melee)
-                    {
-
-                    }
+                    
                 }
                 
             }

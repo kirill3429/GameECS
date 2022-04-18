@@ -9,6 +9,7 @@ TagManager:
   - CameraTarget
   - Enemy
   - EnemyAttackCollider
+  - InventoryContainer
   layers:
   - Default
   - TransparentFX

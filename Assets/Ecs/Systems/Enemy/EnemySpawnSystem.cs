@@ -68,7 +68,7 @@ namespace Client
                 weapon.projectilePrefabNumber = 1;
                 weapon.currentAmmo = 500;
                 weapon.magazineAmmo = 500;
-                weapon.attackSpeed = 5;
+                weapon.bulletSpeed = 5;
                 weapon.delayBetweenAttack = 1f;
                 weapon.projectileLifeTime = 3f;
                 damage.value = 5;

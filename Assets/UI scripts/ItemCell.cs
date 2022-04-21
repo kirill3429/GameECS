@@ -9,13 +9,14 @@ public class ItemCell : IItem
     public int PrefabNumber { get { return _prefabNumber; } set { _prefabNumber = value; } }
     public int Level { get { return _level; } set { _level = value; } }
 
-
+    public Transform StatsHolder { get { return _statsHolder; } set { _statsHolder = value; }  }
 
     [SerializeField] private string _name;
     [SerializeField] private int _uiIcon;
     [SerializeField] private int _background;
     [SerializeField] private int _prefabNumber;
     [SerializeField] private int _level;
+    [SerializeField] private Transform _statsHolder;
 
 
     public virtual void ShowInfo(GameObject uiWindow, GameObject statPrefab)

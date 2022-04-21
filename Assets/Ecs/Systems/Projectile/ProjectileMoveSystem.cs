@@ -18,7 +18,7 @@ namespace Client
                 ref var projectile = ref bulletEntity.Get<ObjectLink>().Object;
                 var rb = projectile.GetComponent<Rigidbody>();
 
-                rb.velocity = (projectile.transform.forward * weapon.attackSpeed);
+                rb.velocity = (projectile.transform.forward * weapon.bulletSpeed);
 
                 if (currentTime - weapon.projectileStartTime > weapon.projectileLifeTime)
                 {

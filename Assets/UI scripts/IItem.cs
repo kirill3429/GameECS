@@ -8,7 +8,8 @@ public interface IItem
     int Level { get; set; }
     int PrefabNumber { get; set; }
 
-    void ShowInfo(GameObject uiWindow, GameObject statPrefab);
+    Transform StatsHolder { get; set; }
 
+    void ShowInfo(GameObject uiWindow, GameObject statPrefab);
 
 }

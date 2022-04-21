@@ -7,7 +7,7 @@ namespace Client
     {
         public int projectilePrefabNumber;
 
-        public float attackSpeed;
+        public float bulletSpeed;
         public float delayBetweenAttack;
         public float reloadTime;
         public float lastAttack;

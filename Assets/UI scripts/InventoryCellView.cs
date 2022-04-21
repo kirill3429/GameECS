@@ -5,15 +5,16 @@ using UnityEngine.EventSystems;
 
 public class InventoryCellView : MonoBehaviour , IPointerClickHandler
 {
+    public IItem elementLink;
     public int icon;
     public int background;
     public int level;
     public int prefabNumber;
     public string type;
-    public IItem elementLink;
+    
     public GameObject uiWindow;
-    public GameObject statPrefab;
     public Transform windowHolder;
+    GameObject window;
 
 
     private void Start()
@@ -28,8 +29,10 @@ public class InventoryCellView : MonoBehaviour , IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        GameObject window = Instantiate(uiWindow, windowHolder);
-        
-        elementLink.ShowInfo(window, statPrefab);
+        window = Instantiate(uiWindow, windowHolder);
+        window.GetComponent<Window>().elementLink = elementLink;
+        window.GetComponent<Window>().cellLink = this;
     }
+
+
 }

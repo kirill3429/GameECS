@@ -1,0 +1,231 @@
+Using pre-set license
+Built from '2022.1/staging' branch; Version is '2022.1.0b16 (098023fe5c31) revision 622627'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19043) 64bit CoreSingleLanguage' Language: 'ru' Physical Memory: 16224 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.1.0b16\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker7
+-projectPath
+C:/Games/Test/GameECS
+-logFile
+Logs/AssetImportWorker7.log
+-srvPort
+22557
+Successfully changed project path to: C:/Games/Test/GameECS
+C:/Games/Test/GameECS
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 77.11 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.1.0b16 (098023fe5c31)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.1.0b16/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Games/Test/GameECS/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon (TM) R7 370 Series (ID=0x6811)
+    Vendor:   ATI
+    VRAM:     4075 MB
+    Driver:   27.20.20903.8001
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.1.0b16/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.1.0b16/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.1.0b16/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56740
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.1.0b16/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.1.0b16/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.008835 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 80.57 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.844 seconds
+Domain Reload Profiling:
+	ReloadAssembly (845ms)
+		BeginReloadAssembly (100ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (600ms)
+			LoadAssemblies (97ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (150ms)
+				TypeCache.Initialize (149ms)
+					TypeCache.ScanAssembly (147ms)
+				ResolveRequiredComponents (1ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (341ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (10ms)
+				RefreshPlugins (81ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (179ms)
+				ProcessInitializeOnLoadMethodAttributes (58ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006177 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 76.25 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.506 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1507ms)
+		BeginReloadAssembly (150ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (1205ms)
+			LoadAssemblies (115ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (299ms)
+				TypeCache.Initialize (283ms)
+					TypeCache.ScanAssembly (278ms)
+				ResolveRequiredComponents (16ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (77ms)
+			SetupLoadedEditorAssemblies (646ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (8ms)
+				RefreshPlugins (76ms)
+				BeforeProcessingInitializeOnLoad (101ms)
+				ProcessInitializeOnLoadAttributes (339ms)
+				ProcessInitializeOnLoadMethodAttributes (106ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3727 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (145.3 KB). Loaded Objects now: 4203.
+Memory consumption went from 0.61 GB to 0.61 GB.
+Total: 4.229800 ms (FindLiveObjects: 0.407400 ms CreateObjectMapping: 0.207600 ms MarkObjects: 3.464500 ms  DeleteObjects: 0.149300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 9140.576064 seconds.
+  path: Assets/10WeaponsPack/Models/Blaster3.fbx
+  artifactKey: Guid(1fd3f599f31216545bc2aa73164c4ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/10WeaponsPack/Models/Blaster3.fbx using Guid(1fd3f599f31216545bc2aa73164c4ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f71066b89c83fb0254ba3f5ac05baa47') in 0.495431 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/10WeaponsPack/Models/Blaster5.fbx
+  artifactKey: Guid(48b83f4652eac274aaccef2e6ebb3e7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/10WeaponsPack/Models/Blaster5.fbx using Guid(48b83f4652eac274aaccef2e6ebb3e7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73c9ccf72244dbe309437e0592f9c584') in 0.072093 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/10WeaponsPack/Models/Blaster9.fbx
+  artifactKey: Guid(903d2e1f4e8d5db49b5f73c23be9328c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/10WeaponsPack/Models/Blaster9.fbx using Guid(903d2e1f4e8d5db49b5f73c23be9328c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfa39f87b5173fe1fe797995d72f908d') in 0.078535 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/10WeaponsPack/Models/Blaster7.fbx
+  artifactKey: Guid(3612b36e5c0f4204abe1702df853c621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/10WeaponsPack/Models/Blaster7.fbx using Guid(3612b36e5c0f4204abe1702df853c621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c76a95d0e44ebdff91d8dfe0ff8c1528') in 0.097566 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/10WeaponsPack/Models/Blaster10.fbx
+  artifactKey: Guid(a4bca856892ba5844b51fbfa08ef5070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/10WeaponsPack/Models/Blaster10.fbx using Guid(a4bca856892ba5844b51fbfa08ef5070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b75f2d98ba5eea164867199b067bbdc') in 0.055841 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.537979 seconds.
+  path: Assets/10WeaponsPack/Prefabs/Weapon6.prefab
+  artifactKey: Guid(05fad388f99760149a03a8a3f889dfaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/10WeaponsPack/Prefabs/Weapon6.prefab using Guid(05fad388f99760149a03a8a3f889dfaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06c9e5bc31b5c879e57dd67dd3e748b3') in 0.015886 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/10WeaponsPack/Prefabs/Weapon8.prefab
+  artifactKey: Guid(64fe1025baf628c4cae82f971680f07d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/10WeaponsPack/Prefabs/Weapon8.prefab using Guid(64fe1025baf628c4cae82f971680f07d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37a448c7b9a45d68b494ab2fb30d6ad0') in 0.011582 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.672162 seconds.
+  path: Assets/10WeaponsPack/Models/Blaster6.fbx
+  artifactKey: Guid(9545cf8a0378b5545a96dcdefb2f420e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/10WeaponsPack/Models/Blaster6.fbx using Guid(9545cf8a0378b5545a96dcdefb2f420e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37ba1c4706de30aa56479cdccedaca0f') in 0.061055 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/10WeaponsPack/Models/Blaster8.fbx
+  artifactKey: Guid(7c0a61129beb9f1429eabd49903adb4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/10WeaponsPack/Models/Blaster8.fbx using Guid(7c0a61129beb9f1429eabd49903adb4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bcc1df4509c5c3c40e8b4388ab7d1c6') in 0.084011 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.227844 seconds.
+  path: Assets/10WeaponsPack/Prefabs/Weapon8.prefab
+  artifactKey: Guid(64fe1025baf628c4cae82f971680f07d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/10WeaponsPack/Prefabs/Weapon8.prefab using Guid(64fe1025baf628c4cae82f971680f07d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ee5f0ddc215d5dac17c0682362b0f9c') in 0.013018 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

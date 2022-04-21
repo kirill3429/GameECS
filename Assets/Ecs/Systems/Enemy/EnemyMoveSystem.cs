@@ -5,7 +5,7 @@ namespace Client
     sealed class EnemyMoveSystem : IEcsRunSystem
     {
         
-        int horizontal = Animator.StringToHash("Horizontal");
+        readonly int horizontal = Animator.StringToHash("Horizontal");
 
         readonly EcsWorld _world = null;
         readonly EcsFilter<EnemyTag, InputHandlerComponent, Movable, RigidBodyComponent, AnimatorComponent> filter = null;

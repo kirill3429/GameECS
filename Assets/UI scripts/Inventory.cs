@@ -28,7 +28,7 @@ public class Inventory : MonoBehaviour
         //_gameManager.GetData();
         //_inventory = _gameManager.SDK.GetUserGameData.Inventory;
         Items = new List<IItem>();
-        
+
 
         string[] invItems = _inventory.Trim().Split(" ");
         Debug.Log(invItems.Length + "Предметов в инвентаре");

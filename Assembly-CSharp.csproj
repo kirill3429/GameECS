@@ -124,6 +124,7 @@
     <Compile Include="Assets\Ecs\Systems\Projectile\ProjectileMoveSystem.cs" />
     <Compile Include="Assets\Ecs\Components\Spawner.cs" />
     <Compile Include="Assets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerText.cs" />
+    <Compile Include="Assets\UI scripts\Window.cs" />
     <Compile Include="Assets\Ecs\Components\Dropped.cs" />
     <Compile Include="Assets\Ecs\OtherScripts\EntityLink.cs" />
     <Compile Include="Assets\UI scripts\IWeaponItem.cs" />
@@ -135,6 +136,7 @@
     <Compile Include="Assets\Shift - Complete Sci-Fi UI\Scripts\Event\HoldKeyEvent.cs" />
     <Compile Include="Assets\Ecs\Systems\Enemy\EnemyInputSystem.cs" />
     <Compile Include="Assets\Shift - Complete Sci-Fi UI\Scripts\Input\VirtualCursor.cs" />
+    <Compile Include="Assets\Ecs\OtherScripts\WeaponInfoMono.cs" />
     <Compile Include="Assets\Ecs\Components\Reloadable.cs" />
     <Compile Include="Assets\Ecs\Components\Camera.cs" />
     <Compile Include="Assets\Ecs\Systems\DeathSystem.cs" />

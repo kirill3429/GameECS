@@ -417,4 +417,5 @@ MonoBehaviour:
   prefabNumber: 0
   type: 
   uiWindow: {fileID: 4536363759086042232, guid: b724ba87ac2e9e647aa937c98f1e2154, type: 3}
+  statPrefab: {fileID: 8035983912078942564, guid: a808d474911c10e4399e961bc6139f2b, type: 3}
   windowHolder: {fileID: 0}

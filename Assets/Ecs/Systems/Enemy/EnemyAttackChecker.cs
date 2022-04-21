@@ -22,7 +22,6 @@ namespace Client
                     attackEvent.weapon = attackEvent.eventSender.Get<Equipment>().mainWeapon;
                     attackEvent.mousePos = attackEvent.eventSender.Get<InputHandlerComponent>().mouseVector;
                     filter.GetEntity(i).Destroy();
-                    
                 }
                 
                 

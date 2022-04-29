@@ -1,5 +1,6 @@
 using Leopotam.Ecs;
 using UnityEngine;
+using System;
 namespace Client
 {
     sealed class WeaponInitSystem : IEcsInitSystem
@@ -10,11 +11,18 @@ namespace Client
 
         public void Init()
         {
-            int weaponPrefabNumber = PlayerPrefs.GetInt("firstWeapon");
-            int weaponProjectileNumber = PlayerPrefs.GetInt("weaponProjectileNumber");
+            string activeWeapon = PlayerPrefs.GetString("ActiveWeapon");
+            int prefabNumber = Convert.ToInt32(activeWeapon.Split("-")[2]);
+
+            string weaponStatsString = PlayerPrefs.GetString("PlayerWeaponStats");
+            string[] weaponStats = weaponStatsString.Split("-");
+
+            Debug.Log(prefabNumber);
+            Debug.Log(activeWeapon.Split("-")[2]);
+            // finalDamage-finalAttackSpeed-finalReloadSpeed-finalDmgChance-finalDmgMultiplier-finalAmmo
 
 
-            GameObject weaponGameObject = GameObject.Instantiate(allPrefabsData.weaponPrefabs[weaponPrefabNumber], sceneData.weaponSpawnPoint);
+            GameObject weaponGameObject = GameObject.Instantiate(allPrefabsData.weaponPrefabs[prefabNumber], sceneData.weaponSpawnPoint);
 
             EcsEntity weaponEntity = world.NewEntity();
             ref var objectLink = ref weaponEntity.Get<ObjectLink>();
@@ -29,12 +37,13 @@ namespace Client
             objectLink.Object = weaponGameObject;
             weapon.weaponSocket = weaponGameObject.transform.GetChild(0).transform;
             weapon.weaponTransform = weaponGameObject.transform;
-            weapon.currentAmmo = 500;
-            weapon.magazineAmmo = 500;
+
+            weapon.currentAmmo = Convert.ToInt32(weaponStats[5]);
+            weapon.magazineAmmo = Convert.ToInt32(weaponStats[5]);
             weapon.bulletSpeed = 100;
-            weapon.delayBetweenAttack = 0.2f;
+            weapon.delayBetweenAttack = Convert.ToSingle(weaponStats[1]);
             weapon.projectileLifeTime = 6f;
-            damage.value = 5;
+            damage.value = Convert.ToSingle(weaponStats[0]);
                 
             objectLink.Object.AddComponent<EntityLink>().entity = weaponEntity;
             

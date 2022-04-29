@@ -51,7 +51,7 @@ namespace Client
             info.WeaponTransform.parent = equipp.weaponHolder;
             info.WeaponTransform.position = equipp.weaponHolder.position;
             info.WeaponTransform.gameObject.GetComponent<Collider>().enabled = false;
-            info.WeaponTransform.gameObject.GetComponent<Animator>().enabled = false;
+            //info.WeaponTransform.gameObject.GetComponent<Animator>().enabled = false;
             info.WeaponTransform.forward = equipp.weaponHolder.forward;
             info.weaponEntity.Get<Weapon>().ownerEntity = info.newOwnerEntity;
         }

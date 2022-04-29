@@ -12,6 +12,7 @@ namespace Client
         EcsSystems _fixedSystems;
 
         public SceneData sceneData;
+        public TerrainMaterialsData materialsData;
         public StaticPlayerData staticPlayerData;
         public AllPrefabsData prefabsData;
         public AllWaveData allWaveData;
@@ -29,6 +30,7 @@ namespace Client
             Leopotam.Ecs.UnityIntegration.EcsSystemsObserver.Create(_fixedSystems);
 #endif
             _systems
+                .Add(new LevelInitSystem())
                 .Add(new WeaponInitSystem())
                 .Add(new PlayerInitSystem())
                 .Add(new PlayerInputSystem())
@@ -36,7 +38,7 @@ namespace Client
                 .Add(new PickUpSystem())
                 .Add(new WeaponGetSystem())
                 .Add(new EventGeneratorSystem())
-                .Add(new DropWeaponSystem())
+                //.Add(new DropWeaponSystem())
 
 
                 .Add(new CameraInitSystem())
@@ -60,7 +62,7 @@ namespace Client
                 // register one-frame components (order is important), for example:
                 .OneFrame<HitEvent> ()
                 .OneFrame<AttackEvent> ()
-                .OneFrame<WeaponDropEvent>()
+                //.OneFrame<WeaponDropEvent>()
                 .OneFrame<SpawnProjectile> ()
                 .OneFrame<EnemySpawnEvent> ()
                 // .OneFrame<TestComponent2> ()
@@ -71,6 +73,7 @@ namespace Client
                 .Inject(prefabsData)
                 .Inject(allWaveData)
                 .Inject(runtimeData)
+                .Inject(materialsData)
                 
 
                 // .Inject (new NavMeshSupport ())
@@ -79,7 +82,7 @@ namespace Client
                 
                 
                 
-                .Add(new SwitchWeaponSystem())
+                //.Add(new SwitchWeaponSystem())
                 .Add(new ProjectileMoveSystem())
                 .Add(new EnemyMoveSystem())
                 .Add(new EnemySpawnEventGenerator())
@@ -87,7 +90,7 @@ namespace Client
                 .Add(new DeathSystem())
                 .Add(new AvaibleSystem())
                 
-                .OneFrame<SwitchWeaponEvent>()
+                //.OneFrame<SwitchWeaponEvent>()
                 
 
                 .Inject(sceneData)

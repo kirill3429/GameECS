@@ -18,6 +18,8 @@ namespace Client
                 GameObject hitEffect = GameObject.Instantiate(eventInfo.hittedEntity.Get<HitEffect>().hitPrefab, eventInfo.hittedObject.transform.position, Quaternion.identity);
                 hitEffect.transform.forward = eventInfo.hitDirection;
 
+                eventInfo.bulletEntity.Get<DeathEvent>();
+
                 if (targetHP.currentHealth < 0)
                 {
                     eventInfo.hittedEntity.Get<DeathEvent>();

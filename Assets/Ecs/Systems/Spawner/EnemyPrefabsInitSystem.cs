@@ -13,31 +13,36 @@ namespace Client
         {
             allWaveData.waves.Clear();
             allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
-            allWaveData.waves[0].waveInfo = new Dictionary<int, int>();
-            allWaveData.waves[0].waveInfo.Add(0, 1);
-            allWaveData.waves[0].waveInfo.Add(1, 1);
             allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
+            allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
+            allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
+            allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
+            allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
+            allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
+            allWaveData.waves[0].waveInfo = new Dictionary<int, int>();
+            allWaveData.waves[0].waveInfo.Add(0, 50);
+            allWaveData.waves[0].waveInfo.Add(1, 50);
             allWaveData.waves[1].waveInfo = new Dictionary<int, int>();
             allWaveData.waves[1].waveInfo.Add(0, 10);
             allWaveData.waves[1].waveInfo.Add(1, 10);
-            //allWaveData.waves[2].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[2].waveInfo.Add(0, 10);
-            //allWaveData.waves[2].waveInfo.Add(1, 10);
-            //allWaveData.waves[3].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[3].waveInfo.Add(0, 10);
-            //allWaveData.waves[3].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[4].waveInfo.Add(0, 10);
-            //allWaveData.waves[4].waveInfo.Add(1, 10);
-            //allWaveData.waves[4].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[5].waveInfo.Add(0, 10);
-            //allWaveData.waves[5].waveInfo.Add(1, 10);
-            //allWaveData.waves[5].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[6].waveInfo.Add(0, 10);
-            //allWaveData.waves[6].waveInfo.Add(1, 10);
-            //allWaveData.waves[6].waveInfo = new Dictionary<int, int>();
+            allWaveData.waves[2].waveInfo = new Dictionary<int, int>();
+            allWaveData.waves[2].waveInfo.Add(0, 10);
+            allWaveData.waves[2].waveInfo.Add(1, 10);
+            allWaveData.waves[3].waveInfo = new Dictionary<int, int>();
+            allWaveData.waves[3].waveInfo.Add(0, 10);
+            allWaveData.waves[4].waveInfo = new Dictionary<int, int>();
+            allWaveData.waves[4].waveInfo.Add(0, 10);
+            allWaveData.waves[4].waveInfo.Add(1, 10);
+            allWaveData.waves[5].waveInfo = new Dictionary<int, int>();
+            allWaveData.waves[5].waveInfo.Add(0, 10);
+            allWaveData.waves[5].waveInfo.Add(1, 10);
+            allWaveData.waves[6].waveInfo = new Dictionary<int, int>();
+            allWaveData.waves[6].waveInfo.Add(0, 10);
+            allWaveData.waves[6].waveInfo.Add(1, 10);
+            //allWaveData.waves[7].waveInfo = new Dictionary<int, int>();
             //allWaveData.waves[7].waveInfo.Add(0, 10);
             //allWaveData.waves[7].waveInfo.Add(1, 10);
-            //allWaveData.waves[7].waveInfo = new Dictionary<int, int>();
+            //allWaveData.waves[8].waveInfo = new Dictionary<int, int>();
             //allWaveData.waves[8].waveInfo.Add(0, 10);
             //allWaveData.waves[8].waveInfo = new Dictionary<int, int>();
             //allWaveData.waves[8].waveInfo.Add(0, 10);
@@ -71,7 +76,7 @@ namespace Client
             //allWaveData.waves[1].waveInfo.Add(0, 10);
 
             //allWaveData.waves[1].waveInfo.Add(1, 10);
-            
+
         }
     }
 }

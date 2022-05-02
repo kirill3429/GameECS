@@ -4,9 +4,12 @@ using UnityEngine;
 public class StaticPlayerData : ScriptableObject
 {
     public float playerMoveSpeed;
-    public float threshold;
+    public float thresholdCamera;
+
     public float enemySpawnRadius;
     public int maxEnemies;
     public LayerMask layerMask;
     public float spawnDispersion;
+
+    public float timeBetweenWaves;
 }

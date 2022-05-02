@@ -1,6 +1,8 @@
 using Leopotam.Ecs;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using System;
 
 namespace Client
 {
@@ -11,72 +13,35 @@ namespace Client
 
         public void Init()
         {
+            int levelNumber = PlayerPrefs.GetInt("LevelNumber");
+            string monsterSet = PlayerPrefs.GetString("MonsterSet");
+
+            WaveDataInit(levelNumber, monsterSet);
+        }
+
+
+        public void WaveDataInit(int levelNumber, string monsterSet)
+        {
             allWaveData.waves.Clear();
-            allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
-            allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
-            allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
-            allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
-            allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
-            allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
-            allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
-            allWaveData.waves[0].waveInfo = new Dictionary<int, int>();
-            allWaveData.waves[0].waveInfo.Add(0, 50);
-            allWaveData.waves[0].waveInfo.Add(1, 50);
-            allWaveData.waves[1].waveInfo = new Dictionary<int, int>();
-            allWaveData.waves[1].waveInfo.Add(0, 10);
-            allWaveData.waves[1].waveInfo.Add(1, 10);
-            allWaveData.waves[2].waveInfo = new Dictionary<int, int>();
-            allWaveData.waves[2].waveInfo.Add(0, 10);
-            allWaveData.waves[2].waveInfo.Add(1, 10);
-            allWaveData.waves[3].waveInfo = new Dictionary<int, int>();
-            allWaveData.waves[3].waveInfo.Add(0, 10);
-            allWaveData.waves[4].waveInfo = new Dictionary<int, int>();
-            allWaveData.waves[4].waveInfo.Add(0, 10);
-            allWaveData.waves[4].waveInfo.Add(1, 10);
-            allWaveData.waves[5].waveInfo = new Dictionary<int, int>();
-            allWaveData.waves[5].waveInfo.Add(0, 10);
-            allWaveData.waves[5].waveInfo.Add(1, 10);
-            allWaveData.waves[6].waveInfo = new Dictionary<int, int>();
-            allWaveData.waves[6].waveInfo.Add(0, 10);
-            allWaveData.waves[6].waveInfo.Add(1, 10);
-            //allWaveData.waves[7].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[7].waveInfo.Add(0, 10);
-            //allWaveData.waves[7].waveInfo.Add(1, 10);
-            //allWaveData.waves[8].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[8].waveInfo.Add(0, 10);
-            //allWaveData.waves[8].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[8].waveInfo.Add(0, 10);
-            //allWaveData.waves[9].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[9].waveInfo.Add(0, 10);
-            //allWaveData.waves[9].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[10].waveInfo.Add(0, 10);
-            //allWaveData.waves[10].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[10].waveInfo.Add(0, 10);
-            //allWaveData.waves[11].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[11].waveInfo.Add(0, 10);
-            //allWaveData.waves[11].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[12].waveInfo.Add(0, 10);
-            //allWaveData.waves[12].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[12].waveInfo.Add(0, 10);
-            //allWaveData.waves[13].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[13].waveInfo.Add(0, 10);
-            //allWaveData.waves[13].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[14].waveInfo.Add(0, 10);
-            //allWaveData.waves[14].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[14].waveInfo.Add(0, 10);
-            //allWaveData.waves[15].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[15].waveInfo.Add(0, 10);
-            //allWaveData.waves[15].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[16].waveInfo.Add(0, 10);
-            //allWaveData.waves[16].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[16].waveInfo.Add(0, 10);
-            //allWaveData.waves[17].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[17].waveInfo.Add(0, 10);
-            //allWaveData.waves[17].waveInfo = new Dictionary<int, int>();
-            //allWaveData.waves[1].waveInfo.Add(0, 10);
 
-            //allWaveData.waves[1].waveInfo.Add(1, 10);
+            string[] monsterStringArray = monsterSet.Trim().Split(" ");
+            List<int> monsterArray = new List<int>();
 
+            foreach (string str in monsterStringArray)
+            {
+                monsterArray.Add(Convert.ToInt32(str));
+            }
+
+            for (int i = 0; i < 20; i++)
+            {
+                allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
+                allWaveData.waves[i].waveInfo = new Dictionary<int, int>();
+
+                foreach(int monsterNum in monsterArray)
+                {
+                    allWaveData.waves[i].waveInfo.Add(monsterNum, 30 + i * 5);
+                }
+            }
         }
     }
 }

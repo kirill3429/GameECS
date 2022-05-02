@@ -15,8 +15,7 @@ namespace Client
             spawner.currentEnemies = 0;
             spawner.isWork = true;
             spawner.playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-            spawner.timer = 1;
-            spawner.lastSpawnTime = Time.time;
+            spawnEntity.Get<NeedToFill>();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Client
             camera.cameraTransform = GameObject.FindGameObjectWithTag("MainCamera").transform;
             camera.targetTransform = GameObject.FindGameObjectWithTag("CameraTarget").transform;
             camera.playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-            camera.threshold = staticData.threshold;
+            camera.threshold = staticData.thresholdCamera;
         }
     }
 }

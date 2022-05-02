@@ -72,6 +72,7 @@
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Event\TimedEvent.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Input\VirtualCursorAnimate.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\MainPanelButton.cs" />
+    <Compile Include="Assets\Ecs\Components\NeedToFill.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\SplashScreenManager.cs" />
     <Compile Include="Assets\Ecs\Systems\Items\SwitchWeaponSystem.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\ChapterButton.cs" />
@@ -92,20 +93,21 @@
     <Compile Include="Assets\Ecs\Systems\Items\ReloadingSystem.cs" />
     <Compile Include="Assets\Ecs\Components\Reloading.cs" />
     <Compile Include="Assets\Ecs\Components\Events\SwitchWeaponEvent.cs" />
+    <Compile Include="Assets\Ecs\Systems\Spawner\EnemySpawnSystem.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\CanvasManager.cs" />
     <Compile Include="Assets\Ecs\Systems\Items\DropWeaponSystem.cs" />
     <Compile Include="Assets\Ecs\Components\Movable.cs" />
-    <Compile Include="Assets\Ecs\Systems\Enemy\EnemySpawnEventGenerator.cs" />
+    <Compile Include="Assets\Ecs\Systems\Player\LevelInitSystem.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\FavoriteButton.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Input\ScrollGamepadManager.cs" />
     <Compile Include="Assets\Ecs\Components\Events\AttackEvent.cs" />
     <Compile Include="Assets\Ecs\Systems\AttackSystem.cs" />
     <Compile Include="Assets\Ecs\Components\Active.cs" />
+    <Compile Include="Assets\Ecs\Systems\Spawner\EnemySpawnEventGenerator.cs" />
     <Compile Include="Assets\Ecs\Data\scripts\StaticPlayerData.cs" />
     <Compile Include="Assets\Ecs\Components\EnemyTag.cs" />
     <Compile Include="Assets\Ecs\Data\scripts\TerrainMaterialsData.cs" />
     <Compile Include="Assets\Ecs\Data\scripts\AllPrefabsData.cs" />
-    <Compile Include="Assets\Ecs\Systems\Enemy\EnemySpawnSystem.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerImage.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\ScrollForMore.cs" />
     <Compile Include="Assets\Ecs\Components\PlayerTag.cs" />
@@ -117,7 +119,7 @@
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\QuickMatchButton.cs" />
     <Compile Include="Assets\Ecs\Components\InputHandlerComponent.cs" />
     <Compile Include="Assets\Ecs\Data\scripts\AllWaveData.cs" />
-    <Compile Include="Assets\Ecs\Systems\Spawner\WaveDataInitSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\Spawner\CurrentEnemiesUpdateSystem.cs" />
     <Compile Include="Assets\Ecs\Systems\Player\PlayerMoveSystem.cs" />
     <Compile Include="Assets\Ecs\Systems\Items\PickUpSystem.cs" />
     <Compile Include="Assets\Ecs\Systems\Player\PlayerInputSystem.cs" />
@@ -167,6 +169,7 @@
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Input\GamepadChecker.cs" />
     <Compile Include="Assets\Ecs\Components\Name.cs" />
     <Compile Include="Assets\Scripts\UI scripts\StartGame\ILevel.cs" />
+    <Compile Include="Assets\Ecs\Systems\Spawner\QueueFillerSystem.cs" />
     <Compile Include="Assets\YandexSDK\Assets\Plugins\SimpleJSON.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\FriendsPanelManager.cs" />
     <Compile Include="Assets\Ecs\Components\Weapon.cs" />
@@ -185,7 +188,7 @@
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\ServerBrowserManager.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Element\UIElementSound.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\MainButton.cs" />
-    <Compile Include="Assets\Ecs\Systems\Player\LevelInitSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\Spawner\WaveManagerSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 namespace Client
 {
     struct Spawner
@@ -7,8 +8,7 @@ namespace Client
         public int currentEnemies;
         public int maxEnemies;
         public bool isWork;
-        public int spawnDelay;
-        public float timer;
-        public float lastSpawnTime;
+        public Queue<int> creepsQueue;
+        public float endWaveTime;
     }
 }

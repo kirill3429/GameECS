@@ -46,7 +46,7 @@ namespace Client
                 .Add(new EnemyPrefabsInitSystem())
                 .Add(new SpawnerInitSystem())
                 
-                .Add(new EnemySpawnSystem())
+                
                 .Add(new EnemyInputSystem())
                 .Add(new EnemyAttackChecker())
 
@@ -64,7 +64,7 @@ namespace Client
                 .OneFrame<AttackEvent> ()
                 //.OneFrame<WeaponDropEvent>()
                 .OneFrame<SpawnProjectile> ()
-                .OneFrame<EnemySpawnEvent> ()
+                
                 // .OneFrame<TestComponent2> ()
 
                 // inject service instances here (order doesn't important), for example:
@@ -79,20 +79,24 @@ namespace Client
                 // .Inject (new NavMeshSupport ())
                 .Init();
             _fixedSystems
+
+
                 
-                
+                .Add(new CurrentEnemiesUpdateSystem())
+                .Add(new WaveManagerSystem())
+                .Add(new QueueFillerSystem())
                 
                 //.Add(new SwitchWeaponSystem())
                 .Add(new ProjectileMoveSystem())
                 .Add(new EnemyMoveSystem())
                 .Add(new EnemySpawnEventGenerator())
-                
+                .Add(new EnemySpawnSystem())
                 .Add(new DeathSystem())
                 .Add(new AvaibleSystem())
-                
-                //.OneFrame<SwitchWeaponEvent>()
-                
 
+                //.OneFrame<SwitchWeaponEvent>()
+
+                .OneFrame<EnemySpawnEvent>()
                 .Inject(sceneData)
                 .Inject(staticPlayerData)
                 .Inject(prefabsData)

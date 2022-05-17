@@ -12,17 +12,48 @@ namespace Client
             foreach (var i in filter)
             {
                 ref var eventInfo = ref filter.Get1(i);
-                ref var targetHP = ref eventInfo.hittedEntity.Get<Health>();
-                targetHP.currentHealth -= eventInfo.bulletEntity.Get<Damage>().value;
+                ref var bulletEntity = ref eventInfo.bulletEntity;
+                ref var hittedEntity = ref eventInfo.hittedEntity;
+
+                eventInfo.hittedEntity.Get<TakeDamage>().value += bulletEntity.Get<Damage>().value;
 
                 GameObject hitEffect = GameObject.Instantiate(eventInfo.hittedEntity.Get<HitEffect>().hitPrefab, eventInfo.hittedObject.transform.position, Quaternion.identity);
                 hitEffect.transform.forward = eventInfo.hitDirection;
 
-                eventInfo.bulletEntity.Get<DeathEvent>();
+                // Накинуть на врага эффекты с пули
 
-                if (targetHP.currentHealth < 0)
+                if (bulletEntity.Has<Fire>())
                 {
-                    eventInfo.hittedEntity.Get<DeathEvent>();
+                    hittedEntity.Replace(new Fire());
+                    hittedEntity.Get<Fire>().burningStartTime = Time.time;
+                }
+                if (bulletEntity.Has<Ice>())
+                {
+                    hittedEntity.Replace(new Ice());
+                    hittedEntity.Get<Ice>().iceStartTime = Time.time;
+                }
+                if (bulletEntity.Has<Explosion>())
+                {
+                    hittedEntity.Get<Explosion>();
+                }
+                if (bulletEntity.Has<Lifesteal>())
+                {
+                    world.NewEntity().Get<LifestealEvent>();
+                }
+
+                if (bulletEntity.Has<Ricochet>())
+                {
+                    bulletEntity.Get<Ricochet>().level--;
+                    bulletEntity.Get<RicochetEvent>().bulletEntity = bulletEntity;
+                    bulletEntity.Get<RicochetEvent>().hittedObject = eventInfo.hittedObject;
+                    if (bulletEntity.Get<Ricochet>().level == 0)
+                    {
+                        bulletEntity.Get<DeathEvent>();
+                    }
+                }
+                else
+                {
+                    bulletEntity.Get<DeathEvent>();
                 }
             }
         }

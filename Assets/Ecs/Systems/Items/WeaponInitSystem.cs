@@ -22,12 +22,11 @@ namespace Client
             // finalDamage-finalAttackSpeed-finalReloadSpeed-finalDmgChance-finalDmgMultiplier-finalAmmo
 
 
-            GameObject weaponGameObject = GameObject.Instantiate(allPrefabsData.weaponPrefabs[prefabNumber], sceneData.weaponSpawnPoint);
+            GameObject weaponGameObject = GameObject.Instantiate(allPrefabsData.weaponPrefabs[prefabNumber], sceneData.playerTransform);
 
             EcsEntity weaponEntity = world.NewEntity();
             ref var objectLink = ref weaponEntity.Get<ObjectLink>();
             ref var weapon = ref weaponEntity.Get<Weapon>();
-            ref var name = ref weaponEntity.Get<Name>();
             ref var damage = ref weaponEntity.Get<Damage>();
             weaponEntity.Get<Dropped>();
             weaponEntity.Get<Reloadable>();

@@ -8,7 +8,7 @@ namespace Client
         readonly RuntimeData runtimeData;
         readonly AllWaveData allWaveData;
         readonly EcsWorld world = null;
-        readonly EcsFilter<Spawner, NeedToFill> filter; 
+        readonly EcsFilter<Spawner, NeedToFill> filter = null; 
 
         public void Run()
         {

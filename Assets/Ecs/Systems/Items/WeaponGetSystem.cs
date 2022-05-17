@@ -22,10 +22,7 @@ namespace Client
                     Debug.Log("Главное оружие не занято");
                     equipment.mainWeapon = eventInfo.weaponEntity;
                     WeaponGet(ref eventInfo, ref equipment);
-                    if (equipment.secondWeapon == EcsEntity.Null)
-                    {
-                        equipment.mainWeapon.Get<Active>();
-                    }
+                    
                 }
                 else if (equipment.secondWeapon == EcsEntity.Null)
                 {

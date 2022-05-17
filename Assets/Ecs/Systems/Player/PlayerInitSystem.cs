@@ -4,7 +4,8 @@ namespace Client
 {
     sealed class PlayerInitSystem : IEcsInitSystem
     {
-        AllPrefabsData prefabsData;
+        readonly UI ui;
+        readonly AllPrefabsData prefabsData;
         readonly StaticPlayerData staticData;
         readonly EcsWorld world = null;
 
@@ -19,15 +20,20 @@ namespace Client
             ref var objectLink = ref playerEntity.Get<ObjectLink>();
             ref var equipment = ref playerEntity.Get<Equipment>();
             ref var health = ref playerEntity.Get<Health>();
+            ref var healthView = ref playerEntity.Get<HealthView>();
             ref var hitEffect = ref playerEntity.Get<HitEffect>();
 
+            
             objectLink.Object = GameObject.FindGameObjectWithTag("Player");
             objectLink.Object.AddComponent<EntityLink>().entity = playerEntity;
             equipment.weaponHolder = objectLink.Object.GetComponent<WeaponHolder>().weaponTransform;
             animator.animator = objectLink.Object.GetComponent<Animator>();
             player.transform = objectLink.Object.transform;
             move.moveSpeed = staticData.playerMoveSpeed;
-            health.currentHealth = 1000;
+
+            health.currentHealth = 100;
+            health.maxHealth = 100;
+            ui.gameScreen.SetHealth(health.currentHealth, health.maxHealth);
             hitEffect.hitPrefab = prefabsData.hitEffectPrefabs[0];
 
         }

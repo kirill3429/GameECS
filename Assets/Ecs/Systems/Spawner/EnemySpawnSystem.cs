@@ -5,6 +5,7 @@ namespace Client
 {
     sealed class EnemySpawnSystem : IEcsRunSystem
     {
+        readonly RuntimeData runtimeData;
         readonly StaticPlayerData staticPlayerData;
         readonly AllPrefabsData prefabsData;
         readonly EcsWorld world = null;
@@ -48,13 +49,17 @@ namespace Client
 
                 objectLink.Object = GameObject.Instantiate(prefabsData.enemiesPrefabs[eventInfo.prefabNumber], spawnPoint, rotationSpawn);
                 objectLink.Object.GetComponent<EntityLink>().entity = enemyEntity;
+                var enemyInfo = objectLink.Object.GetComponent<EnemyInfo>();
                 rigidBody.rigidBody = objectLink.Object.GetComponent<Rigidbody>();
                 animator.animator = objectLink.Object.GetComponent<Animator>();
-                moveable.moveSpeed = 5;
+                moveable.moveSpeed = enemyInfo.moveSpeed + enemyInfo.moveSpeedProgress * runtimeData.waveNumber;
                 moveable.canRotate = true;
                 moveable.canMove = true;
-                health.currentHealth = 10;
+                health.maxHealth = enemyInfo.health + enemyInfo.healthProgress * runtimeData.waveNumber;
+                health.currentHealth = health.maxHealth;
                 enemyTag.enemyTransform = objectLink.Object.transform;
+
+                
 
                 hitEffect.hitPrefab = prefabsData.hitEffectPrefabs[0];
 
@@ -65,13 +70,13 @@ namespace Client
                 ref var damage = ref equip.mainWeapon.Get<Damage>();
                 weapon.weaponTransform = objectLink.Object.transform.Find("weaponTransform");
                 weapon.weaponSocket = weapon.weaponTransform;
-                weapon.projectilePrefabNumber = 1;
+                weapon.projectilePrefabNumber = enemyInfo.projectilePrefabNumber;
                 weapon.currentAmmo = 500;
                 weapon.magazineAmmo = 500;
-                weapon.bulletSpeed = 5;
-                weapon.delayBetweenAttack = 1f;
-                weapon.projectileLifeTime = 3f;
-                damage.value = 5;
+                weapon.bulletSpeed = enemyInfo.bulletSpeed + enemyInfo.bulletSpeedProgress * runtimeData.waveNumber;
+                weapon.delayBetweenAttack = enemyInfo.delayBetweenAttack + enemyInfo.bulletSpeedProgress * runtimeData.waveNumber;
+                weapon.projectileLifeTime = enemyInfo.projectileLifeTime;
+                damage.value = enemyInfo.damage + enemyInfo.damageProgress * runtimeData.waveNumber;
 
 
             }

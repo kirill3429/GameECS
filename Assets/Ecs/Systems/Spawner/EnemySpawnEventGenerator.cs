@@ -19,14 +19,15 @@ namespace Client
 
                 if (spawner.isWork == true)
                 {
-                    if (spawner.creepsQueue.Count == 0)
+                    if (spawner.creepsQueue.Count == 0 && spawner.currentEnemies == 0)
                     {
                         spawner.isWork = false;
                         spawner.endWaveTime = Time.time;
+                        world.NewEntity().Get<OpenAbilityWindowEvent>();
                         continue;
                     }
 
-                    if (spawner.currentEnemies < spawner.maxEnemies)
+                    if (spawner.currentEnemies < spawner.maxEnemies && spawner.creepsQueue.Count != 0)
                     {
                         int creepToSpawn = spawner.creepsQueue.Dequeue();
                         ref var spawnEvent = ref world.NewEntity().Get<EnemySpawnEvent>();

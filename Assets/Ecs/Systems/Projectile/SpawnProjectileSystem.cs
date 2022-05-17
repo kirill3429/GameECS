@@ -5,11 +5,13 @@ namespace Client
 {
     sealed class ProjectileSpawnSystem : IEcsRunSystem
     {
+        readonly RuntimeData runtimeData;
         readonly AllPrefabsData allPrefabsData;
         readonly EcsWorld world = null;
         readonly EcsFilter<SpawnProjectile> filter = null;
         public void Run()
         {
+            if (runtimeData.isPaused) return;
             foreach (var i in filter)
             {
                 ref var projectileEntity = ref filter.GetEntity(i);

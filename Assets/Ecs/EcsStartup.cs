@@ -7,8 +7,9 @@ namespace Client
 {
     sealed class EcsStartup : MonoBehaviour
     {
-        EcsWorld _world;
+        public EcsWorld _world;
         EcsSystems _systems;
+        EcsSystems _abilitySystems;
         EcsSystems _fixedSystems;
 
         public SceneData sceneData;
@@ -16,17 +17,21 @@ namespace Client
         public StaticPlayerData staticPlayerData;
         public AllPrefabsData prefabsData;
         public AllWaveData allWaveData;
-        RuntimeData runtimeData = new RuntimeData();
+        public UI ui;
+        public RuntimeData runtimeData = new RuntimeData();
         
         void Start()
         {
+            runtimeData.gameState = GameState.Running;
             _world = new EcsWorld();
             _systems = new EcsSystems(_world);
+            _abilitySystems = new EcsSystems(_world);
             _fixedSystems = new EcsSystems(_world);
             EcsPhysicsEvents.ecsWorld = _world;
 #if UNITY_EDITOR
             Leopotam.Ecs.UnityIntegration.EcsWorldObserver.Create(_world);
             Leopotam.Ecs.UnityIntegration.EcsSystemsObserver.Create(_systems);
+            Leopotam.Ecs.UnityIntegration.EcsSystemsObserver.Create(_abilitySystems);
             Leopotam.Ecs.UnityIntegration.EcsSystemsObserver.Create(_fixedSystems);
 #endif
             _systems
@@ -38,63 +43,60 @@ namespace Client
                 .Add(new PickUpSystem())
                 .Add(new WeaponGetSystem())
                 .Add(new EventGeneratorSystem())
-                //.Add(new DropWeaponSystem())
-
-
                 .Add(new CameraInitSystem())
                 .Add(new CameraSystem())
                 .Add(new EnemyPrefabsInitSystem())
                 .Add(new SpawnerInitSystem())
-                
-                
                 .Add(new EnemyInputSystem())
                 .Add(new EnemyAttackChecker())
-
                 .Add(new AttackSystem())
                 .Add(new ProjectileSpawnSystem())
-
                 .Add(new ProjectileHitEventSystem())
                 .Add(new ProjectileHitSystem())
-
+                .Add(new TakeDamageSystem())
+                .Add(new HealSystem())
+                .Add(new DeathSystem())
+                
+                .Add(new OpenAbilityWindowSystem())
+                .Add(new PauseSystem())
 
                 .OneFramePhysics()
 
-                // register one-frame components (order is important), for example:
-                .OneFrame<HitEvent> ()
-                .OneFrame<AttackEvent> ()
-                //.OneFrame<WeaponDropEvent>()
-                .OneFrame<SpawnProjectile> ()
-                
-                // .OneFrame<TestComponent2> ()
+                .OneFrame<HitEvent>()
+                .OneFrame<AttackEvent>()
+                .OneFrame<SpawnProjectile>()
 
-                // inject service instances here (order doesn't important), for example:
                 .Inject(sceneData)
                 .Inject(staticPlayerData)
                 .Inject(prefabsData)
                 .Inject(allWaveData)
                 .Inject(runtimeData)
                 .Inject(materialsData)
-                
-
-                // .Inject (new NavMeshSupport ())
+                .Inject(ui)
                 .Init();
+
+            _abilitySystems
+                .Add(new AddDamageSystem())
+                .Add(new FireAttackSystem())
+                .Add(new IceAttackSystem())
+                .Add(new ExplosionAttackSystem())
+                .Add(new LifestealAttackSystem())
+                .Add(new RicochetSystem())
+
+                .Init();
+
             _fixedSystems
 
-
-                
                 .Add(new CurrentEnemiesUpdateSystem())
                 .Add(new WaveManagerSystem())
                 .Add(new QueueFillerSystem())
-                
-                //.Add(new SwitchWeaponSystem())
                 .Add(new ProjectileMoveSystem())
                 .Add(new EnemyMoveSystem())
                 .Add(new EnemySpawnEventGenerator())
                 .Add(new EnemySpawnSystem())
-                .Add(new DeathSystem())
                 .Add(new AvaibleSystem())
 
-                //.OneFrame<SwitchWeaponEvent>()
+                .Add(new AbilityAddSystem())
 
                 .OneFrame<EnemySpawnEvent>()
                 .Inject(sceneData)
@@ -114,6 +116,7 @@ namespace Client
         private void FixedUpdate()
         {
             _fixedSystems?.Run();
+            _abilitySystems?.Run();
         }
 
         void OnDestroy()
@@ -122,8 +125,10 @@ namespace Client
                 EcsPhysicsEvents.ecsWorld = null;
                 _systems.Destroy();
                 _fixedSystems.Destroy();
+                _abilitySystems.Destroy();
                 _systems = null;
                 _fixedSystems = null;
+                _abilitySystems = null;
                 _world.Destroy();
                 _world = null;
             }

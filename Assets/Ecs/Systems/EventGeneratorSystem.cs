@@ -4,6 +4,7 @@ namespace Client
 {
     sealed class EventGeneratorSystem : IEcsRunSystem
     {
+        readonly RuntimeData runtimeData;
         readonly EcsWorld world = null;
         readonly EcsFilter<InputHandlerComponent> filter = null;
         public void Run()
@@ -40,7 +41,10 @@ namespace Client
                     var eventEntity = world.NewEntity();
                     ref var dropEvent = ref eventEntity.Get<WeaponDropEvent>();
                     dropEvent.eventSender = filter.GetEntity(i);
-
+                }
+                if (input.pause)
+                {
+                    world.NewEntity().Get<PauseEvent>();
                 }
             }
         }

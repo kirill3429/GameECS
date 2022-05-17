@@ -10,13 +10,14 @@ namespace Client
         int vertical = Animator.StringToHash("Vertical");
         int inputMagnitude = Animator.StringToHash("InputMagnitude");
 
-
+        readonly RuntimeData runtimeData;
         readonly EcsWorld _world = null;
         readonly EcsFilter<PlayerTag, InputHandlerComponent, Movable, AnimatorComponent> filter = null;
 
 
         void IEcsRunSystem.Run()
         {
+            if (runtimeData.isPaused) return;
 
             foreach (var i in filter)
             {
@@ -24,8 +25,6 @@ namespace Client
                 ref var input = ref filter.Get2(i);
                 ref var movable = ref filter.Get3(i);
                 ref var anim = ref filter.Get4(i);
-
-                
 
                 #region Moving
                 float alpha = -player.transform.eulerAngles.y;
@@ -47,9 +46,6 @@ namespace Client
                     input.mouseVector = input.mouse - player.transform.position;
                     player.transform.forward = Vector3.ProjectOnPlane(input.mouseVector, Vector3.up);
                 }
-                
-
-
                 Debug.DrawRay(player.transform.position, input.mouseVector);
                 #endregion
             }

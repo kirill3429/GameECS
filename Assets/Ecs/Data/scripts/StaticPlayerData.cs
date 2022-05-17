@@ -12,4 +12,6 @@ public class StaticPlayerData : ScriptableObject
     public float spawnDispersion;
 
     public float timeBetweenWaves;
+
+    public GameObject NewAbilityWindow;
 }

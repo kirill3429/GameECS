@@ -34,7 +34,8 @@ namespace Client
                 }
                 if (bulletEntity.Has<Explosion>())
                 {
-                    hittedEntity.Get<Explosion>();
+                    hittedEntity.Get<Explosion>().damage = bulletEntity.Get<Explosion>().damage;
+                    hittedEntity.Get<Explosion>().level = bulletEntity.Get<Explosion>().level;
                 }
                 if (bulletEntity.Has<Lifesteal>())
                 {

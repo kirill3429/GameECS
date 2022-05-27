@@ -2599,7 +2599,7 @@ Animator:
   m_GameObject: {fileID: 3897915548112452566}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: ca8d8a5559861f1439ed63d88e6446f1, type: 3}
-  m_Controller: {fileID: 9100000, guid: d4d86d7c0c89dd549a4f0fc816195261, type: 2}
+  m_Controller: {fileID: 9100000, guid: 232c35c0c5c4b8a44a755df332928706, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2619,7 +2619,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.28
+  m_Radius: 0.38
   m_Height: 1.87
   m_Direction: 1
   m_Center: {x: 0, y: 0.94, z: 0}
@@ -2663,18 +2663,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b18e44175e23724fbe83724e3dce1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  health: 0
-  damage: 0
-  delayBetweenAttack: 0
-  projectileLifeTime: 0
-  bulletSpeed: 0
-  projectilePrefabNumber: 0
+  reward: 4
+  moveSpeed: 8
+  health: 5
+  damage: 5
+  delayBetweenAttack: 0.5
+  projectileLifeTime: 1
+  bulletSpeed: 10
+  projectilePrefabNumber: 1
   moveSpeedProgress: 0
-  healthProgress: 0
-  damageProgress: 0
+  healthProgress: 6
+  damageProgress: 7
   delayBetweenAttackProgress: 0
   bulletSpeedProgress: 0
+  enemyType: 1
 --- !u!1 &7650402532278698842
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ namespace Client
         {
             foreach (var i in filter)
             {
-                
+                PlayerPrefs.SetInt("ScoreInGame", runtimeData.score);
                 if (runtimeData.gameState == GameState.Running || runtimeData.gameState == GameState.Menu)
                 {
                     ShowPauseBackground();

@@ -6,6 +6,7 @@ namespace Client
     {
         public Vector3 moveDirection;
         public float moveSpeed;
+        public float defaultMoveSpeed;
         public bool canRotate;
         public bool canMove;
     }

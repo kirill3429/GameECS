@@ -1060,7 +1060,7 @@ Transform:
   - {fileID: 428820}
   - {fileID: 2856720060074737001}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &9575048
 Animator:
@@ -1110,7 +1110,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &8955969648130789989
 MonoBehaviour:
@@ -1136,18 +1136,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b18e44175e23724fbe83724e3dce1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  health: 0
-  damage: 0
-  delayBetweenAttack: 0
-  projectileLifeTime: 0
-  bulletSpeed: 0
-  projectilePrefabNumber: 0
+  reward: 10
+  moveSpeed: 6
+  health: 20
+  damage: 15
+  delayBetweenAttack: 2
+  projectileLifeTime: 1
+  bulletSpeed: 10
+  projectilePrefabNumber: 1
   moveSpeedProgress: 0
-  healthProgress: 0
-  damageProgress: 0
+  healthProgress: 10
+  damageProgress: 10
   delayBetweenAttackProgress: 0
-  bulletSpeedProgress: 0
+  bulletSpeedProgress: 10
+  enemyType: 1
 --- !u!1 &153408
 GameObject:
   m_ObjectHideFlags: 0

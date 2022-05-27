@@ -47,7 +47,7 @@ public class Inventory : MonoBehaviour
         foreach (IItem item in items)
         {
             var cell = Instantiate(_inventoryCell, inventoryContent);
-            //cell.icon.sprite = item.Icon;
+            cell.icon = item.Icon;
             cell.background = item.Background;
             cell.prefabNumber = item.PrefabNumber;
             cell.level = item.Level;
@@ -89,10 +89,10 @@ public class Inventory : MonoBehaviour
 
             StringBuilder weaponStatsToSave = new StringBuilder();
             WeaponCell weapon = (WeaponCell)weaponContainer.transform.GetChild(0).GetComponent<InventoryCellView>().elementLink;
-            weaponStatsToSave.Append(weapon.finalDamage + "-" + weapon.finalAttackSpeed + "-" + weapon.finalReloadSpeed
-            + "-" + weapon.finalDmgChance + "-" + weapon.finalDmgMultiplier + "-" + weapon.finalAmmo);
+            weaponStatsToSave.Append(weapon.finalDamage + "-" + weapon.finalAttackSpeed + "-"
+            + "-" + weapon.finalDmgChance + "-" + weapon.finalDmgMultiplier + "-");
             string statsWeapon = weaponStatsToSave.ToString();
-            PlayerPrefs.SetString("PlayerWeaponStats", statsWeapon); // для GameScene  || finalDamage-finalAttackSpeed-finalReloadSpeed-finalDmgChance-finalDmgMultiplier-finalAmmo
+            PlayerPrefs.SetString("PlayerWeaponStats", statsWeapon); // для GameScene  || finalDamage-finalAttackSpeed-finalDmgChance-finalDmgMultiplier
 
         }
         else

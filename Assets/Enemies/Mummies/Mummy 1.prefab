@@ -551,7 +551,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.28
+  m_Radius: 0.38
   m_Height: 1.87
   m_Direction: 1
   m_Center: {x: 0, y: 0.94, z: 0}
@@ -595,18 +595,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b18e44175e23724fbe83724e3dce1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reward: 2
   moveSpeed: 4
-  health: 5
+  health: 10
   damage: 2
   delayBetweenAttack: 0.3
   projectileLifeTime: 1
   bulletSpeed: 1
   projectilePrefabNumber: 1
   moveSpeedProgress: 0
-  healthProgress: 1
-  damageProgress: 1
-  delayBetweenAttackProgress: -0.1
+  healthProgress: 3
+  damageProgress: 3
+  delayBetweenAttackProgress: 0
   bulletSpeedProgress: 0
+  enemyType: 1
 --- !u!1 &7355745405685542373
 GameObject:
   m_ObjectHideFlags: 0

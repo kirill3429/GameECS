@@ -15,6 +15,7 @@ public class InventoryCellView : MonoBehaviour , IPointerClickHandler, IDragHand
     public int prefabNumber;
     public string type;
 
+    public IconData iconData;
 
     private Inventory inventory;
     private Transform arsenalContent;
@@ -40,8 +41,10 @@ public class InventoryCellView : MonoBehaviour , IPointerClickHandler, IDragHand
 
     public void UpdateCell()
     {
-        Image backgroundImage = gameObject.GetComponentInChildren<Image>();
-        Image Icon = backgroundImage.GetComponentInChildren<Image>();
+        Image backgroundImage = gameObject.GetComponentsInChildren<Image>()[1];
+        backgroundImage.sprite = iconData.Icons[icon];
+
+
         TMP_Text levelText = backgroundImage.GetComponentInChildren<TMP_Text>();
         levelText.text = level.ToString() + " уровень";
         Debug.Log("Инициализация");

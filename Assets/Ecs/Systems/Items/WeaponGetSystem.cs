@@ -15,27 +15,9 @@ namespace Client
             {
                 ref var eventInfo = ref filter.Get1(i);
                 ref var equipment = ref eventInfo.newOwnerEntity.Get<Equipment>();
-                
-                
-                if (equipment.mainWeapon == EcsEntity.Null)
-                {
-                    Debug.Log("Главное оружие не занято");
-                    equipment.mainWeapon = eventInfo.weaponEntity;
-                    WeaponGet(ref eventInfo, ref equipment);
-                    
-                }
-                else if (equipment.secondWeapon == EcsEntity.Null)
-                {
-                    Debug.Log("Главное оружие занято");
-                    equipment.secondWeapon = eventInfo.weaponEntity;
-                    WeaponGet(ref eventInfo, ref equipment);
-                    eventInfo.WeaponTransform.gameObject.SetActive(false);
-                }
-                else
-                {
-                    Debug.Log("Слоты заняты");
-                }
-
+                Debug.Log("Главное оружие не занято");
+                equipment.mainWeapon = eventInfo.weaponEntity;
+                WeaponGet(ref eventInfo, ref equipment);
                 filter.GetEntity(i).Del<WeaponPickUpEvent>();
             }
         }
@@ -48,7 +30,6 @@ namespace Client
             info.WeaponTransform.parent = equipp.weaponHolder;
             info.WeaponTransform.position = equipp.weaponHolder.position;
             info.WeaponTransform.gameObject.GetComponent<Collider>().enabled = false;
-            //info.WeaponTransform.gameObject.GetComponent<Animator>().enabled = false;
             info.WeaponTransform.forward = equipp.weaponHolder.forward;
             info.weaponEntity.Get<Weapon>().ownerEntity = info.newOwnerEntity;
         }

@@ -16,6 +16,8 @@ namespace Client
 
         public Transform weaponTransform;
         public Transform weaponSocket;
+        public AudioSource shotSound;
+        public GameObject muzzleEffect;
         public EcsEntity ownerEntity;
 
         public float magazineAmmo;

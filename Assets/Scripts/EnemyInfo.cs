@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class EnemyInfo : MonoBehaviour
 {
+    public int reward;
+
     public float moveSpeed;
     public float health;
     public float damage;
@@ -16,5 +18,11 @@ public class EnemyInfo : MonoBehaviour
     public float damageProgress;
     public float delayBetweenAttackProgress;
     public float bulletSpeedProgress;
+    public EnemyType enemyType;
+    public enum EnemyType
+    {
+        Range,
+        Melee
+    }
 
 }

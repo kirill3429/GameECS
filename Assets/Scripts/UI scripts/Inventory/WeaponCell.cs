@@ -7,10 +7,8 @@ public class WeaponCell : ItemCell
 
     public float finalDamage;
     public float finalAttackSpeed;
-    public float finalReloadSpeed;
     public float finalDmgMultiplier;
     public float finalDmgChance;
-    public float finalAmmo;
 
     public override void ItemInit(AllPrefabsData allPrefabsData)
     {
@@ -18,8 +16,6 @@ public class WeaponCell : ItemCell
         WeaponInfoMono weaponInfo = allPrefabsData.weaponPrefabs[PrefabNumber].GetComponent<WeaponInfoMono>();
         finalDamage = FinalValue(weaponInfo.damage);
         finalAttackSpeed = FinalValue(weaponInfo.delayBetweenAttack);
-        finalReloadSpeed = FinalValue(weaponInfo.reloadSpeed);
-        finalAmmo = FinalValue(weaponInfo.ammo);
         finalDmgMultiplier = FinalValue(weaponInfo.criticalDamageMultiplier);
         finalDmgChance = FinalValue(weaponInfo.criticalDamageChance);
     }
@@ -37,8 +33,6 @@ public class WeaponCell : ItemCell
         TMP_Text damageField = GameObject.Instantiate(emptyObject, StatsHolder);
         TMP_Text levelField = GameObject.Instantiate(emptyObject, StatsHolder);
         TMP_Text attackSpeedField = GameObject.Instantiate(emptyObject, StatsHolder);
-        TMP_Text reloadSpeedField = GameObject.Instantiate(emptyObject, StatsHolder);
-        TMP_Text maxAmmo = GameObject.Instantiate(emptyObject, StatsHolder);
         TMP_Text criticalDamageMultiplierField = GameObject.Instantiate(emptyObject, StatsHolder);
         TMP_Text criticalDamageChanceField = GameObject.Instantiate(emptyObject, StatsHolder);
 
@@ -49,8 +43,6 @@ public class WeaponCell : ItemCell
         damageField.text = "Урон " + finalDamage.ToString();
         levelField.text = "Уровень " + Level.ToString();
         attackSpeedField.text = "Скорость атаки " + System.Math.Round(finalAttackSpeed, 2).ToString();
-        reloadSpeedField.text = "Скорость перезарядки " + finalReloadSpeed.ToString();
-        maxAmmo.text = "Патронов в магазине " + finalAmmo.ToString();
         criticalDamageMultiplierField.text = "Множитель крит. урона " + finalDmgMultiplier.ToString();
         criticalDamageChanceField.text = "Шанс крит. атаки " + finalDmgChance.ToString();
     }

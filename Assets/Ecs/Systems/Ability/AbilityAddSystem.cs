@@ -16,7 +16,7 @@ namespace Client
                 foreach (var j in playerFilter)
                 {
                     ref var weapon = ref playerFilter.GetEntity(j).Get<Equipment>().mainWeapon;
-
+                    ref var player = ref  playerFilter.GetEntity(i);
                     ref var ability = ref filter.Get1(i).abilityName;
 
                     switch (ability)
@@ -28,7 +28,7 @@ namespace Client
                             weapon.Get<Ricochet>().level += 2;
                             break;
                         case "Ice":
-                            weapon.Get<Ice>().level++;
+                            weapon.Get<Ice>().level +=2;
                             break;
                         case "Damage":
                             weapon.Get<AddDamage>();
@@ -39,6 +39,9 @@ namespace Client
                         case "Explosion":
                             weapon.Get<Explosion>().level++;
                             weapon.Get<Explosion>().damage = weapon.Get<Damage>().value / 5;
+                            break;
+                        case "AddHealth":
+                            player.Get<AddHealth>();
                             break;
                     }
 

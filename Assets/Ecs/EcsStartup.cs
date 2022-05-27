@@ -36,26 +36,30 @@ namespace Client
 #endif
             _systems
                 .Add(new LevelInitSystem())
-                .Add(new WeaponInitSystem())
+                
                 .Add(new PlayerInitSystem())
+                
                 .Add(new PlayerInputSystem())
                 .Add(new PlayerMoveSystem())
+                
                 .Add(new PickUpSystem())
-                .Add(new WeaponGetSystem())
+
                 .Add(new EventGeneratorSystem())
                 .Add(new CameraInitSystem())
                 .Add(new CameraSystem())
                 .Add(new EnemyPrefabsInitSystem())
                 .Add(new SpawnerInitSystem())
-                .Add(new EnemyInputSystem())
-                .Add(new EnemyAttackChecker())
+                .Add(new EnemyInputMeleeSystem())
+                .Add(new EnemyMeleeAttackChecker())
                 .Add(new AttackSystem())
                 .Add(new ProjectileSpawnSystem())
                 .Add(new ProjectileHitEventSystem())
                 .Add(new ProjectileHitSystem())
                 .Add(new TakeDamageSystem())
-                .Add(new HealSystem())
-                .Add(new DeathSystem())
+                
+                .Add(new DashInputSystem())
+                
+                .Add(new RewardSystem())
                 
                 .Add(new OpenAbilityWindowSystem())
                 .Add(new PauseSystem())
@@ -81,12 +85,16 @@ namespace Client
                 .Add(new IceAttackSystem())
                 .Add(new ExplosionAttackSystem())
                 .Add(new LifestealAttackSystem())
+                .Add(new AddHealthSystem())
                 .Add(new RicochetSystem())
-
+                .Inject(ui)
+                .Inject(prefabsData)
                 .Init();
 
             _fixedSystems
-
+                .Add(new HealSystem())
+                .Add(new DeathSystem())
+                .Add(new DashSystem())
                 .Add(new CurrentEnemiesUpdateSystem())
                 .Add(new WaveManagerSystem())
                 .Add(new QueueFillerSystem())
@@ -95,9 +103,9 @@ namespace Client
                 .Add(new EnemySpawnEventGenerator())
                 .Add(new EnemySpawnSystem())
                 .Add(new AvaibleSystem())
-
+                .Add(new WeaponGetSystem())
                 .Add(new AbilityAddSystem())
-
+                .Add(new WeaponInitSystem())
                 .OneFrame<EnemySpawnEvent>()
                 .Inject(sceneData)
                 .Inject(staticPlayerData)
@@ -115,8 +123,8 @@ namespace Client
 
         private void FixedUpdate()
         {
-            _fixedSystems?.Run();
             _abilitySystems?.Run();
+            _fixedSystems?.Run();
         }
 
         void OnDestroy()

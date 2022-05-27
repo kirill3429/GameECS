@@ -24,7 +24,17 @@ namespace Client
                 objectLink.Object = GameObject.Instantiate(allPrefabsData.bulletPrefabs[weapon.projectilePrefabNumber], weapon.weaponSocket.position, weapon.weaponSocket.rotation);
                 objectLink.Object.transform.LookAt(direction);
                 objectLink.Object.GetComponent<EntityLink>().entity = projectileEntity;
-                            
+
+                if (weapon.muzzleEffect != null)
+                {
+                    weapon.muzzleEffect.SetActive(true);
+                }
+                if (weapon.shotSound != null)
+                {
+                    weapon.shotSound.pitch = Random.Range(0.8f, 1.1f);
+                    weapon.shotSound.Play();
+                }
+
             }
         }
 

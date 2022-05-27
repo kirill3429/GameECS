@@ -11,18 +11,13 @@ namespace Client
         {
             foreach (var i in filter)
             {
-                // SWITCH WEAPON EVENT
+                ref var inputEntity = ref filter.GetEntity(i);
                 ref var input = ref filter.Get1(i);
-                if (input.switchWeapon)
-                {
-                    var eventEntity = world.NewEntity();
-                    ref var switchWeaponEvent = ref eventEntity.Get<SwitchWeaponEvent>();
-                    switchWeaponEvent.eventSender = filter.GetEntity(i);
-                }
+
                 // ATACK EVENT
                 if (input.attack)
                 {
-                    EcsEntity eventSender = filter.GetEntity(i);
+                    EcsEntity eventSender = inputEntity;
                     ref var equip = ref eventSender.Get<Equipment>();
 
                     if (equip.mainWeapon != EcsEntity.Null)
@@ -36,16 +31,11 @@ namespace Client
                 }
                 // DROP WEAPON EVENT
 
-                if (input.dropWeapon)
-                {
-                    var eventEntity = world.NewEntity();
-                    ref var dropEvent = ref eventEntity.Get<WeaponDropEvent>();
-                    dropEvent.eventSender = filter.GetEntity(i);
-                }
                 if (input.pause)
                 {
                     world.NewEntity().Get<PauseEvent>();
                 }
+
             }
         }
 

@@ -7,6 +7,7 @@ public class RuntimeData
     public bool isPaused;
     public bool isAbilityWindowOpen = false;
     public GameState gameState;
+    public int score;
     
 }
 public enum GameState

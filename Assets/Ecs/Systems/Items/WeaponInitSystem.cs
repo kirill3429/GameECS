@@ -19,7 +19,7 @@ namespace Client
 
             Debug.Log(prefabNumber);
             Debug.Log(activeWeapon.Split("-")[2]);
-            // finalDamage-finalAttackSpeed-finalReloadSpeed-finalDmgChance-finalDmgMultiplier-finalAmmo
+            // finalDamage-finalAttackSpeed-finalDmgChance-finalDmgMultiplier
 
 
             GameObject weaponGameObject = GameObject.Instantiate(allPrefabsData.weaponPrefabs[prefabNumber], sceneData.playerTransform);
@@ -37,8 +37,10 @@ namespace Client
             weapon.weaponSocket = weaponGameObject.transform.GetChild(0).transform;
             weapon.weaponTransform = weaponGameObject.transform;
 
-            weapon.currentAmmo = Convert.ToInt32(weaponStats[5]);
-            weapon.magazineAmmo = Convert.ToInt32(weaponStats[5]);
+            weapon.muzzleEffect = GameObject.Instantiate(allPrefabsData.muzzlePrefabs[0], weapon.weaponSocket);
+            weapon.shotSound = objectLink.Object.GetComponent<AudioSource>();
+            weapon.currentAmmo = 900000;
+            weapon.magazineAmmo = 900000;
             weapon.bulletSpeed = 100;
             weapon.delayBetweenAttack = Convert.ToSingle(weaponStats[1]);
             weapon.projectileLifeTime = 6f;

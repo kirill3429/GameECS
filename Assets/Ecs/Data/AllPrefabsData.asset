@@ -15,14 +15,25 @@ MonoBehaviour:
   bulletPrefabs:
   - {fileID: 4584607951747425361, guid: 16f0f591258d5ad4f89a334200588e14, type: 3}
   - {fileID: 2588300917983697536, guid: d1c18d64b0019b544af0530c8b61912b, type: 3}
+  muzzlePrefabs:
+  - {fileID: 6672854350865327570, guid: 15c07c6ec39ea204d9979788ceb09bf9, type: 3}
   enemiesPrefabs:
   - {fileID: 7355745405685541923, guid: caf154edf51d15f4f8951f8926b4267b, type: 3}
+  - {fileID: 7355745405685541923, guid: 12093c4a43a14cd4ca2764869bc81414, type: 3}
+  - {fileID: 7355745405685541923, guid: 83575ec117cfd1f4891e0b2c815b9adb, type: 3}
   - {fileID: 7238350203197957672, guid: f17a34c40f02c2e48b8b40e5fa0fc41b, type: 3}
-  - {fileID: 7355745405685541923, guid: caf154edf51d15f4f8951f8926b4267b, type: 3}
+  - {fileID: 7238350203197957672, guid: f2a5d1cb6388963468d0bc7a84f7c233, type: 3}
+  - {fileID: 7238350203197957672, guid: ebb6e4ff4f297bc48b2bf131d84eeb0f, type: 3}
+  - {fileID: 3897915548112452566, guid: d5420805ff6a70e458267fa3463279f4, type: 3}
+  - {fileID: 3897915548112452566, guid: 497029ed839c36742b35e035a9acbd37, type: 3}
+  - {fileID: 3897915548112452566, guid: 7c3d6d3b2f5abb04680e23a9d032161c, type: 3}
   - {fileID: 7355745405685541923, guid: 4a39766e4b808fd4780535bdd36deac9, type: 3}
+  - {fileID: 1438169871030806, guid: c9bc790a133e19c40b64d6db4cfb7a22, type: 3}
+  - {fileID: 1067925524328404, guid: 6bbfea6690ef7724ba495c866081f855, type: 3}
+  - {fileID: 2963627595190116945, guid: 27c003ed42f7dd749adc3cb6d83c0479, type: 3}
   - {fileID: 153010, guid: 80afb8f52d27bae4f8ff4cf083945861, type: 3}
   - {fileID: 1299959546001872786, guid: ded9f78ddda21974e9f1f7b486da8c2f, type: 3}
-  - {fileID: 3897915548112452566, guid: d5420805ff6a70e458267fa3463279f4, type: 3}
+  - {fileID: 165424, guid: 9f4313a771e05c64d8da7ae6bd19a19f, type: 3}
   weaponPrefabs:
   - {fileID: 4837681895879419947, guid: 8c755382e7827c244835ec7042b46dce, type: 3}
   - {fileID: 7185271542456367918, guid: ee5042ddf8b8ad24ba3996e00f7540aa, type: 3}
@@ -32,4 +43,6 @@ MonoBehaviour:
   - {fileID: 5712467492965875664, guid: a6a85774ac55f034e825bef77541e54d, type: 3}
   - {fileID: 4747628295195381720, guid: c8e054a577708ce4ab1105cdb5dfce3a, type: 3}
   hitEffectPrefabs:
-  - {fileID: 2929978251653852446, guid: 0e404661ff7c1854b94d4bfe321a2e34, type: 3}
+  - {fileID: 100002, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
+  - {fileID: 100004, guid: 084c6a87873fd6e4da7978a01aa18b34, type: 3}
+  - {fileID: 100002, guid: 34fd02ac9d79ecc48959596089be08ca, type: 3}

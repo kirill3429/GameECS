@@ -5,7 +5,7 @@ namespace Client
 {
     sealed class FireAttackSystem : IEcsRunSystem
     {
-
+        readonly AllPrefabsData allPrefabsData;
         readonly EcsWorld _world = null;
         readonly EcsFilter<Fire, EnemyTag> filter = null;
         void IEcsRunSystem.Run()
@@ -17,8 +17,9 @@ namespace Client
 
                 if (Time.time - fire.burningStartTime < 20)
                 {
-                    if (Time.time - fire.lastDamageTime > 3)
+                    if (Time.time - fire.lastDamageTime > 1)
                     {
+                        GameObject.Instantiate(allPrefabsData.hitEffectPrefabs[2], enemy.enemyTransform);
                         filter.GetEntity(i).Get<TakeDamage>().value += fire.level + 1; // damage
                         fire.lastDamageTime = Time.time;
                     }

@@ -22,19 +22,14 @@ namespace Client
                     
                     if (currentTime - weapon.lastAttack > weapon.delayBetweenAttack)
                     {
-                        if (weapon.currentAmmo > 0 && !eventInfo.weapon.Has<Reloading>())
-                        {
-                            weapon.currentAmmo--;
-                            EcsEntity projectile = eventInfo.weapon.Copy();
-                            projectile.Get<SpawnProjectile>().direction = eventInfo.mousePos;
-                            projectile.Del<Name>();
-                            projectile.Del<ObjectLink>();
-                            eventInfo.eventSender.Get<AnimatorComponent>().animator.SetTrigger(AnimatorComponent.fireHash);
-                            weapon.lastAttack = currentTime;
-                            weapon.projectileStartTime = currentTime;
+                        EcsEntity projectile = eventInfo.weapon.Copy();
+                        projectile.Get<SpawnProjectile>().direction = eventInfo.mousePos;
+                        projectile.Del<Name>();
+                        projectile.Del<ObjectLink>();
+                        eventInfo.eventSender.Get<AnimatorComponent>().animator.SetTrigger(AnimatorComponent.fireHash);
+                        weapon.lastAttack = currentTime;
+                        weapon.projectileStartTime = currentTime;
 
-                        }
-                        else eventInfo.weapon.Get<Reloading>();
                     }
 
                     

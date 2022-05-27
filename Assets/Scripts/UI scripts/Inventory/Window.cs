@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Window : MonoBehaviour
 {
     public IItem elementLink;
     public InventoryCellView cellLink;
     public GameObject statPrefab;
+    public Image Icon;
     public AllPrefabsData allPrefabsData;
+    public IconData iconData;
 
     private void Start()
     {
+        Icon.sprite = iconData.Icons[elementLink.Icon];
         elementLink.ShowInfo(gameObject, statPrefab);
     }
     public void CloseWindow()

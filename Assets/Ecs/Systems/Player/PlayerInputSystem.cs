@@ -25,6 +25,7 @@ namespace Client
                 playerInput.switchWeapon = Input.GetKeyDown(KeyCode.Q);
                 playerInput.dropWeapon = Input.GetKeyDown(KeyCode.G);
                 playerInput.pause = Input.GetKeyDown(KeyCode.Tab);
+                playerInput.dash = Input.GetKeyDown(KeyCode.Space);
 
                 Ray ray = sceneData.mainCamera.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out var hit, 100, staticData.layerMask))

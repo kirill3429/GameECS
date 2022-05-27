@@ -17,6 +17,7 @@ namespace Client
                 ref var eventInfo = ref filter.Get1(i);
                 EcsEntity enemyEntity = world.NewEntity();
                 ref var health = ref enemyEntity.Get<Health>();
+                ref var reward = ref enemyEntity.Get<Reward>();
                 ref var input = ref enemyEntity.Get<InputHandlerComponent>();
                 ref var objectLink = ref enemyEntity.Get<ObjectLink>();
                 ref var equip = ref enemyEntity.Get<Equipment>();
@@ -50,6 +51,18 @@ namespace Client
                 objectLink.Object = GameObject.Instantiate(prefabsData.enemiesPrefabs[eventInfo.prefabNumber], spawnPoint, rotationSpawn);
                 objectLink.Object.GetComponent<EntityLink>().entity = enemyEntity;
                 var enemyInfo = objectLink.Object.GetComponent<EnemyInfo>();
+
+                switch (enemyInfo.enemyType)
+                {
+                    case EnemyInfo.EnemyType.Melee:
+                        enemyEntity.Get<Meele>();
+                        break;
+                    case EnemyInfo.EnemyType.Range:
+                        enemyEntity.Get<Range>();
+                        break;
+                }
+
+                reward.reward = enemyInfo.reward;
                 rigidBody.rigidBody = objectLink.Object.GetComponent<Rigidbody>();
                 animator.animator = objectLink.Object.GetComponent<Animator>();
                 moveable.moveSpeed = enemyInfo.moveSpeed + enemyInfo.moveSpeedProgress * runtimeData.waveNumber;

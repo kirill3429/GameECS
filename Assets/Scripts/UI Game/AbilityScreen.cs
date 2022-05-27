@@ -4,5 +4,4 @@ using UnityEngine;
 
 public class AbilityScreen : Client.Screen
 {
-    
 }

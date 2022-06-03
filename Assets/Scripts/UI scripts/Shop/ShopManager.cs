@@ -10,7 +10,7 @@ public class ShopManager : MonoBehaviour
 {
     private Transform shopPanel;
     [SerializeField] private GameObject abilityView;
-    [SerializeField] private AbilityAsset[] abilityPrefabs;
+    [SerializeField] private AbilityData abilityPrefabs;
 
     private void Start()
     {
@@ -33,9 +33,9 @@ public class ShopManager : MonoBehaviour
     #region Load
     private void RenderAllSkills()
     {
-        for (int i = 0; i < abilityPrefabs.Length; i++)
+        for (int i = 0; i < abilityPrefabs.abilityPrefabs.Length; i++)
         {
-            CreateAbilityView(abilityPrefabs[i]);
+            CreateAbilityView(abilityPrefabs.abilityPrefabs[i]);
         }
     }
 

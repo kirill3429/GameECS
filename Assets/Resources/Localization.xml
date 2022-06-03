@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Keys xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Key Name="score">
+		<Translates>
+			<en-us>score</en-us>
+			<ru>счет</ru>
+			<tr>Puanı</tr>
+		</Translates>
+	</Key>
+	<Key Name="wave">
+		<Translates>
+			<en-us>wave</en-us>
+			<ru>волна</ru>
+			<tr>Dalgası</tr>
+		</Translates>
+	</Key>
+	<Key Name="resume">
+		<Translates>
+			<en-us>Resume</en-us>
+			<ru>Продолжить</ru>
+			<tr>Devam Etmek</tr>
+		</Translates>
+	</Key>
+	<Key Name="restart">
+		<Translates>
+			<en-us>Restart</en-us>
+			<ru>Заново</ru>
+			<tr>Yeniden Başlat</tr>
+		</Translates>
+	</Key>
+	<Key Name="mainmenu">
+		<Translates>
+			<en-us>Main Menu</en-us>
+			<ru>Главное меню</ru>
+			<tr>Ana menü</tr>
+		</Translates>
+	</Key>
+	<Key Name="menu">
+		<Translates>
+			<en-us>Menu</en-us>
+			<ru>Меню</ru>
+			<tr>Menü</tr>
+		</Translates>
+	</Key>
+	<Key Name="lose">
+		<Translates>
+			<en-us>You Lose</en-us>
+			<ru>Вы проиграли</ru>
+			<tr>Kaybettin</tr>
+		</Translates>
+	</Key>
+	<Key Name="revive">
+		<Translates>
+			<en-us>Revive</en-us>
+			<ru>Возродиться</ru>
+			<tr>Diriliş</tr>
+		</Translates>
+	</Key>
+	<Key Name="adddamage">
+		<Translates>
+			<en-us>Add damage</en-us>
+			<ru>Добавить урон</ru>
+			<tr>Hasar ekle</tr>
+		</Translates>
+	</Key>
+	<Key Name="addhealth">
+		<Translates>
+			<en-us>Add health</en-us>
+			<ru>Добавить жизек</ru>
+			<tr>Sağlık ekle</tr>
+		</Translates>
+	</Key>
+	<Key Name="addexplosion">
+		<Translates>
+			<en-us>Add explosion</en-us>
+			<ru>Взрывные пули</ru>
+			<tr>Patlayıcı mermiler</tr>
+		</Translates>
+	</Key>
+	<Key Name="addfire">
+		<Translates>
+			<en-us>Add fire</en-us>
+			<ru>Поджигающие пули</ru>
+			<tr>Ateş eden mermiler</tr>
+		</Translates>
+	</Key>
+	<Key Name="addice">
+		<Translates>
+			<en-us>Add ice</en-us>
+			<ru>Замедляющие пули</ru>
+			<tr>Yavaşlayan mermiler</tr>
+		</Translates>
+	</Key>
+	<Key Name="addlifesteal">
+		<Translates>
+			<en-us>Add lifesteal</en-us>
+			<ru>Вампиризм</ru>
+			<tr>Hayat kaçırma</tr>
+		</Translates>
+	</Key>
+	<Key Name="bulletthrough">
+		<Translates>
+			<en-us>Bullet Through</en-us>
+			<ru>Пуля навылет</ru>
+			<tr>Kurşun patlayacak</tr>
+		</Translates>
+	</Key>
+	<Key Name="home">
+		<Translates>
+			<en-us>Home</en-us>
+			<ru>Главная</ru>
+			<tr>Ana</tr>
+		</Translates>
+	</Key>
+	<Key Name="play">
+		<Translates>
+			<en-us>Play</en-us>
+			<ru>Играть</ru>
+			<tr>Oynamak</tr>
+		</Translates>
+	</Key>
+	<Key Name="settings">
+		<Translates>
+			<en-us>Setting</en-us>
+			<ru>Настройки</ru>
+			<tr>Ayarlar</tr>
+		</Translates>
+	</Key>
+	<Key Name="arsenal">
+		<Translates>
+			<en-us>Equipment</en-us>
+			<ru>Снаряжение</ru>
+			<tr>Ekipman</tr>
+		</Translates>
+	</Key>
+	<Key Name="shop">
+		<Translates>
+			<en-us>Shop</en-us>
+			<ru>Магазин</ru>
+			<tr>dükkanı</tr>
+		</Translates>
+	</Key>
+	<Key Name="chapter1">
+		<Translates>
+			<en-us>Sands of Horror</en-us>
+			<ru>Пески ужаса</ru>
+			<tr>Bölüm 1</tr>
+		</Translates>
+	</Key>
+	<Key Name="chapter2">
+		<Translates>
+			<en-us>Sands of Horror 2</en-us>
+			<ru>Пески ужаса 2</ru>
+			<tr>Bölüm 2</tr>
+		</Translates>
+	</Key>
+	<Key Name="chapter3">
+		<Translates>
+			<en-us>City of the Dead</en-us>
+			<ru>Город мертвых</ru>
+			<tr>Bölüm 3</tr>
+		</Translates>
+	</Key>
+	<Key Name="chapter4">
+		<Translates>
+			<en-us>City of the Dead 2</en-us>
+			<ru>Город мертвых 2</ru>
+			<tr>Bölüm 4</tr>
+		</Translates>
+	</Key>
+	<Key Name="chapter5">
+		<Translates>
+			<en-us>Goblin Attack</en-us>
+			<ru>Нападение гоблинов</ru>
+			<tr>Bölüm 5</tr>
+		</Translates>
+	</Key>
+	<Key Name="chapter6">
+		<Translates>
+			<en-us>Invasion of forests</en-us>
+			<ru>Вторжение в леса</ru>
+			<tr>Bölüm 6</tr>
+		</Translates>
+	</Key>
+	<Key Name="chapter7">
+		<Translates>
+			<en-us>Knights of Darkness</en-us>
+			<ru>Рыцари тьмы</ru>
+			<tr>Bölüm 7</tr>
+		</Translates>
+	</Key>
+	<Key Name="chapter8">
+		<Translates>
+			<en-us>Orc Attack</en-us>
+			<ru>Нападение орков</ru>
+			<tr>Bölüm 8</tr>
+		</Translates>
+	</Key>
+	<Key Name="chapter9">
+		<Translates>
+			<en-us>Undead Alliance</en-us>
+			<ru>Союз нежити</ru>
+			<tr>Bölüm 9</tr>
+		</Translates>
+	</Key>
+	<Key Name="weapon">
+		<Translates>
+			<en-us>Weapon</en-us>
+			<ru>Оружие</ru>
+			<tr>Silah</tr>
+		</Translates>
+	</Key>
+	<Key Name="level">
+		<Translates>
+			<en-us>level</en-us>
+			<ru>уровень</ru>
+			<tr>Düzey</tr>
+		</Translates>
+	</Key>
+	<Key Name="welcome">
+		<Translates>
+			<en-us>Welcome,</en-us>
+			<ru>Добро пожаловать,</ru>
+			<tr>Hoş geldiniz</tr>
+		</Translates>
+	</Key>
+</Keys>

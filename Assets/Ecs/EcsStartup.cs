@@ -22,6 +22,7 @@ namespace Client
         
         void Start()
         {
+            LocalizationManager.SetLanguage(1);
             runtimeData.gameState = GameState.Running;
             _world = new EcsWorld();
             _systems = new EcsSystems(_world);
@@ -86,7 +87,6 @@ namespace Client
                 .Add(new ExplosionAttackSystem())
                 .Add(new LifestealAttackSystem())
                 .Add(new AddHealthSystem())
-                .Add(new RicochetSystem())
                 .Inject(ui)
                 .Inject(prefabsData)
                 .Init();
@@ -112,6 +112,7 @@ namespace Client
                 .Inject(prefabsData)
                 .Inject(allWaveData)
                 .Inject(runtimeData)
+                .Inject(ui)
 
                 .Init();
         }

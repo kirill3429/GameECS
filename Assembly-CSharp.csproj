@@ -58,7 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Ecs\Components\Events\ToogleMenuEvent.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Element\HorizontalSelector.cs" />
-    <Compile Include="Assets\Scripts\UI Game\Abilities\GetAbilityButton.cs" />
+    <Compile Include="Assets\Scripts\Abilities\Scripts\GetAbilityButton.cs" />
     <Compile Include="Assets\Ecs\Components\Events\EnemySpawnEvent.cs" />
     <Compile Include="Assets\Ecs\Components\Skills\AddDamage.cs" />
     <Compile Include="Assets\Ecs\Components\Events\HitEvent.cs" />
@@ -67,22 +67,25 @@
     <Compile Include="Assets\Ecs\Components\Events\OpenAbilityWindowEvent.cs" />
     <Compile Include="Assets\Ecs\Components\HealthView.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerParticle.cs" />
-    <Compile Include="Assets\Scripts\UI Game\AbilityScreen.cs" />
+    <Compile Include="Assets\Scripts\UI Game\Screens\AbilityScreen.cs" />
     <Compile Include="Assets\Ecs\Data\scripts\SceneData.cs" />
     <Compile Include="Assets\Ecs\Systems\Projectile\ProjectileHitEventSystem.cs" />
     <Compile Include="Assets\Ecs\Components\UnAvaible.cs" />
-    <Compile Include="Assets\Scripts\UI Game\Abilities\AbilityAsset.cs" />
+    <Compile Include="Assets\Scripts\Abilities\Scripts\AbilityAsset.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\SettingsButton.cs" />
     <Compile Include="Assets\Scripts\UI Game\MenuManager.cs" />
-    <Compile Include="Assets\Scripts\UI Game\MenuScreen.cs" />
+    <Compile Include="Assets\Scripts\UI Game\Screens\MenuScreen.cs" />
+    <Compile Include="Assets\Scripts\UI scripts\Shop\SkillDiscriptionPanel.cs" />
     <Compile Include="Assets\Ecs\Components\Equipment.cs" />
     <Compile Include="Assets\Ecs\Components\Skills\Lifesteal.cs" />
     <Compile Include="Assets\Scripts\UI Game\UI.cs" />
     <Compile Include="Assets\StoreAssets\JMO Assets\WarFX\Spawn System\CFX_SpawnSystem.cs" />
     <Compile Include="Assets\YandexSDK\Assets\Scripts\YandexSDK.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManager.cs" />
+    <Compile Include="Assets\Scripts\UI scripts\Shop\ShopManager.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerGameLogo.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Event\TimedEvent.cs" />
+    <Compile Include="Assets\Scripts\LevelOpen.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Input\VirtualCursorAnimate.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\MainPanelButton.cs" />
     <Compile Include="Assets\Ecs\Components\NeedToFill.cs" />
@@ -90,8 +93,6 @@
     <Compile Include="Assets\Ecs\Systems\Items\SwitchWeaponSystem.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\ChapterButton.cs" />
     <Compile Include="Assets\Ecs\Systems\AbilitySystems\FireAttackSystem.cs" />
-    <Compile Include="Assets\Scripts\UI scripts\Inventory\Inventory.cs" />
-    <Compile Include="Assets\Scripts\UI scripts\Inventory\ItemCell.cs" />
     <Compile Include="Assets\Ecs\Systems\Spawner\EnemyPrefabsInitSystem.cs" />
     <Compile Include="Assets\Ecs\Data\scripts\WaveData.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\MainPanelManager.cs" />
@@ -100,7 +101,6 @@
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\ShortcutButton.cs" />
     <Compile Include="Assets\Ecs\Systems\Items\AvaibleSystem.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\ModalWindowManager.cs" />
-    <Compile Include="Assets\Scripts\UI scripts\Inventory\WeaponCell.cs" />
     <Compile Include="Assets\StoreAssets\JMO Assets\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\UIElementInFront.cs" />
     <Compile Include="Assets\Ecs\Components\DeathEvent.cs" />
@@ -109,12 +109,12 @@
     <Compile Include="Assets\Ecs\Systems\Enemy\EnemyRangeAttackChecker.cs" />
     <Compile Include="Assets\Ecs\Systems\Items\ReloadingSystem.cs" />
     <Compile Include="Assets\Ecs\Components\Reloading.cs" />
-    <Compile Include="Assets\Ecs\Systems\AbilitySystems\RicochetSystem.cs" />
     <Compile Include="Assets\Ecs\Components\Events\SwitchWeaponEvent.cs" />
     <Compile Include="Assets\Ecs\Systems\Spawner\WaveManagerSystem.cs" />
     <Compile Include="Assets\Ecs\Components\Events\Heal.cs" />
     <Compile Include="Assets\Ecs\Systems\Ability\OpenAbilityWindowSystem.cs" />
     <Compile Include="Assets\Ecs\Systems\Spawner\EnemySpawnSystem.cs" />
+    <Compile Include="Assets\Scripts\UI scripts\Shop\SkillProperties.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\CanvasManager.cs" />
     <Compile Include="Assets\Ecs\Systems\Items\DropWeaponSystem.cs" />
     <Compile Include="Assets\Ecs\Components\Movable.cs" />
@@ -139,6 +139,7 @@
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\ScrollForMore.cs" />
     <Compile Include="Assets\Ecs\Components\PlayerTag.cs" />
     <Compile Include="Assets\Ecs\Components\AnimatorComponent.cs" />
+    <Compile Include="Assets\Scripts\Localization\LocalizationManager.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Element\SliderManager.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Editor Handlers\ShiftUIEditorHandler.cs" />
     <Compile Include="Assets\Ecs\Data\scripts\RuntimeData.cs" />
@@ -153,22 +154,20 @@
     <Compile Include="Assets\Ecs\Systems\Player\PlayerMoveSystem.cs" />
     <Compile Include="Assets\Ecs\Systems\Items\PickUpSystem.cs" />
     <Compile Include="Assets\Ecs\Systems\Player\PlayerInputSystem.cs" />
-    <Compile Include="Assets\Scripts\UI Game\DeathScreen.cs" />
+    <Compile Include="Assets\Scripts\UI Game\Screens\DeathScreen.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\ExitToSystem.cs" />
     <Compile Include="Assets\Ecs\Systems\Projectile\ProjectileMoveSystem.cs" />
     <Compile Include="Assets\StoreAssets\JMO Assets\WarFX\Scripts\WFX_LightFlicker.cs" />
     <Compile Include="Assets\Ecs\Systems\AbilitySystems\LifestealAttackSystem.cs" />
     <Compile Include="Assets\Ecs\Components\Spawner.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerText.cs" />
-    <Compile Include="Assets\Scripts\UI scripts\Inventory\Window.cs" />
     <Compile Include="Assets\Ecs\Systems\Enemy\EnemyInputRangeSystem.cs" />
     <Compile Include="Assets\Ecs\Components\Events\AddAbilityEvent.cs" />
-    <Compile Include="Assets\Scripts\UI Game\GameScreen.cs" />
+    <Compile Include="Assets\Scripts\UI Game\Screens\GameScreen.cs" />
     <Compile Include="Assets\Ecs\Components\Dropped.cs" />
-    <Compile Include="Assets\Scripts\UI Game\Abilities\AbilityWindow.cs" />
+    <Compile Include="Assets\Scripts\Abilities\Scripts\AbilityWindow.cs" />
     <Compile Include="Assets\Ecs\OtherScripts\EntityLink.cs" />
     <Compile Include="Assets\Ecs\Components\Skills\Fire.cs" />
-    <Compile Include="Assets\Scripts\UI scripts\Inventory\IWeaponItem.cs" />
     <Compile Include="Assets\Ecs\Components\ProjectilePrefab.cs" />
     <Compile Include="Assets\Ecs\Components\Range.cs" />
     <Compile Include="Assets\Ecs\Systems\Player\PlayerInitSystem.cs" />
@@ -179,7 +178,7 @@
     <Compile Include="Assets\Scripts\UI scripts\StartGame\Level.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Element\CustomInputField.cs" />
     <Compile Include="Assets\Ecs\Systems\Projectile\SpawnProjectileSystem.cs" />
-    <Compile Include="Assets\Scripts\UI Game\Screen.cs" />
+    <Compile Include="Assets\Scripts\UI Game\Screens\Screen.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Event\HoldKeyEvent.cs" />
     <Compile Include="Assets\Ecs\Systems\Enemy\EnemyInputMeleeSystem.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Input\VirtualCursor.cs" />
@@ -201,7 +200,6 @@
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Event\PointerEnterEvents.cs" />
     <Compile Include="Assets\Ecs\Systems\RewardSystem.cs" />
     <Compile Include="Assets\Ecs\Systems\Items\WeaponInitSystem.cs" />
-    <Compile Include="Assets\Scripts\UI scripts\Inventory\InventoryCellView.cs" />
     <Compile Include="Assets\Ecs\Components\Skills\Explosion.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\EditorDemoPositionFix.cs" />
     <Compile Include="Assets\Ecs\Systems\Enemy\EnemyMeleeAttackChecker.cs" />
@@ -212,7 +210,6 @@
     <Compile Include="Assets\Ecs\Systems\Enemy\EnemyMoveSystem.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Rendering\UIParticleRenderer.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerBackground.cs" />
-    <Compile Include="Assets\Scripts\UI scripts\Inventory\IItem.cs" />
     <Compile Include="Assets\Ecs\Components\RigidBodyComponent.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Rendering\GradientEffect.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Input\GamepadChecker.cs" />
@@ -223,6 +220,7 @@
     <Compile Include="Assets\Ecs\Components\Skills\AddHealth.cs" />
     <Compile Include="Assets\YandexSDK\Assets\Plugins\SimpleJSON.cs" />
     <Compile Include="Assets\Ecs\Systems\AbilitySystems\AddDamageSystem.cs" />
+    <Compile Include="Assets\Scripts\Localization\LocalizedText.cs" />
     <Compile Include="Assets\Ecs\Components\Events\PauseEvent.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\FriendsPanelManager.cs" />
     <Compile Include="Assets\Ecs\Components\Weapon.cs" />
@@ -236,7 +234,7 @@
     <Compile Include="Assets\Scripts\EnemyInfo.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Rendering\BlurManager.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\QualityManager.cs" />
-    <Compile Include="Assets\Scripts\UI scripts\Inventory\IconData.cs" />
+    <Compile Include="Assets\Scripts\UI scripts\Inventory\NonMono\IconData.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\MainPanelButtonParent.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Input\SliderGamepadManager.cs" />
     <Compile Include="Assets\Ecs\OtherScripts\WeaponHolder.cs" />
@@ -245,6 +243,7 @@
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\ServerBrowserManager.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Element\UIElementSound.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\MainButton.cs" />
+    <Compile Include="Assets\Scripts\Abilities\AbilityAssetObjects\AbilityData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -287,6 +286,7 @@
     <None Include="Assets\StoreAssets\JMO Assets\WarFX\Shaders\WFX_S Alpha-Diffuse TintColor.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Shaders\UI Blur.shader" />
+    <None Include="Assets\Resources\Localization.xml" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\StoreAssets\JMO Assets\WarFX\Shaders\WFX_S AlphaBlend NoSoftParticles.shader" />

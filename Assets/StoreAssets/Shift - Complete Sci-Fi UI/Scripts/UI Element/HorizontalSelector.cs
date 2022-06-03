@@ -9,7 +9,7 @@ namespace Michsky.UI.Shift
     public class HorizontalSelector : MonoBehaviour
     {
         [Header("Settings")]
-        public int defaultIndex = 0;
+        public int defaultIndex = LocalizationManager.SelectedLanguage;
         public bool invokeAtStart;
         public bool invertAnimation;
         public bool loopSelection;

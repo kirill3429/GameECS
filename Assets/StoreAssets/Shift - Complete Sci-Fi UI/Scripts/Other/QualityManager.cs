@@ -28,7 +28,7 @@ namespace Michsky.UI.Shift
 
         void Start()
         {
-            mixer.SetFloat("Master", Mathf.Log10(PlayerPrefs.GetFloat(masterSlider.sliderTag + "SliderValue")) * 20);
+            //mixer.SetFloat("Master", Mathf.Log10(PlayerPrefs.GetFloat(masterSlider.sliderTag + "SliderValue")) * 20);
             
 
             resolutions = Screen.resolutions;

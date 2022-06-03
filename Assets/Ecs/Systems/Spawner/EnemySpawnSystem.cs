@@ -66,6 +66,7 @@ namespace Client
                 rigidBody.rigidBody = objectLink.Object.GetComponent<Rigidbody>();
                 animator.animator = objectLink.Object.GetComponent<Animator>();
                 moveable.moveSpeed = enemyInfo.moveSpeed + enemyInfo.moveSpeedProgress * runtimeData.waveNumber;
+                moveable.defaultMoveSpeed = moveable.moveSpeed;
                 moveable.canRotate = true;
                 moveable.canMove = true;
                 health.maxHealth = enemyInfo.health + enemyInfo.healthProgress * runtimeData.waveNumber;

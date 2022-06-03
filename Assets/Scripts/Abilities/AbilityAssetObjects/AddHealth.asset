@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b97b4f8cdb2777b47813381f757ed8d8, type: 3}
+  m_Name: AddHealth
+  m_EditorClassIdentifier: 
+  Name: AddHealth
+  Description: addhealth
+  AdvancedDescription: addhealthadvanced
+  Id: 1
+  DefaultCost: 0
+  Icon: {fileID: 21300000, guid: ca72df0836200134c80ffbedbc42aaee, type: 3}

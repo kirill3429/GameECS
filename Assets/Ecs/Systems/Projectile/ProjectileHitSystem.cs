@@ -31,6 +31,7 @@ namespace Client
                 {
                     hittedEntity.Replace(new Ice());
                     hittedEntity.Get<Ice>().iceStartTime = Time.time;
+                    hittedEntity.Get<Ice>().level = bulletEntity.Get<Ice>().level;
                 }
                 if (bulletEntity.Has<Explosion>())
                 {
@@ -45,8 +46,6 @@ namespace Client
                 if (bulletEntity.Has<Ricochet>())
                 {
                     bulletEntity.Get<Ricochet>().level--;
-                    bulletEntity.Get<RicochetEvent>().bulletEntity = bulletEntity;
-                    bulletEntity.Get<RicochetEvent>().hittedObject = eventInfo.hittedObject;
                     if (bulletEntity.Get<Ricochet>().level == 0)
                     {
                         bulletEntity.Get<DeathEvent>();

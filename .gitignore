@@ -1,5 +1,7 @@
 Library/ArtifactDB
-Library/Bee
-Library/il2cpp_cache
-Library/Il2cppBuildCache
-Library/PackageCache
+Library/Bee/artifacts/WebGL/GameAssembly/master_WebGL_wasm/GameAssembly.bc
+Library/Bee/artifacts/WebGL/il2cppOutput/build/GameAssembly.bc
+Library/il2cpp_cache/
+Library/Il2cppBuildCache/WebGL/
+Library/PackageCache/com.unity.burst@1.7.0/
+

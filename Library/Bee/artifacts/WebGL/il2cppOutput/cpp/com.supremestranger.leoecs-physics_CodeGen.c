@@ -1,0 +1,201 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+// 0x00000001 System.Void LeoEcsPhysics.OnCollisionEnter2DChecker::OnCollisionEnter2D(UnityEngine.Collision2D)
+extern void OnCollisionEnter2DChecker_OnCollisionEnter2D_m9226BB59A58A48142BCC2D0C668975888432E7EE (void);
+// 0x00000002 System.Void LeoEcsPhysics.OnCollisionEnter2DChecker::.ctor()
+extern void OnCollisionEnter2DChecker__ctor_m089A778038A186A2F38148509481B1D05F6DCE8C (void);
+// 0x00000003 System.Void LeoEcsPhysics.OnCollisionEnterChecker::OnCollisionEnter(UnityEngine.Collision)
+extern void OnCollisionEnterChecker_OnCollisionEnter_mCC77541C5BD343AF3D4C05CE019C9453DE151E0C (void);
+// 0x00000004 System.Void LeoEcsPhysics.OnCollisionEnterChecker::.ctor()
+extern void OnCollisionEnterChecker__ctor_m6EA4D9CEC3C09055481A6BA73880D4AEB6C93FBE (void);
+// 0x00000005 System.Void LeoEcsPhysics.OnCollisionExit2DChecker::OnCollisionExit2D(UnityEngine.Collision2D)
+extern void OnCollisionExit2DChecker_OnCollisionExit2D_m0B228DE8E39B5AE8870BF49BD47A871CCAEF53E5 (void);
+// 0x00000006 System.Void LeoEcsPhysics.OnCollisionExit2DChecker::.ctor()
+extern void OnCollisionExit2DChecker__ctor_m8CDE9BFD7A5440DD4BF97B873AC18E431A28635C (void);
+// 0x00000007 System.Void LeoEcsPhysics.OnCollisionExitChecker::OnCollisionExit(UnityEngine.Collision)
+extern void OnCollisionExitChecker_OnCollisionExit_mFEC1D0C1A6A5D49088CBB021483AF4250DDA9B1F (void);
+// 0x00000008 System.Void LeoEcsPhysics.OnCollisionExitChecker::.ctor()
+extern void OnCollisionExitChecker__ctor_m2A36F7E613E47DBF39749CF6547BDD6DE5B64B43 (void);
+// 0x00000009 System.Void LeoEcsPhysics.OnCollisionStay2DChecker::OnCollisionStay2D(UnityEngine.Collision2D)
+extern void OnCollisionStay2DChecker_OnCollisionStay2D_m84EFAE49488D58363E6D80492B5C504EA5AE8FB6 (void);
+// 0x0000000A System.Void LeoEcsPhysics.OnCollisionStay2DChecker::.ctor()
+extern void OnCollisionStay2DChecker__ctor_m9F6FEAA6255E124E9DC2E10714407648E44577F6 (void);
+// 0x0000000B System.Void LeoEcsPhysics.OnCollisionStayChecker::OnCollisionStay(UnityEngine.Collision)
+extern void OnCollisionStayChecker_OnCollisionStay_m339232FBF38967474D0FD8EC5832CD893A80378E (void);
+// 0x0000000C System.Void LeoEcsPhysics.OnCollisionStayChecker::.ctor()
+extern void OnCollisionStayChecker__ctor_mD23966F7EC56A5C90087DC964122A4C60C965A15 (void);
+// 0x0000000D System.Void LeoEcsPhysics.OnControllerColliderHitChecker::OnControllerColliderHit(UnityEngine.ControllerColliderHit)
+extern void OnControllerColliderHitChecker_OnControllerColliderHit_m01425BB3706755B19409903CEE59AC70D626ED79 (void);
+// 0x0000000E System.Void LeoEcsPhysics.OnControllerColliderHitChecker::.ctor()
+extern void OnControllerColliderHitChecker__ctor_mC4159375288A639E77FA8A7347D18783F222FCDE (void);
+// 0x0000000F System.Void LeoEcsPhysics.OnTriggerEnter2DChecker::OnTriggerEnter2D(UnityEngine.Collider2D)
+extern void OnTriggerEnter2DChecker_OnTriggerEnter2D_mA77DC505C067088373FBD4E38BFFD243AC3D8ECD (void);
+// 0x00000010 System.Void LeoEcsPhysics.OnTriggerEnter2DChecker::.ctor()
+extern void OnTriggerEnter2DChecker__ctor_m4FF6B80FE3FC0CEF426A760D7172AAD60F530704 (void);
+// 0x00000011 System.Void LeoEcsPhysics.OnTriggerEnterChecker::OnTriggerEnter(UnityEngine.Collider)
+extern void OnTriggerEnterChecker_OnTriggerEnter_mE6127C7C98CEA97CF7B8D89E370AA1921B93C112 (void);
+// 0x00000012 System.Void LeoEcsPhysics.OnTriggerEnterChecker::.ctor()
+extern void OnTriggerEnterChecker__ctor_m2EE91212EFAACF9D69BED8FEEFF028D26A65D92F (void);
+// 0x00000013 System.Void LeoEcsPhysics.OnTriggerExit2DChecker::OnTriggerExit2D(UnityEngine.Collider2D)
+extern void OnTriggerExit2DChecker_OnTriggerExit2D_mFF5F27BAE8C5D3C601F3FE9860923A4A8682A0E7 (void);
+// 0x00000014 System.Void LeoEcsPhysics.OnTriggerExit2DChecker::.ctor()
+extern void OnTriggerExit2DChecker__ctor_m5991797F2C5DE80D495B2827B275F6CADDC2D70D (void);
+// 0x00000015 System.Void LeoEcsPhysics.OnTriggerExitChecker::OnTriggerExit(UnityEngine.Collider)
+extern void OnTriggerExitChecker_OnTriggerExit_m12A337225FA51F5615C0224A3769E43A93CF6A6E (void);
+// 0x00000016 System.Void LeoEcsPhysics.OnTriggerExitChecker::.ctor()
+extern void OnTriggerExitChecker__ctor_mE67F672F7FF9FD2A4C497C9BA692A2B9538F8318 (void);
+// 0x00000017 System.Void LeoEcsPhysics.OnTriggerStay2DChecker::OnTriggerStay2D(UnityEngine.Collider2D)
+extern void OnTriggerStay2DChecker_OnTriggerStay2D_m7E0671C283688C2F7929673DB49F127A50EF857D (void);
+// 0x00000018 System.Void LeoEcsPhysics.OnTriggerStay2DChecker::.ctor()
+extern void OnTriggerStay2DChecker__ctor_m001A37ACFA34D5F70D49E0ECAEAC1687108DB969 (void);
+// 0x00000019 System.Void LeoEcsPhysics.OnTriggerStayChecker::OnTriggerStay(UnityEngine.Collider)
+extern void OnTriggerStayChecker_OnTriggerStay_mC393FFC5AACC281E7CEEA38A3C5C1D5F039F747C (void);
+// 0x0000001A System.Void LeoEcsPhysics.OnTriggerStayChecker::.ctor()
+extern void OnTriggerStayChecker__ctor_m88126263BE4F3EA4EC70E81B8221D321AE599DD4 (void);
+// 0x0000001B System.Void LeoEcsPhysics.EcsPhysicsEvents::RegisterTriggerEnterEvent(UnityEngine.GameObject,UnityEngine.Collider)
+extern void EcsPhysicsEvents_RegisterTriggerEnterEvent_m4199B1330164F7AE213DDC19A2CE68DD99AC40E0 (void);
+// 0x0000001C System.Void LeoEcsPhysics.EcsPhysicsEvents::RegisterTriggerStayEvent(UnityEngine.GameObject,UnityEngine.Collider)
+extern void EcsPhysicsEvents_RegisterTriggerStayEvent_m612590FC0CAD59C9B76621E7D620E190D94B8DD6 (void);
+// 0x0000001D System.Void LeoEcsPhysics.EcsPhysicsEvents::RegisterTriggerExitEvent(UnityEngine.GameObject,UnityEngine.Collider)
+extern void EcsPhysicsEvents_RegisterTriggerExitEvent_m5F09879AA182A3175426537359E392A65881CC60 (void);
+// 0x0000001E System.Void LeoEcsPhysics.EcsPhysicsEvents::RegisterCollisionEnterEvent(UnityEngine.GameObject,UnityEngine.Collider,UnityEngine.ContactPoint,UnityEngine.Vector3)
+extern void EcsPhysicsEvents_RegisterCollisionEnterEvent_m5E39E85AFABCABF69940188D7FF99EF0D21627B2 (void);
+// 0x0000001F System.Void LeoEcsPhysics.EcsPhysicsEvents::RegisterCollisionStayEvent(UnityEngine.GameObject,UnityEngine.Collider,UnityEngine.ContactPoint,UnityEngine.Vector3)
+extern void EcsPhysicsEvents_RegisterCollisionStayEvent_mC21EF775A5820FB2969CB0F8D41A894297414D2F (void);
+// 0x00000020 System.Void LeoEcsPhysics.EcsPhysicsEvents::RegisterCollisionExitEvent(UnityEngine.GameObject,UnityEngine.Collider,UnityEngine.Vector3)
+extern void EcsPhysicsEvents_RegisterCollisionExitEvent_m1C79287E7DB7F5DDA1D737BE682D73A13AE8ED37 (void);
+// 0x00000021 System.Void LeoEcsPhysics.EcsPhysicsEvents::RegisterControllerColliderHitEvent(UnityEngine.GameObject,UnityEngine.Collider,UnityEngine.Vector3,UnityEngine.Vector3)
+extern void EcsPhysicsEvents_RegisterControllerColliderHitEvent_m3F24320C88F6435C9CACCEBC44A456D8244AB29C (void);
+// 0x00000022 System.Void LeoEcsPhysics.EcsPhysicsEvents::RegisterCollisionEnter2DEvent(UnityEngine.GameObject,UnityEngine.Collider2D,UnityEngine.ContactPoint2D,UnityEngine.Vector2)
+extern void EcsPhysicsEvents_RegisterCollisionEnter2DEvent_m6B198E59F1C4820CE8D55E0C37067A2F2C455582 (void);
+// 0x00000023 System.Void LeoEcsPhysics.EcsPhysicsEvents::RegisterCollisionStay2DEvent(UnityEngine.GameObject,UnityEngine.Collider2D,UnityEngine.ContactPoint2D,UnityEngine.Vector2)
+extern void EcsPhysicsEvents_RegisterCollisionStay2DEvent_m3B98963F9E21A1CC2896EB8EEA25305E67D8FC59 (void);
+// 0x00000024 System.Void LeoEcsPhysics.EcsPhysicsEvents::RegisterCollisionExit2DEvent(UnityEngine.GameObject,UnityEngine.Collider2D,UnityEngine.Vector2)
+extern void EcsPhysicsEvents_RegisterCollisionExit2DEvent_m9BB55FEA1AF2454F0020484DD65D037D3BB0F81D (void);
+// 0x00000025 System.Void LeoEcsPhysics.EcsPhysicsEvents::RegisterTriggerEnter2DEvent(UnityEngine.GameObject,UnityEngine.Collider2D)
+extern void EcsPhysicsEvents_RegisterTriggerEnter2DEvent_m27EF1F2E82E1BA7E51E3D1AB58D9E02DE798D539 (void);
+// 0x00000026 System.Void LeoEcsPhysics.EcsPhysicsEvents::RegisterTriggerStay2DEvent(UnityEngine.GameObject,UnityEngine.Collider2D)
+extern void EcsPhysicsEvents_RegisterTriggerStay2DEvent_m13800FB3AC5E7F904288645C11B1446DCC484FF9 (void);
+// 0x00000027 System.Void LeoEcsPhysics.EcsPhysicsEvents::RegisterTriggerExit2DEvent(UnityEngine.GameObject,UnityEngine.Collider2D)
+extern void EcsPhysicsEvents_RegisterTriggerExit2DEvent_m6856AC1880FED073840D1A603CBBE264B1CA36D0 (void);
+// 0x00000028 Leopotam.Ecs.EcsSystems LeoEcsPhysics.EcsSystemsExtensions::OneFramePhysics(Leopotam.Ecs.EcsSystems)
+extern void EcsSystemsExtensions_OneFramePhysics_mD505FCEADFDFDD2F8EF5D6F8DA8C1ACBDA3B3A62 (void);
+static Il2CppMethodPointer s_methodPointers[40] = 
+{
+	OnCollisionEnter2DChecker_OnCollisionEnter2D_m9226BB59A58A48142BCC2D0C668975888432E7EE,
+	OnCollisionEnter2DChecker__ctor_m089A778038A186A2F38148509481B1D05F6DCE8C,
+	OnCollisionEnterChecker_OnCollisionEnter_mCC77541C5BD343AF3D4C05CE019C9453DE151E0C,
+	OnCollisionEnterChecker__ctor_m6EA4D9CEC3C09055481A6BA73880D4AEB6C93FBE,
+	OnCollisionExit2DChecker_OnCollisionExit2D_m0B228DE8E39B5AE8870BF49BD47A871CCAEF53E5,
+	OnCollisionExit2DChecker__ctor_m8CDE9BFD7A5440DD4BF97B873AC18E431A28635C,
+	OnCollisionExitChecker_OnCollisionExit_mFEC1D0C1A6A5D49088CBB021483AF4250DDA9B1F,
+	OnCollisionExitChecker__ctor_m2A36F7E613E47DBF39749CF6547BDD6DE5B64B43,
+	OnCollisionStay2DChecker_OnCollisionStay2D_m84EFAE49488D58363E6D80492B5C504EA5AE8FB6,
+	OnCollisionStay2DChecker__ctor_m9F6FEAA6255E124E9DC2E10714407648E44577F6,
+	OnCollisionStayChecker_OnCollisionStay_m339232FBF38967474D0FD8EC5832CD893A80378E,
+	OnCollisionStayChecker__ctor_mD23966F7EC56A5C90087DC964122A4C60C965A15,
+	OnControllerColliderHitChecker_OnControllerColliderHit_m01425BB3706755B19409903CEE59AC70D626ED79,
+	OnControllerColliderHitChecker__ctor_mC4159375288A639E77FA8A7347D18783F222FCDE,
+	OnTriggerEnter2DChecker_OnTriggerEnter2D_mA77DC505C067088373FBD4E38BFFD243AC3D8ECD,
+	OnTriggerEnter2DChecker__ctor_m4FF6B80FE3FC0CEF426A760D7172AAD60F530704,
+	OnTriggerEnterChecker_OnTriggerEnter_mE6127C7C98CEA97CF7B8D89E370AA1921B93C112,
+	OnTriggerEnterChecker__ctor_m2EE91212EFAACF9D69BED8FEEFF028D26A65D92F,
+	OnTriggerExit2DChecker_OnTriggerExit2D_mFF5F27BAE8C5D3C601F3FE9860923A4A8682A0E7,
+	OnTriggerExit2DChecker__ctor_m5991797F2C5DE80D495B2827B275F6CADDC2D70D,
+	OnTriggerExitChecker_OnTriggerExit_m12A337225FA51F5615C0224A3769E43A93CF6A6E,
+	OnTriggerExitChecker__ctor_mE67F672F7FF9FD2A4C497C9BA692A2B9538F8318,
+	OnTriggerStay2DChecker_OnTriggerStay2D_m7E0671C283688C2F7929673DB49F127A50EF857D,
+	OnTriggerStay2DChecker__ctor_m001A37ACFA34D5F70D49E0ECAEAC1687108DB969,
+	OnTriggerStayChecker_OnTriggerStay_mC393FFC5AACC281E7CEEA38A3C5C1D5F039F747C,
+	OnTriggerStayChecker__ctor_m88126263BE4F3EA4EC70E81B8221D321AE599DD4,
+	EcsPhysicsEvents_RegisterTriggerEnterEvent_m4199B1330164F7AE213DDC19A2CE68DD99AC40E0,
+	EcsPhysicsEvents_RegisterTriggerStayEvent_m612590FC0CAD59C9B76621E7D620E190D94B8DD6,
+	EcsPhysicsEvents_RegisterTriggerExitEvent_m5F09879AA182A3175426537359E392A65881CC60,
+	EcsPhysicsEvents_RegisterCollisionEnterEvent_m5E39E85AFABCABF69940188D7FF99EF0D21627B2,
+	EcsPhysicsEvents_RegisterCollisionStayEvent_mC21EF775A5820FB2969CB0F8D41A894297414D2F,
+	EcsPhysicsEvents_RegisterCollisionExitEvent_m1C79287E7DB7F5DDA1D737BE682D73A13AE8ED37,
+	EcsPhysicsEvents_RegisterControllerColliderHitEvent_m3F24320C88F6435C9CACCEBC44A456D8244AB29C,
+	EcsPhysicsEvents_RegisterCollisionEnter2DEvent_m6B198E59F1C4820CE8D55E0C37067A2F2C455582,
+	EcsPhysicsEvents_RegisterCollisionStay2DEvent_m3B98963F9E21A1CC2896EB8EEA25305E67D8FC59,
+	EcsPhysicsEvents_RegisterCollisionExit2DEvent_m9BB55FEA1AF2454F0020484DD65D037D3BB0F81D,
+	EcsPhysicsEvents_RegisterTriggerEnter2DEvent_m27EF1F2E82E1BA7E51E3D1AB58D9E02DE798D539,
+	EcsPhysicsEvents_RegisterTriggerStay2DEvent_m13800FB3AC5E7F904288645C11B1446DCC484FF9,
+	EcsPhysicsEvents_RegisterTriggerExit2DEvent_m6856AC1880FED073840D1A603CBBE264B1CA36D0,
+	EcsSystemsExtensions_OneFramePhysics_mD505FCEADFDFDD2F8EF5D6F8DA8C1ACBDA3B3A62,
+};
+static const int32_t s_InvokerIndices[40] = 
+{
+	5512,
+	6861,
+	5512,
+	6861,
+	5512,
+	6861,
+	5512,
+	6861,
+	5512,
+	6861,
+	5512,
+	6861,
+	5512,
+	6861,
+	5512,
+	6861,
+	5512,
+	6861,
+	5512,
+	6861,
+	5512,
+	6861,
+	5512,
+	6861,
+	5512,
+	6861,
+	9839,
+	9839,
+	9839,
+	8192,
+	8192,
+	8908,
+	8205,
+	8193,
+	8193,
+	8907,
+	9839,
+	9839,
+	9839,
+	10883,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_com_supremestranger_leoecsU2Dphysics_CodeGenModule;
+const Il2CppCodeGenModule g_com_supremestranger_leoecsU2Dphysics_CodeGenModule = 
+{
+	"com.supremestranger.leoecs-physics.dll",
+	40,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL, // module initializer,
+	NULL,
+	NULL,
+	NULL,
+};

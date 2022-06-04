@@ -3,26 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Weapon
-  - Projectile
-  - CameraTarget
-  - Enemy
-  - EnemyAttackCollider
-  - InventoryScriptHolder
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - EnemyAttackCollider
+  - 
   - Water
   - UI
-  - Ground
-  - Projectile
-  - Player
-  - Enemy
-  - EnemyProjectile
-  - HitEffect
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

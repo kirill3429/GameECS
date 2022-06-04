@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{37393A9C-AA17-663D-A645-FF188DC42AAA}</ProjectGuid>
+    <ProjectGuid>{2178AD86-AEB0-8801-67A5-3D18B6511D1C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>UNITY_2021_3_4;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2021_3_4;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;SCENE_TEMPLATE_MODULE;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_MANAGED_UNITYTLS;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_WEBGL;TEXTCORE_1_0_OR_NEWER;UNITY_WEBGL;UNITY_WEBGL_API;UNITY_DISABLE_WEB_VERIFICATION;UNITY_GFX_USE_PLATFORM_VSYNC;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_SPATIALTRACKING;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -49,201 +49,201 @@
     <UnityProjectGenerator>Package</UnityProjectGenerator>
     <UnityProjectGeneratorVersion>2.0.15</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
-    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
+    <UnityBuildTarget>WebGL:20</UnityBuildTarget>
     <UnityVersion>2021.3.4f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Ecs\Systems\Enemy\EnemyMoveSystem.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\SettingsButton.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Editor Handlers\ShiftUIEditorHandler.cs" />
     <Compile Include="Assets\Ecs\Components\Events\ToogleMenuEvent.cs" />
-    <Compile Include="Assets\Scripts\UI Game\MenuManager.cs" />
-    <Compile Include="Assets\Ecs\Components\Movable.cs" />
-    <Compile Include="Assets\Ecs\Components\Spawner.cs" />
-    <Compile Include="Assets\Ecs\Systems\EventGeneratorSystem.cs" />
-    <Compile Include="Assets\Ecs\Components\Skills\RicochetEvent.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Element\HorizontalSelector.cs" />
+    <Compile Include="Assets\Scripts\Abilities\Scripts\GetAbilityButton.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\EnemySpawnEvent.cs" />
+    <Compile Include="Assets\Ecs\Components\Skills\AddDamage.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\HitEvent.cs" />
+    <Compile Include="Assets\Ecs\Systems\Items\WeaponGetSystem.cs" />
+    <Compile Include="Assets\StoreAssets\JMO Assets\WarFX\Scripts\CFX_LightIntensityFade.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\OpenAbilityWindowEvent.cs" />
+    <Compile Include="Assets\Ecs\Components\HealthView.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerParticle.cs" />
+    <Compile Include="Assets\Scripts\UI Game\Screens\AbilityScreen.cs" />
+    <Compile Include="Assets\Ecs\Data\scripts\SceneData.cs" />
+    <Compile Include="Assets\Ecs\Systems\Projectile\ProjectileHitEventSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\UnAvaible.cs" />
+    <Compile Include="Assets\Scripts\Abilities\Scripts\AbilityAsset.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\SettingsButton.cs" />
+    <Compile Include="Assets\Scripts\UI Game\MenuManager.cs" />
     <Compile Include="Assets\Scripts\UI Game\Screens\MenuScreen.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Rendering\UIParticleRenderer.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerBackground.cs" />
+    <Compile Include="Assets\Scripts\UI scripts\Shop\SkillDiscriptionPanel.cs" />
+    <Compile Include="Assets\Ecs\Components\Equipment.cs" />
+    <Compile Include="Assets\Ecs\Components\Skills\Lifesteal.cs" />
+    <Compile Include="Assets\Scripts\UI Game\UI.cs" />
+    <Compile Include="Assets\StoreAssets\JMO Assets\WarFX\Spawn System\CFX_SpawnSystem.cs" />
+    <Compile Include="Assets\YandexSDK\Assets\Scripts\YandexSDK.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManager.cs" />
+    <Compile Include="Assets\Scripts\UI scripts\Shop\ShopManager.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerGameLogo.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Event\TimedEvent.cs" />
+    <Compile Include="Assets\Scripts\LevelOpen.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\MainPanelButton.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Input\VirtualCursorAnimate.cs" />
+    <Compile Include="Assets\Ecs\Components\NeedToFill.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\SplashScreenManager.cs" />
+    <Compile Include="Assets\Ecs\Systems\Items\SwitchWeaponSystem.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\ChapterButton.cs" />
+    <Compile Include="Assets\Ecs\Systems\AbilitySystems\FireAttackSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\Spawner\EnemyPrefabsInitSystem.cs" />
+    <Compile Include="Assets\Ecs\Data\scripts\WaveData.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\MainPanelManager.cs" />
+    <Compile Include="Assets\Ecs\OtherScripts\CameraMouse.cs" />
+    <Compile Include="Assets\Ecs\Systems\EventGeneratorSystem.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\ShortcutButton.cs" />
-    <Compile Include="Assets\Scripts\UI scripts\StartGame\Level.cs" />
     <Compile Include="Assets\Ecs\Systems\Items\AvaibleSystem.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\ModalWindowManager.cs" />
-    <Compile Include="Assets\Ecs\Components\RigidBodyComponent.cs" />
-    <Compile Include="Assets\Scripts\UI scripts\Shop\SkillDiscriptionPanel.cs" />
+    <Compile Include="Assets\StoreAssets\JMO Assets\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\UIElementInFront.cs" />
+    <Compile Include="Assets\Scripts\Abilities\AbilityAssetObjects\AbilityData.cs" />
+    <Compile Include="Assets\Ecs\Components\DeathEvent.cs" />
+    <Compile Include="Assets\Ecs\Systems\Ability\AbilityAddSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\Camera\CameraInitSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\Enemy\EnemyRangeAttackChecker.cs" />
+    <Compile Include="Assets\Ecs\Systems\Items\ReloadingSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\Reloading.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\SwitchWeaponEvent.cs" />
+    <Compile Include="Assets\Ecs\Systems\Spawner\WaveManagerSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\Heal.cs" />
+    <Compile Include="Assets\Ecs\Systems\Ability\OpenAbilityWindowSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\Spawner\EnemySpawnSystem.cs" />
+    <Compile Include="Assets\Scripts\UI scripts\Shop\SkillProperties.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\CanvasManager.cs" />
+    <Compile Include="Assets\Ecs\Systems\Items\DropWeaponSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\Skills\RicochetEvent.cs" />
+    <Compile Include="Assets\Ecs\Components\Movable.cs" />
+    <Compile Include="Assets\Ecs\Systems\Player\LevelInitSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\Reward.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Input\ScrollGamepadManager.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\FavoriteButton.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\AttackEvent.cs" />
+    <Compile Include="Assets\Ecs\Systems\AttackSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\Active.cs" />
+    <Compile Include="Assets\Ecs\Components\Skills\LifestealEvent.cs" />
+    <Compile Include="Assets\StoreAssets\JMO Assets\WarFX\Scripts\CFX_AutoDestructShuriken.cs" />
+    <Compile Include="Assets\Ecs\Systems\Spawner\EnemySpawnEventGenerator.cs" />
+    <Compile Include="Assets\Ecs\Data\scripts\StaticPlayerData.cs" />
+    <Compile Include="Assets\Ecs\Components\EnemyTag.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\TakeDamage.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\RewardEvent.cs" />
+    <Compile Include="Assets\Ecs\Data\scripts\TerrainMaterialsData.cs" />
+    <Compile Include="Assets\Ecs\Data\scripts\AllPrefabsData.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerImage.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\ScrollForMore.cs" />
+    <Compile Include="Assets\Ecs\Components\PlayerTag.cs" />
+    <Compile Include="Assets\Ecs\Components\AnimatorComponent.cs" />
+    <Compile Include="Assets\Scripts\Localization\LocalizationManager.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Element\SliderManager.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Editor Handlers\ShiftUIEditorHandler.cs" />
+    <Compile Include="Assets\Ecs\Data\scripts\RuntimeData.cs" />
+    <Compile Include="Assets\Ecs\Components\Skills\Ice.cs" />
+    <Compile Include="Assets\Ecs\Systems\PauseSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\Meele.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\WeaponDropEvent.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\QuickMatchButton.cs" />
+    <Compile Include="Assets\Ecs\Components\InputHandlerComponent.cs" />
+    <Compile Include="Assets\Ecs\Data\scripts\AllWaveData.cs" />
+    <Compile Include="Assets\Ecs\Systems\Spawner\CurrentEnemiesUpdateSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\Player\PlayerMoveSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\Items\PickUpSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\Player\PlayerInputSystem.cs" />
+    <Compile Include="Assets\Scripts\UI Game\Screens\DeathScreen.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\ExitToSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\Projectile\ProjectileMoveSystem.cs" />
+    <Compile Include="Assets\StoreAssets\JMO Assets\WarFX\Scripts\WFX_LightFlicker.cs" />
+    <Compile Include="Assets\Ecs\Systems\AbilitySystems\LifestealAttackSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\Spawner.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerText.cs" />
+    <Compile Include="Assets\Ecs\Systems\Enemy\EnemyInputRangeSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\AddAbilityEvent.cs" />
+    <Compile Include="Assets\Scripts\UI Game\Screens\GameScreen.cs" />
+    <Compile Include="Assets\Ecs\Components\Dropped.cs" />
+    <Compile Include="Assets\Scripts\Abilities\Scripts\AbilityWindow.cs" />
+    <Compile Include="Assets\Ecs\OtherScripts\EntityLink.cs" />
+    <Compile Include="Assets\Ecs\Components\Skills\Fire.cs" />
+    <Compile Include="Assets\Ecs\Components\ProjectilePrefab.cs" />
+    <Compile Include="Assets\Ecs\Components\Range.cs" />
+    <Compile Include="Assets\Ecs\Systems\Player\PlayerInitSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\Spawner\SpawnerInitSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\TakeDamageSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\DashSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\AbilitySystems\AddHealthSystem.cs" />
+    <Compile Include="Assets\Scripts\UI scripts\StartGame\Level.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Element\CustomInputField.cs" />
+    <Compile Include="Assets\Ecs\Systems\Projectile\SpawnProjectileSystem.cs" />
+    <Compile Include="Assets\Scripts\UI Game\Screens\Screen.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Event\HoldKeyEvent.cs" />
+    <Compile Include="Assets\Ecs\Systems\Enemy\EnemyInputMeleeSystem.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Input\VirtualCursor.cs" />
+    <Compile Include="Assets\Ecs\Systems\AbilitySystems\IceAttackSystem.cs" />
+    <Compile Include="Assets\Ecs\OtherScripts\WeaponInfoMono.cs" />
+    <Compile Include="Assets\Ecs\Components\Reloadable.cs" />
+    <Compile Include="Assets\Ecs\Components\Camera.cs" />
+    <Compile Include="Assets\Ecs\Systems\DeathSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\Events\BloodEffect.cs" />
+    <Compile Include="Assets\YandexSDK\Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Ecs\EcsStartup.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\LaunchURL.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerBGMusic.cs" />
+    <Compile Include="Assets\Scripts\FPS.cs" />
+    <Compile Include="Assets\Ecs\Systems\AbilitySystems\ExplosionAttackSystem.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Element\SwitchManager.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\SpotlightButton.cs" />
+    <Compile Include="Assets\Ecs\Components\Damage.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Event\PointerEnterEvents.cs" />
+    <Compile Include="Assets\Ecs\Systems\RewardSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\Items\WeaponInitSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\Skills\Explosion.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\EditorDemoPositionFix.cs" />
+    <Compile Include="Assets\Ecs\Systems\Enemy\EnemyMeleeAttackChecker.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Event\PressKeyEvent.cs" />
+    <Compile Include="Assets\Ecs\Components\ObjectLink.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\LayoutGroupPositionFix.cs" />
+    <Compile Include="Assets\Ecs\Systems\DashInputSystem.cs" />
+    <Compile Include="Assets\Ecs\Systems\Enemy\EnemyMoveSystem.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Rendering\UIParticleRenderer.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerBackground.cs" />
+    <Compile Include="Assets\Ecs\Components\RigidBodyComponent.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Rendering\GradientEffect.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Input\GamepadChecker.cs" />
     <Compile Include="Assets\Ecs\Components\Events\DashEvent.cs" />
-    <Compile Include="Assets\Ecs\Components\Equipment.cs" />
-    <Compile Include="Assets\Ecs\Systems\Spawner\QueueFillerSystem.cs" />
-    <Compile Include="Assets\Scripts\Abilities\Scripts\GetAbilityButton.cs" />
-    <Compile Include="Assets\Ecs\Components\Skills\Lifesteal.cs" />
-    <Compile Include="Assets\Ecs\Systems\Player\LevelInitSystem.cs" />
-    <Compile Include="Assets\Ecs\Components\Skills\AddHealth.cs" />
     <Compile Include="Assets\Ecs\Components\Name.cs" />
-    <Compile Include="Assets\YandexSDK\Assets\Plugins\SimpleJSON.cs" />
-    <Compile Include="Assets\Ecs\Components\Events\EnemySpawnEvent.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Element\CustomInputField.cs" />
     <Compile Include="Assets\Scripts\UI scripts\StartGame\ILevel.cs" />
-    <Compile Include="Assets\Scripts\UI Game\UI.cs" />
+    <Compile Include="Assets\Ecs\Systems\Spawner\QueueFillerSystem.cs" />
+    <Compile Include="Assets\Ecs\Components\Skills\AddHealth.cs" />
+    <Compile Include="Assets\YandexSDK\Assets\Plugins\SimpleJSON.cs" />
     <Compile Include="Assets\Ecs\Systems\AbilitySystems\AddDamageSystem.cs" />
-    <Compile Include="Assets\Ecs\Components\Events\Reward.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\FavoriteButton.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Input\ScrollGamepadManager.cs" />
-    <Compile Include="Assets\Ecs\Components\Skills\AddDamage.cs" />
-    <Compile Include="Assets\StoreAssets\JMO Assets\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\UIElementInFront.cs" />
-    <Compile Include="Assets\Ecs\Components\Events\AttackEvent.cs" />
-    <Compile Include="Assets\Ecs\Components\Events\HitEvent.cs" />
     <Compile Include="Assets\Scripts\Localization\LocalizedText.cs" />
-    <Compile Include="Assets\StoreAssets\JMO Assets\WarFX\Spawn System\CFX_SpawnSystem.cs" />
-    <Compile Include="Assets\Scripts\Abilities\AbilityAssetObjects\AbilityData.cs" />
-    <Compile Include="Assets\Ecs\Systems\Projectile\SpawnProjectileSystem.cs" />
-    <Compile Include="Assets\Ecs\Data\scripts\RuntimeData.cs" />
-    <Compile Include="Assets\Scripts\UI Game\Screens\Screen.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Event\HoldKeyEvent.cs" />
-    <Compile Include="Assets\Ecs\Systems\AttackSystem.cs" />
-    <Compile Include="Assets\Ecs\Components\Skills\Ice.cs" />
     <Compile Include="Assets\Ecs\Components\Events\PauseEvent.cs" />
-    <Compile Include="Assets\Ecs\Systems\Enemy\EnemyInputMeleeSystem.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Input\VirtualCursor.cs" />
-    <Compile Include="Assets\Ecs\Systems\Enemy\EnemyInputRangeSystem.cs" />
-    <Compile Include="Assets\Ecs\Components\Events\WeaponDropEvent.cs" />
-    <Compile Include="Assets\Ecs\Systems\Items\WeaponGetSystem.cs" />
-    <Compile Include="Assets\Ecs\Components\DeathEvent.cs" />
-    <Compile Include="Assets\Ecs\Components\Meele.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\FriendsPanelManager.cs" />
     <Compile Include="Assets\Ecs\Components\Weapon.cs" />
-    <Compile Include="Assets\Ecs\Systems\AbilitySystems\IceAttackSystem.cs" />
-    <Compile Include="Assets\Ecs\Systems\Ability\AbilityAddSystem.cs" />
-    <Compile Include="Assets\Ecs\Systems\PauseSystem.cs" />
-    <Compile Include="Assets\Ecs\OtherScripts\WeaponInfoMono.cs" />
     <Compile Include="Assets\Ecs\Components\Skills\Ricochet.cs" />
-    <Compile Include="Assets\Ecs\Components\Active.cs" />
-    <Compile Include="Assets\YandexSDK\Assets\Scripts\YandexSDK.cs" />
-    <Compile Include="Assets\StoreAssets\JMO Assets\WarFX\Scripts\CFX_LightIntensityFade.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManager.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\QuickMatchButton.cs" />
-    <Compile Include="Assets\Ecs\Components\Events\AddAbilityEvent.cs" />
-    <Compile Include="Assets\Ecs\Components\Reloadable.cs" />
-    <Compile Include="Assets\Ecs\Systems\Camera\CameraInitSystem.cs" />
     <Compile Include="Assets\Ecs\Components\HitEffect.cs" />
-    <Compile Include="Assets\Ecs\Components\InputHandlerComponent.cs" />
-    <Compile Include="Assets\Ecs\Components\Skills\LifestealEvent.cs" />
     <Compile Include="Assets\Ecs\Systems\Camera\CameraSystem.cs" />
-    <Compile Include="Assets\Scripts\UI scripts\Shop\ShopManager.cs" />
-    <Compile Include="Assets\Ecs\Systems\Enemy\EnemyRangeAttackChecker.cs" />
-    <Compile Include="Assets\Ecs\Components\Events\OpenAbilityWindowEvent.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerGameLogo.cs" />
-    <Compile Include="Assets\Ecs\Components\Camera.cs" />
     <Compile Include="Assets\Ecs\Systems\Projectile\ProjectileHitSystem.cs" />
-    <Compile Include="Assets\StoreAssets\JMO Assets\WarFX\Scripts\CFX_AutoDestructShuriken.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Event\TimedEvent.cs" />
-    <Compile Include="Assets\Ecs\Systems\DeathSystem.cs" />
     <Compile Include="Assets\Ecs\Components\Events\SpawnProjectile.cs" />
-    <Compile Include="Assets\Ecs\Systems\Spawner\EnemySpawnEventGenerator.cs" />
-    <Compile Include="Assets\Scripts\UI Game\Screens\GameScreen.cs" />
-    <Compile Include="Assets\Ecs\Components\Events\BloodEffect.cs" />
-    <Compile Include="Assets\Ecs\Data\scripts\AllWaveData.cs" />
     <Compile Include="Assets\Ecs\Components\Health.cs" />
-    <Compile Include="Assets\Scripts\LevelOpen.cs" />
-    <Compile Include="Assets\Ecs\Systems\Spawner\CurrentEnemiesUpdateSystem.cs" />
     <Compile Include="Assets\Ecs\Components\Events\WeaponPickUpEvent.cs" />
-    <Compile Include="Assets\Ecs\Data\scripts\StaticPlayerData.cs" />
-    <Compile Include="Assets\Ecs\Systems\Player\PlayerMoveSystem.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Input\VirtualCursorAnimate.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\MainPanelButton.cs" />
-    <Compile Include="Assets\Ecs\Systems\Items\ReloadingSystem.cs" />
     <Compile Include="Assets\Scripts\EnemyInfo.cs" />
-    <Compile Include="Assets\Ecs\Components\NeedToFill.cs" />
-    <Compile Include="Assets\Ecs\Components\Events\TakeDamage.cs" />
-    <Compile Include="Assets\Ecs\Components\EnemyTag.cs" />
-    <Compile Include="Assets\Ecs\Components\Dropped.cs" />
-    <Compile Include="Assets\YandexSDK\Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Abilities\Scripts\AbilityWindow.cs" />
-    <Compile Include="Assets\Ecs\EcsStartup.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\LaunchURL.cs" />
-    <Compile Include="Assets\Ecs\Components\Events\RewardEvent.cs" />
-    <Compile Include="Assets\Ecs\Components\Reloading.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerBGMusic.cs" />
-    <Compile Include="Assets\Ecs\OtherScripts\EntityLink.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\SplashScreenManager.cs" />
-    <Compile Include="Assets\Ecs\Systems\Items\SwitchWeaponSystem.cs" />
-    <Compile Include="Assets\Ecs\Data\scripts\TerrainMaterialsData.cs" />
-    <Compile Include="Assets\Ecs\Components\Skills\Fire.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\ChapterButton.cs" />
-    <Compile Include="Assets\Ecs\Systems\AbilitySystems\ExplosionAttackSystem.cs" />
-    <Compile Include="Assets\Scripts\FPS.cs" />
-    <Compile Include="Assets\Ecs\Data\scripts\AllPrefabsData.cs" />
-    <Compile Include="Assets\Ecs\Systems\Items\PickUpSystem.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Element\SwitchManager.cs" />
-    <Compile Include="Assets\Ecs\Systems\Player\PlayerInputSystem.cs" />
-    <Compile Include="Assets\Ecs\Components\Events\SwitchWeaponEvent.cs" />
-    <Compile Include="Assets\Ecs\Components\HealthView.cs" />
-    <Compile Include="Assets\Ecs\Systems\AbilitySystems\FireAttackSystem.cs" />
-    <Compile Include="Assets\Ecs\Systems\Spawner\WaveManagerSystem.cs" />
-    <Compile Include="Assets\Ecs\Components\Events\Heal.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerImage.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\SpotlightButton.cs" />
-    <Compile Include="Assets\Ecs\Systems\Ability\OpenAbilityWindowSystem.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Rendering\BlurManager.cs" />
-    <Compile Include="Assets\Ecs\Components\ProjectilePrefab.cs" />
-    <Compile Include="Assets\Ecs\Systems\Spawner\EnemySpawnSystem.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\ScrollForMore.cs" />
-    <Compile Include="Assets\Ecs\Components\Damage.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\QualityManager.cs" />
-    <Compile Include="Assets\Scripts\UI Game\Screens\DeathScreen.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Event\PointerEnterEvents.cs" />
-    <Compile Include="Assets\Ecs\Components\PlayerTag.cs" />
-    <Compile Include="Assets\Ecs\Components\Range.cs" />
-    <Compile Include="Assets\Ecs\Systems\Player\PlayerInitSystem.cs" />
-    <Compile Include="Assets\Ecs\Systems\RewardSystem.cs" />
-    <Compile Include="Assets\Ecs\Systems\Items\WeaponInitSystem.cs" />
-    <Compile Include="Assets\Scripts\UI scripts\Shop\SkillProperties.cs" />
     <Compile Include="Assets\Scripts\UI scripts\Inventory\NonMono\IconData.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\MainPanelButtonParent.cs" />
-    <Compile Include="Assets\Ecs\Components\AnimatorComponent.cs" />
-    <Compile Include="Assets\Ecs\Data\scripts\WaveData.cs" />
-    <Compile Include="Assets\Ecs\Systems\Spawner\EnemyPrefabsInitSystem.cs" />
-    <Compile Include="Assets\Ecs\Components\Skills\Explosion.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\EditorDemoPositionFix.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\ExitToSystem.cs" />
     <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Input\SliderGamepadManager.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\MainPanelManager.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Manager\UIManagerParticle.cs" />
-    <Compile Include="Assets\Ecs\Systems\Projectile\ProjectileMoveSystem.cs" />
-    <Compile Include="Assets\Ecs\Systems\Enemy\EnemyMeleeAttackChecker.cs" />
-    <Compile Include="Assets\Ecs\Systems\Spawner\SpawnerInitSystem.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Event\PressKeyEvent.cs" />
-    <Compile Include="Assets\StoreAssets\JMO Assets\WarFX\Scripts\WFX_LightFlicker.cs" />
-    <Compile Include="Assets\Scripts\Localization\LocalizationManager.cs" />
     <Compile Include="Assets\Ecs\OtherScripts\WeaponHolder.cs" />
-    <Compile Include="Assets\Ecs\Components\ObjectLink.cs" />
-    <Compile Include="Assets\Ecs\Systems\TakeDamageSystem.cs" />
-    <Compile Include="Assets\Scripts\UI Game\Screens\AbilityScreen.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\CanvasManager.cs" />
-    <Compile Include="Assets\Ecs\Systems\AbilitySystems\LifestealAttackSystem.cs" />
-    <Compile Include="Assets\Ecs\Systems\DashSystem.cs" />
-    <Compile Include="Assets\Ecs\Data\scripts\SceneData.cs" />
-    <Compile Include="Assets\Ecs\Systems\AbilitySystems\AddHealthSystem.cs" />
-    <Compile Include="Assets\Ecs\Components\UnAvaible.cs" />
-    <Compile Include="Assets\Ecs\Systems\Projectile\ProjectileHitEventSystem.cs" />
-    <Compile Include="Assets\Ecs\Systems\Items\DropWeaponSystem.cs" />
-    <Compile Include="Assets\Ecs\OtherScripts\CameraMouse.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Element\SliderManager.cs" />
-    <Compile Include="Assets\Ecs\Systems\DashInputSystem.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\MainButton.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Other\LayoutGroupPositionFix.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\ServerBrowserManager.cs" />
     <Compile Include="Assets\Ecs\Components\Projectile.cs" />
-    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Element\UIElementSound.cs" />
     <Compile Include="Assets\Ecs\Systems\HealSystem.cs" />
-    <Compile Include="Assets\Scripts\Abilities\Scripts\AbilityAsset.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Panel\ServerBrowserManager.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\Buttons\MainButton.cs" />
+    <Compile Include="Assets\StoreAssets\Shift - Complete Sci-Fi UI\Scripts\UI Element\UIElementSound.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -299,9 +299,6 @@
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.AIModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.ARModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.ARModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.AccessibilityModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.AccessibilityModule.dll</HintPath>
     </Reference>
@@ -319,12 +316,6 @@
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClusterInputModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterInputModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClusterRendererModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterRendererModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
@@ -482,8 +473,8 @@
     <Reference Include="UnityEngine.VideoModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.VirtualTexturingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.VirtualTexturingModule.dll</HintPath>
+    <Reference Include="UnityEngine.WebGLModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.WebGLModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.WindModule.dll</HintPath>
@@ -938,11 +929,17 @@
     <Reference Include="PPv2URPConverters">
       <HintPath>Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
     </Reference>
+    <Reference Include="Leopotam.Ecs.UnityIntegration">
+      <HintPath>Library\ScriptAssemblies\Leopotam.Ecs.UnityIntegration.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.supremestranger.leoecs-physics">
+      <HintPath>Library\ScriptAssemblies\com.supremestranger.leoecs-physics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -961,6 +958,9 @@
     </Reference>
     <Reference Include="Unity.Searcher.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Leopotam.Ecs.UnityIntegration.Editor">
+      <HintPath>Library\ScriptAssemblies\Leopotam.Ecs.UnityIntegration.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
@@ -1004,6 +1004,9 @@
     <Reference Include="Unity.Burst">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
     </Reference>
+    <Reference Include="Leopotam.Ecs">
+      <HintPath>Library\ScriptAssemblies\Leopotam.Ecs.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
@@ -1030,18 +1033,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-    </Reference>
-    <Reference Include="Leopotam.Ecs">
-      <HintPath>Library\ScriptAssemblies\Leopotam.Ecs.dll</HintPath>
-    </Reference>
-    <Reference Include="Leopotam.Ecs.UnityIntegration">
-      <HintPath>Library\ScriptAssemblies\Leopotam.Ecs.UnityIntegration.dll</HintPath>
-    </Reference>
-    <Reference Include="Leopotam.Ecs.UnityIntegration.Editor">
-      <HintPath>Library\ScriptAssemblies\Leopotam.Ecs.UnityIntegration.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.supremestranger.leoecs-physics">
-      <HintPath>Library\ScriptAssemblies\com.supremestranger.leoecs-physics.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

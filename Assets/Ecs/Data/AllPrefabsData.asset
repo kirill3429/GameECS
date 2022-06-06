@@ -35,13 +35,11 @@ MonoBehaviour:
   - {fileID: 1299959546001872786, guid: ded9f78ddda21974e9f1f7b486da8c2f, type: 3}
   - {fileID: 165424, guid: 9f4313a771e05c64d8da7ae6bd19a19f, type: 3}
   weaponPrefabs:
-  - {fileID: 4837681895879419947, guid: 8c755382e7827c244835ec7042b46dce, type: 3}
-  - {fileID: 7185271542456367918, guid: ee5042ddf8b8ad24ba3996e00f7540aa, type: 3}
-  - {fileID: 3722634912988566560, guid: 2d522c2955947c44dbb460c903cbe7fc, type: 3}
-  - {fileID: 5810665671667119818, guid: 87dc60ebd63fe9341aad6e3e116cc5fb, type: 3}
-  - {fileID: 2694483399057504016, guid: 2250fbe2d4aeb84459e089dba53aa77e, type: 3}
-  - {fileID: 5712467492965875664, guid: a6a85774ac55f034e825bef77541e54d, type: 3}
-  - {fileID: 4747628295195381720, guid: c8e054a577708ce4ab1105cdb5dfce3a, type: 3}
+  - {fileID: 7846477175074941070, guid: d135819b04b8476459cc522e369527cb, type: 3}
+  - {fileID: 6222255393979850024, guid: cdad4ca73e42b41448a5e701f8d1d88b, type: 3}
+  - {fileID: 5802598192363826362, guid: 854a20728f6f2f74198a3687263ae707, type: 3}
+  - {fileID: 8234321100261593149, guid: 11f82e92b648b934c90272aa1165dd40, type: 3}
+  - {fileID: 3399513902591331949, guid: 3c9a1ad4bb833b540b300f71f94c1caa, type: 3}
   hitEffectPrefabs:
   - {fileID: 100002, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
   - {fileID: 100004, guid: 084c6a87873fd6e4da7978a01aa18b34, type: 3}

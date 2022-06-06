@@ -68,18 +68,11 @@ public class SkillDiscriptionPanel : MonoBehaviour
         {
             if (_skillProperties != null)
             {
-                LearnSkill();
+                _skillProperties.Level++;
                 LevelUI.text = _skillProperties.Level.ToString();
                 skillPoints--;
                 SetSkillPoints(skillPoints);
             }
         } 
-    }
-
-    private void LearnSkill()
-    {
-        _skillProperties.Level++;
-        _skillProperties.Learned = true;
-        _skillProperties.LearnedView();
     }
 }

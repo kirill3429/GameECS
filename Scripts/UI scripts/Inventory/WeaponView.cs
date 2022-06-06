@@ -10,9 +10,4 @@ public class WeaponView : MonoBehaviour
     public TextMeshProUGUI LevelUI;
     public Image IconUI;
 
-
-    private void Start()
-    {
-
-    }
 }

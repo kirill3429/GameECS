@@ -9,8 +9,8 @@ public class InventoryManager : MonoBehaviour
 {
 
     private Transform inventoryPanel;
+    private List<WeaponInfoMono> weaponData;
     [SerializeField] private GameObject weaponViewPrefab;
-    [SerializeField] private List<WeaponInfoMono> weaponData;
     [SerializeField] private AllPrefabsData prefabsData;
     private void OnEnable()
     {
@@ -67,6 +67,7 @@ public class InventoryManager : MonoBehaviour
         GameObject weaponView = Instantiate(weaponViewPrefab, inventoryPanel);
         WeaponView weaponProperties = weaponView.GetComponent<WeaponView>();
         weaponProperties.LevelUI.text = weaponLevel.ToString();
+        weaponProperties.Level = weaponLevel;
         weaponProperties.IconUI.sprite = weaponData[weaponId].Icon;
     }
 
@@ -81,9 +82,12 @@ public class InventoryManager : MonoBehaviour
 
     private void Start()
     {
-        foreach (GameObject waepon in prefabsData.weaponPrefabs)
+        Debug.Log(prefabsData.weaponPrefabs.Length);
+        foreach (GameObject weapon in prefabsData.weaponPrefabs)
         {
-            weaponData.Add(waepon.GetComponent<WeaponInfoMono>());
+            Debug.Log(weaponData.Count);
+            Debug.Log(weaponData[1]);
+            weaponData.Add(weapon.GetComponent<WeaponInfoMono>());
         }
     }
 

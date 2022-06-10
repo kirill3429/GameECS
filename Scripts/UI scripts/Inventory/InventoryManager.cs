@@ -82,11 +82,10 @@ public class InventoryManager : MonoBehaviour
 
     private void Start()
     {
+        weaponData = new List<WeaponInfoMono>();
         Debug.Log(prefabsData.weaponPrefabs.Length);
-        foreach (GameObject weapon in prefabsData.weaponPrefabs)
+        foreach (var weapon in prefabsData.weaponPrefabs)
         {
-            Debug.Log(weaponData.Count);
-            Debug.Log(weaponData[1]);
             weaponData.Add(weapon.GetComponent<WeaponInfoMono>());
         }
     }

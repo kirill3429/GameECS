@@ -11,15 +11,9 @@ namespace Client
 
         public void Init()
         {
-            string activeWeapon = PlayerPrefs.GetString("ActiveWeapon");
-            int prefabNumber = Convert.ToInt32(activeWeapon.Split("-")[2]);
-
-            string weaponStatsString = PlayerPrefs.GetString("PlayerWeaponStats");
-            string[] weaponStats = weaponStatsString.Split("-");
-
-            Debug.Log(prefabNumber);
-            Debug.Log(activeWeapon.Split("-")[2]);
-            // finalDamage-finalAttackSpeed-finalDmgChance-finalDmgMultiplier
+            string activeWeaponString = PlayerPrefs.GetString("ActiveWeapon");
+            int prefabNumber = Convert.ToInt32(activeWeaponString.Split(":")[0]);
+            int weaponLevel = Convert.ToInt32(activeWeaponString.Split(":")[1]);
 
 
             GameObject weaponGameObject = GameObject.Instantiate(allPrefabsData.weaponPrefabs[prefabNumber], sceneData.playerTransform);
@@ -38,17 +32,17 @@ namespace Client
             weapon.weaponTransform = weaponGameObject.transform;
 
             weapon.muzzleEffect = GameObject.Instantiate(allPrefabsData.muzzlePrefabs[0], weapon.weaponSocket);
-            weapon.shotSound = objectLink.Object.GetComponent<AudioSource>();
-            weapon.currentAmmo = 900000;
-            weapon.magazineAmmo = 900000;
-            weapon.bulletSpeed = 100;
-            weapon.delayBetweenAttack = Convert.ToSingle(weaponStats[1]);
-            weapon.projectileLifeTime = 6f;
-            damage.value = Convert.ToSingle(weaponStats[0]);
+            weapon.shotSound = weaponGameObject.GetComponent<AudioSource>();
+
+            var weaponStats = weaponGameObject.GetComponent<WeaponInfoMono>();
+
+            weapon.bulletSpeed = weaponStats.bulletSpeed * (weaponLevel * 0.1f + 1);
+            weapon.delayBetweenAttack = weaponStats.delayBetweenAttack - (weaponLevel * 0.05f);
+            weapon.projectileLifeTime = weaponStats.projectileLifeTime;
+            damage.value = 5;
                 
             objectLink.Object.AddComponent<EntityLink>().entity = weaponEntity;
             
-
 
         }
     }

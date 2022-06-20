@@ -61,7 +61,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3399513902591331949}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.7433357, y: 1.269, z: -3.592}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -247,8 +247,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.008678736, y: 0.01100234, z: 0.0027959857}
-  m_Center: {x: -0.0020706737, y: 0.0016436839, z: 0.00019822897}
+  m_Size: {x: 0.63, y: 0.55, z: 1.1193824}
+  m_Center: {x: -0.0020706737, y: 0.0016436838, z: -0.051291466}
 --- !u!114 &2588468298038932281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,9 +264,10 @@ MonoBehaviour:
   projectilePrefabNumber: 0
   bulletSpeed: 100
   ammo: 500
-  delayBetweenAttack: 0.1
+  delayBetweenAttack: 0.8
+  projectileLifeTime: 10
   damage: 5
   reloadSpeed: 0
   criticalDamageMultiplier: 0
   criticalDamageChance: 0
-  Icon: {fileID: 0}
+  Icon: {fileID: 279176297, guid: f9ba900c5dfa8fb419ad9f39d0ee35ae, type: 3}

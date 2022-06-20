@@ -13,7 +13,7 @@ namespace Client
             foreach (var i in filter)
             {
                 runtimeData.score += filter.Get1(i).reward;
-                uI.gameScreen.score.text = "score: " + runtimeData.score.ToString();
+                uI.gameScreen.score.text = runtimeData.score.ToString();
                 filter.GetEntity(i).Destroy();
             }
             

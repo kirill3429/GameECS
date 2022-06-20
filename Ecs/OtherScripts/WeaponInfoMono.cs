@@ -8,6 +8,7 @@ public class WeaponInfoMono : MonoBehaviour
     public int bulletSpeed;
     public int ammo;
     public float delayBetweenAttack;
+    public float projectileLifeTime;
     public float damage;
     public float reloadSpeed;
     public float criticalDamageMultiplier;

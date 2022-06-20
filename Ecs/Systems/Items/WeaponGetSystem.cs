@@ -28,9 +28,8 @@ namespace Client
         {
             info.weaponEntity.Del<Dropped>();
             info.WeaponTransform.parent = equipp.weaponHolder;
-            info.WeaponTransform.position = equipp.weaponHolder.position;
             info.WeaponTransform.gameObject.GetComponent<Collider>().enabled = false;
-            info.WeaponTransform.forward = equipp.weaponHolder.forward;
+            info.WeaponTransform.transform.SetPositionAndRotation(equipp.weaponHolder.transform.position, equipp.weaponHolder.rotation);
             info.weaponEntity.Get<Weapon>().ownerEntity = info.newOwnerEntity;
         }
     }

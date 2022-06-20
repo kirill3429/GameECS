@@ -14,7 +14,7 @@ public class AbilityWindow : MonoBehaviour
             GameObject view = Instantiate(abilityView, gameObject.transform);
             view.GetComponent<GetAbilityButton>().abilityString = abilityPrefabs[abilityNum].Name;
             view.GetComponentInChildren<TMP_Text>().text = abilityPrefabs[abilityNum].Description;
-            //view.GetComponentInChildren<TMP_Text>().text = abilityPrefabs[abilityNum].AdvancedDescription;  TODO - добавить текстовое поле
+            //view.GetComponentInChildren<TMP_Text>().text = abilityPrefabs[abilityNum].AdvancedDescription;  TODO - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
             view.GetComponentsInChildren<Image>()[1].sprite = abilityPrefabs[abilityNum].Icon;
         }
     }

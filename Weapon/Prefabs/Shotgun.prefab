@@ -264,7 +264,7 @@ MonoBehaviour:
   projectilePrefabNumber: 0
   bulletSpeed: 100
   ammo: 500
-  delayBetweenAttack: 0.8
+  delayBetweenAttack: 0.3
   projectileLifeTime: 10
   damage: 5
   reloadSpeed: 0

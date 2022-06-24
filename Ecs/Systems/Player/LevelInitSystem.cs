@@ -20,6 +20,8 @@ namespace Client
             terrain.materialTemplate = terrainMaterialsData.materials[materialNum];
             runtimeData.waveNumber = levelNumber;
 
+            world.NewEntity().Get<OpenAbilityWindowEvent>();
+
         }
     }
 }

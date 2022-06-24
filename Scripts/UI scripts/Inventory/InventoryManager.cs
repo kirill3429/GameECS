@@ -1,5 +1,6 @@
 using System.Collections;
 using System;
+using System.Linq;
 using System.Text;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,40 +34,31 @@ public class InventoryManager : MonoBehaviour
     private void LoadWeapons()
     {
         //var weaponString = GetWeaponString();
-        var weaponString = "1:3-2:1";
-        Dictionary<int,int> weaponDictionary = ConvertWeaponToDictionary(weaponString);
-        InstantiateWeaponViewsFromDictionary(weaponDictionary);   
+        var weaponString = "2-3";
+        List<int> weaponsToSpawn = ConvertStringToList(weaponString);
+        SpawnWeaponList(weaponsToSpawn);
+
+        
     }
     private string GetWeaponString()
     {
         return PlayerPrefs.GetString("Weapons");
     }
 
-    private Dictionary<int,int> ConvertWeaponToDictionary(string weaponString)
+    private List<int> ConvertStringToList(string weaponString)
     {
         string[] stringWeaponArray = weaponString.Split("-");
-
-        Dictionary<int, int> weapons = new Dictionary<int, int>();
-
-        foreach (string weapon in stringWeaponArray)
-        {
-            if (weapon != "")
-            {
-                string[] intWeapon = weapon.Split(":");
-
-                weapons.Add(Convert.ToInt32(intWeapon[0]), Convert.ToInt32(intWeapon[1]));
-            }
-        }
-        return weapons;
+        List<int> weaponIDList = new List<int>(stringWeaponArray.Select(id => Convert.ToInt32(id)));
+        return weaponIDList;
     }
 
 
-    private void InstantiateWeaponViewsFromDictionary(Dictionary<int,int> weaponDictionary)
+    private void SpawnWeaponList(List<int> weaponList)
     {
-        foreach (var weapon in weaponDictionary)
+        foreach (var id in weaponList)
         {
-            var weaponView = SpawnWeaponView(inventoryPanel);
-            UpdateWeaponView(weapon.Key, weapon.Value, weaponView);
+            GameObject weapon = SpawnWeaponView(inventoryPanel);
+            UpdateWeaponView(id, weapon);
         }
     }
 
@@ -74,12 +66,10 @@ public class InventoryManager : MonoBehaviour
     {
         return Instantiate(weaponViewPrefab, place);
     }
-    private void UpdateWeaponView(int weaponId, int weaponLevel, GameObject weaponView)
+    private void UpdateWeaponView(int weaponId, GameObject weaponView)
     {
         WeaponView weaponProperties = weaponView.GetComponent<WeaponView>();
         weaponProperties.Id = weaponId;
-        weaponProperties.LevelUI.text = weaponLevel.ToString();
-        weaponProperties.Level = weaponLevel;
         weaponProperties.IconUI.sprite = weaponData[weaponId].Icon;
     }
 
@@ -90,12 +80,10 @@ public class InventoryManager : MonoBehaviour
     {
 
         string activeWeaponString = PlayerPrefs.GetString("ActiveWeapon");
-        Debug.Log(activeWeaponString);
         if (activeWeaponString != null)
         {
-            string[] activeWeaponMassive = activeWeaponString.Split(":");
             GameObject weapon = SpawnWeaponView(weaponContainer);
-            UpdateWeaponView(Convert.ToInt32(activeWeaponMassive[0]), Convert.ToInt32(activeWeaponMassive[1]), weapon);
+            UpdateWeaponView(Convert.ToInt32(activeWeaponString), weapon);
         }
         
     }
@@ -132,7 +120,7 @@ public class InventoryManager : MonoBehaviour
 
         foreach (WeaponView weapon in weaponList)
         {
-            stringBuilder.Append(weapon.Id + ":" + weapon.Level + "-");
+            stringBuilder.Append(weapon.Id + "-");
         }
 
         Debug.Log(stringBuilder.ToString());
@@ -146,7 +134,7 @@ public class InventoryManager : MonoBehaviour
         if (weaponContainer.childCount > 0)
         {
             var info = weaponContainer.GetChild(0).GetComponent<WeaponView>();
-            string activeWeapon = info.Id.ToString() + ":" + info.Level.ToString();
+            string activeWeapon = info.Id.ToString();
             PlayerPrefs.SetString("ActiveWeapon", activeWeapon);
         }
         else

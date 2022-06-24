@@ -16,7 +16,7 @@ namespace Client
             int weaponLevel = Convert.ToInt32(activeWeaponString.Split(":")[1]);
 
 
-            GameObject weaponGameObject = GameObject.Instantiate(allPrefabsData.weaponPrefabs[prefabNumber], sceneData.playerTransform);
+            GameObject weaponGameObject = GameObject.Instantiate(allPrefabsData.weaponPrefabs[2], sceneData.playerTransform);
 
             EcsEntity weaponEntity = world.NewEntity();
             ref var objectLink = ref weaponEntity.Get<ObjectLink>();

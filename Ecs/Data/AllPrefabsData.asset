@@ -15,6 +15,7 @@ MonoBehaviour:
   bulletPrefabs:
   - {fileID: 4584607951747425361, guid: 16f0f591258d5ad4f89a334200588e14, type: 3}
   - {fileID: 2588300917983697536, guid: d1c18d64b0019b544af0530c8b61912b, type: 3}
+  - {fileID: 2228172068639426349, guid: 0c01c022ed9569a4ebf7608b4bf52aad, type: 3}
   muzzlePrefabs:
   - {fileID: 6672854350865327570, guid: 15c07c6ec39ea204d9979788ceb09bf9, type: 3}
   enemiesPrefabs:
@@ -34,6 +35,7 @@ MonoBehaviour:
   - {fileID: 153010, guid: 80afb8f52d27bae4f8ff4cf083945861, type: 3}
   - {fileID: 1299959546001872786, guid: ded9f78ddda21974e9f1f7b486da8c2f, type: 3}
   - {fileID: 165424, guid: 9f4313a771e05c64d8da7ae6bd19a19f, type: 3}
+  - {fileID: 1500939411536426, guid: 274c4c35ed05ea14c87492064b3cadfd, type: 3}
   weaponPrefabs:
   - {fileID: 7846477175074941070, guid: d135819b04b8476459cc522e369527cb, type: 3}
   - {fileID: 6222255393979850024, guid: cdad4ca73e42b41448a5e701f8d1d88b, type: 3}

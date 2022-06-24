@@ -15,7 +15,7 @@ MonoBehaviour:
   playerMoveSpeed: 3
   thresholdCamera: 4
   enemySpawnRadius: 40
-  maxEnemies: 1
+  maxEnemies: 100
   layerMask:
     serializedVersion: 2
     m_Bits: 64

@@ -50,9 +50,9 @@ public class ShopManager : MonoBehaviour
 
     private void LoadLearnedSkills()
     {
-        string learnedSkillsString = GetLearnedSkillsString();
-        Debug.Log(learnedSkillsString);
-        //string learnedSkillsString = "-4:2-3:1-6:1-2:1";
+        //string learnedSkillsString = GetLearnedSkillsString();
+        //Debug.Log(learnedSkillsString);
+        string learnedSkillsString = "-4:2-3:4-6:1-2:1";
         Dictionary<int, int> learnedSkillsDictionary = ConvertSkillsStringToDictionary(learnedSkillsString);
         ApplySkillPropertiesToSkillsViews(learnedSkillsDictionary);
     }

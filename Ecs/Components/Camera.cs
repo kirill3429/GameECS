@@ -1,6 +1,5 @@
 using UnityEngine;
 namespace Client
-
 {
     struct Camera
     {
@@ -9,5 +8,4 @@ namespace Client
         public Transform cameraTransform;
         public float threshold;
     }
-
 }

@@ -64,7 +64,7 @@ public class SkillDiscriptionPanel : MonoBehaviour
     public void LevelUpSkill()
     {
         int skillPoints = GetSkillPoints();
-        if (skillPoints > 0)
+        if (skillPoints > 0 && LevelUI.text != "5")
         {
             if (_skillProperties != null)
             {
@@ -73,7 +73,7 @@ public class SkillDiscriptionPanel : MonoBehaviour
                 skillPoints--;
                 SetSkillPoints(skillPoints);
             }
-        } 
+        }
     }
 
     private void LearnSkill()

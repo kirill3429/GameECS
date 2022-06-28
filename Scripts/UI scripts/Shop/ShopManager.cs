@@ -11,9 +11,11 @@ public class ShopManager : MonoBehaviour
     private Transform shopPanel;
     [SerializeField] private GameObject abilityView;
     [SerializeField] private AbilityData abilityPrefabs;
+    private DataInterface dataInterface;
 
     private void Awake()
     {
+        dataInterface = FindObjectOfType<DataInterface>();
         shopPanel = gameObject.transform;
     }
 
@@ -50,16 +52,13 @@ public class ShopManager : MonoBehaviour
 
     private void LoadLearnedSkills()
     {
-        //string learnedSkillsString = GetLearnedSkillsString();
+        //string learnedSkillsString = dataInterface.GetLearnedSkills();
         //Debug.Log(learnedSkillsString);
         string learnedSkillsString = "-4:2-3:4-6:1-2:1";
         Dictionary<int, int> learnedSkillsDictionary = ConvertSkillsStringToDictionary(learnedSkillsString);
         ApplySkillPropertiesToSkillsViews(learnedSkillsDictionary);
     }
-    private string GetLearnedSkillsString()
-    {
-        return PlayerPrefs.GetString("LearnedSkills");
-    }
+
 
     private Dictionary<int, int> ConvertSkillsStringToDictionary(string stringToConvert)
     {
@@ -106,7 +105,7 @@ public class ShopManager : MonoBehaviour
     private void SaveLearnedSkills()
     {
         string learnedSkillString = BuildStringOfLearnedSkills();
-        SaveLearnedSkillsToPlayerPrefs(learnedSkillString);
+        dataInterface.SaveLearnedSkills(learnedSkillString);
     }
 
     private string BuildStringOfLearnedSkills()
@@ -131,10 +130,7 @@ public class ShopManager : MonoBehaviour
         stringOfLearnedSkills.Append("-" + skillProperties.Id);
         stringOfLearnedSkills.Append(":" + skillProperties.Level);
     }
-    private void SaveLearnedSkillsToPlayerPrefs(string stringToSave)
-    {
-        PlayerPrefs.SetString("LearnedSkills", stringToSave);
-    }
+
 
     #endregion
 

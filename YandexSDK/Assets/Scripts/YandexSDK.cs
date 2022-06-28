@@ -58,9 +58,15 @@ public class YandexSDK : MonoBehaviour
     public event Action<string> LeaderBoardReady; 
 
 
-    public void Authenticate()    //    Авторизация
+    public void Authenticate()    //    Авторизация - отправка запроса на Авторизацию
     {
         Auth();
+    }
+
+    public void AuthenticateSuccess(string data)    // Авторизация успешно пройдена - Вызывается из JS
+    {
+        UD.Name = data;
+        AuthSuccess?.Invoke();
     }
 
     public void GettingData()    // Получение данных
@@ -68,9 +74,17 @@ public class YandexSDK : MonoBehaviour
         GetData();
     }
 
-    public void SettingData(string data)    // Сохранение данных
+    public void DataGetting(string data) // Данные получены
     {
-        SetData(data);
+        UserDataSaving UDS = new UserDataSaving();
+        UDS = JsonUtility.FromJson<UserDataSaving>(data);
+        UGD = JsonUtility.FromJson<UserGameData>(UDS.data);
+        DataGet?.Invoke();
+    }
+
+    public void DataSet(string JSONStringData)    // Сохранение данных
+    {
+        SetData(JSONStringData);
     }
 
     public void getLeaderEntries()
@@ -99,19 +113,9 @@ public class YandexSDK : MonoBehaviour
     }
 
     
-    public void AuthenticateSuccess(string data)    // Авторизация успешно пройдена
-    {
-        UD.Name = data;
-        AuthSuccess?.Invoke();
-    }
+
     
-    public void DataGetting(string data) // Данные получены
-    {
-        UserDataSaving UDS = new UserDataSaving();
-        UDS = JsonUtility.FromJson<UserDataSaving>(data);
-        UGD = JsonUtility.FromJson<UserGameData>(UDS.data);
-        DataGet?.Invoke();
-    }
+
     
     public void RewardGetting() // Реклама просмотрена
     {
@@ -133,10 +137,10 @@ public class UserData
 public class UserGameData
 {
     public string Inventory;
+    public string Abilities;
     public string ActiveWeapon;
-    public DateTime lastEnter;
-    public int day;
-    public int coins;
+    public string LastEnter;
+    public string Coins;
 }
 [Serializable]
 public class UserDataSaving

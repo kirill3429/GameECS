@@ -8,7 +8,7 @@ mergeInto(LibraryManager.library, {
     getUserData();
   },
   
-  SetData : function(data){
+  DataSet : function(data){
     setUserData(UTF8ToString(data));
   },
 

@@ -15,8 +15,12 @@ public class InventoryManager : MonoBehaviour
     private List<WeaponInfoMono> weaponData;
     [SerializeField] private GameObject weaponViewPrefab;
     [SerializeField] private AllPrefabsData prefabsData;
+    [SerializeField] private DataInterface dataInterface;
+
+
     private void OnEnable()
     {
+        dataInterface = FindObjectOfType<DataInterface>();
         LoadWeapons();
         LoadActiveWeapon();
     }
@@ -25,6 +29,8 @@ public class InventoryManager : MonoBehaviour
     {
         SaveWeapons();
         SaveActiveWeapon();
+        dataInterface.SaveToServer();
+
         ClearPanel(inventoryPanel);
         ClearPanel(weaponContainer);
     }
@@ -33,22 +39,23 @@ public class InventoryManager : MonoBehaviour
 
     private void LoadWeapons()
     {
-        //var weaponString = GetWeaponString();
-        var weaponString = "2-3";
+        var weaponString = dataInterface.GetInventoryWeapons();
         List<int> weaponsToSpawn = ConvertStringToList(weaponString);
         SpawnWeaponList(weaponsToSpawn);
 
         
     }
-    private string GetWeaponString()
-    {
-        return PlayerPrefs.GetString("Weapons");
-    }
 
     private List<int> ConvertStringToList(string weaponString)
     {
-        string[] stringWeaponArray = weaponString.Split("-");
-        List<int> weaponIDList = new List<int>(stringWeaponArray.Select(id => Convert.ToInt32(id)));
+        Debug.Log(weaponString + "stroka");
+        
+        List <string> stringWeaponList = weaponString.Split("-").ToList();
+        List<int> weaponIDList = new List<int>(stringWeaponList.Where(id => id != "").Select(id => Convert.ToInt32(id)));
+        foreach (var i in weaponIDList)
+        {
+            Debug.Log(i);
+        }
         return weaponIDList;
     }
 
@@ -79,8 +86,8 @@ public class InventoryManager : MonoBehaviour
     private void LoadActiveWeapon()
     {
 
-        string activeWeaponString = PlayerPrefs.GetString("ActiveWeapon");
-        if (activeWeaponString != null)
+        string activeWeaponString = dataInterface.GetActiveWeapon();
+        if (activeWeaponString != null && activeWeaponString != "")
         {
             GameObject weapon = SpawnWeaponView(weaponContainer);
             UpdateWeaponView(Convert.ToInt32(activeWeaponString), weapon);
@@ -96,12 +103,7 @@ public class InventoryManager : MonoBehaviour
 
         List<WeaponView> weaponList = CreateAndFillWeaponList();
         string weaponsStringToSave = ConvertListToString(weaponList);
-        SaveWeaponsToPrefs(weaponsStringToSave);
-    }
-
-    private void SaveWeaponsToPrefs(string stringToSave)
-    {
-        PlayerPrefs.SetString("Weapons", stringToSave);
+        dataInterface.SaveWeapons(weaponsStringToSave);
     }
 
     private List<WeaponView> CreateAndFillWeaponList()
@@ -135,11 +137,11 @@ public class InventoryManager : MonoBehaviour
         {
             var info = weaponContainer.GetChild(0).GetComponent<WeaponView>();
             string activeWeapon = info.Id.ToString();
-            PlayerPrefs.SetString("ActiveWeapon", activeWeapon);
+            dataInterface.SetActiveWeapon(activeWeapon);
         }
         else
         {
-            PlayerPrefs.SetString("ActiveWeapon", null);
+            dataInterface.SetActiveWeapon(null);
         }
     }
     #endregion

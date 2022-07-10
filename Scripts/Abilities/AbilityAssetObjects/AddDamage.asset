@@ -16,5 +16,5 @@ MonoBehaviour:
   Description: adddamage
   AdvancedDescription: adddamageadvanced
   Id: 0
-  DefaultCost: 0
+  Level: 3
   Icon: {fileID: 21300000, guid: d5f63b8eb8a5f8c46a49890b960dc405, type: 3}

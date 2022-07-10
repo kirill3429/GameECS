@@ -9,6 +9,7 @@ public class LevelOpen : MonoBehaviour
     {
         lastLevel = PlayerPrefs.GetInt("lastLevel");
 
+
         foreach (Transform level in gameObject.transform)
         {
             if (level.TryGetComponent(out Level levelComp))

@@ -29,6 +29,7 @@ public class MenuManager : MonoBehaviour
     }
     public void ToMainMenu()
     {
+        DataInterface.AddScore(startUp.runtimeData.scoreInGame);
         _world.NewEntity().Get<PauseEvent>();
         SceneManager.LoadScene(0);
     }

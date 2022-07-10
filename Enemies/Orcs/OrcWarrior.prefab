@@ -829,7 +829,7 @@ Transform:
   m_GameObject: {fileID: 1299959546001872786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1299246900306500272}
@@ -877,13 +877,14 @@ MonoBehaviour:
   delayBetweenAttack: 1
   projectileLifeTime: 1
   bulletSpeed: 10
-  projectilePrefabNumber: 1
+  projectilePrefabNumber: 3
   moveSpeedProgress: 0
   healthProgress: 20
   damageProgress: 10
   delayBetweenAttackProgress: 0
   bulletSpeedProgress: 0
   enemyType: 1
+  weaponType: 0
 --- !u!65 &2370506138922974511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -895,8 +896,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.83750343, y: 1.1652303, z: 0.5138253}
-  m_Center: {x: 0.00038015842, y: 0.6367835, z: -0.007095635}
+  m_Size: {x: 4.3786373, y: 7.1190114, z: 2.2663941}
+  m_Center: {x: -0.3169155, y: 3.613674, z: 0.15502897}
 --- !u!54 &2630152714173039625
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1211,8 +1212,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5981193, y: 1.3705883, z: 0.4421431}
-  m_Center: {x: 0.002331996, y: 0.0516222, z: 0.22}
+  m_Size: {x: 3.5019553, y: 10.520599, z: 3.8310008}
+  m_Center: {x: -0.45548996, y: 4.6266265, z: 4.1260448}
 --- !u!54 &7482472550924312709
 Rigidbody:
   m_ObjectHideFlags: 0

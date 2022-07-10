@@ -415,7 +415,7 @@ Transform:
   m_GameObject: {fileID: 1500939411536426}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4523268626435018}
@@ -482,6 +482,7 @@ MonoBehaviour:
   delayBetweenAttackProgress: 0
   bulletSpeedProgress: 0
   enemyType: 1
+  weaponType: 2
 --- !u!54 &7430832086295701379
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -496,7 +497,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &3939431490115905354
 CapsuleCollider:

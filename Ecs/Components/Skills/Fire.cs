@@ -5,5 +5,6 @@ namespace Client
         public int level;
         public float burningStartTime;
         public float lastDamageTime;
+        public int learnedLevel;
     }
 }

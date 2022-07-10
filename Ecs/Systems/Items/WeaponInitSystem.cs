@@ -12,11 +12,10 @@ namespace Client
         public void Init()
         {
             string activeWeaponString = PlayerPrefs.GetString("ActiveWeapon");
-            int prefabNumber = Convert.ToInt32(activeWeaponString.Split(":")[0]);
-            int weaponLevel = Convert.ToInt32(activeWeaponString.Split(":")[1]);
+            int prefabNumber = Convert.ToInt32(activeWeaponString);
 
 
-            GameObject weaponGameObject = GameObject.Instantiate(allPrefabsData.weaponPrefabs[2], sceneData.playerTransform);
+            GameObject weaponGameObject = GameObject.Instantiate(allPrefabsData.weaponPrefabs[prefabNumber], sceneData.playerTransform);
 
             EcsEntity weaponEntity = world.NewEntity();
             ref var objectLink = ref weaponEntity.Get<ObjectLink>();
@@ -25,7 +24,7 @@ namespace Client
             weaponEntity.Get<Dropped>();
             weaponEntity.Get<Reloadable>();
 
-            weapon.projectilePrefabNumber = 0;
+            
                 
             objectLink.Object = weaponGameObject;
             weapon.weaponSocket = weaponGameObject.transform.GetChild(0).transform;
@@ -36,13 +35,20 @@ namespace Client
 
             var weaponStats = weaponGameObject.GetComponent<WeaponInfoMono>();
 
-            weapon.bulletSpeed = weaponStats.bulletSpeed * (weaponLevel * 0.1f + 1);
-            weapon.delayBetweenAttack = weaponStats.delayBetweenAttack - (weaponLevel * 0.05f);
+            weapon.projectilePrefabNumber = weaponStats.projectilePrefabNumber;
+            weapon.weaponType = weaponStats.weaponType;
+            weapon.bulletSpeed = weaponStats.bulletSpeed;
+            weapon.delayBetweenAttack = weaponStats.delayBetweenAttack;
             weapon.projectileLifeTime = weaponStats.projectileLifeTime;
             damage.value = 5;
                 
             objectLink.Object.AddComponent<EntityLink>().entity = weaponEntity;
             
+
+            if (weaponStats.weaponType == WeaponType.Flame)
+            {
+                weaponEntity.Get<Fire>().level++;
+            }
 
         }
     }

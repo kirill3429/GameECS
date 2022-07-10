@@ -10,6 +10,9 @@ public class Level : MonoBehaviour
     [SerializeField] private bool _levelState;
 
 
+    [SerializeField] private string _levelReward;
+
+
     public void LoadLevel()
     {
         if (_levelState != false)
@@ -17,7 +20,9 @@ public class Level : MonoBehaviour
             PlayerPrefs.SetInt("LevelNumber", levelNumber);
             PlayerPrefs.SetString("MonsterSet", _monsterSet);
             PlayerPrefs.SetInt("LevelGround", _levelGround);
-            Debug.Log("Материал пола: " + _levelGround);
+
+            PlayerPrefs.SetString("RewardForWin", _levelReward);
+
             SceneManager.LoadScene(1);
         }
     }
@@ -28,3 +33,4 @@ public class Level : MonoBehaviour
     }
 
 }
+

@@ -9,9 +9,9 @@ using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
-
     private Transform inventoryPanel;
     public Transform weaponContainer;
+    public WeaponStatsUI weaponStatsUI;
     private List<WeaponInfoMono> weaponData;
     [SerializeField] private GameObject weaponViewPrefab;
     [SerializeField] private AllPrefabsData prefabsData;
@@ -39,24 +39,9 @@ public class InventoryManager : MonoBehaviour
 
     private void LoadWeapons()
     {
-        var weaponString = dataInterface.GetInventoryWeapons();
-        List<int> weaponsToSpawn = ConvertStringToList(weaponString);
+
+        List<int> weaponsToSpawn = DataInterface.GetWeaponIDList();
         SpawnWeaponList(weaponsToSpawn);
-
-        
-    }
-
-    private List<int> ConvertStringToList(string weaponString)
-    {
-        Debug.Log(weaponString + "stroka");
-        
-        List <string> stringWeaponList = weaponString.Split("-").ToList();
-        List<int> weaponIDList = new List<int>(stringWeaponList.Where(id => id != "").Select(id => Convert.ToInt32(id)));
-        foreach (var i in weaponIDList)
-        {
-            Debug.Log(i);
-        }
-        return weaponIDList;
     }
 
 
@@ -78,6 +63,9 @@ public class InventoryManager : MonoBehaviour
         WeaponView weaponProperties = weaponView.GetComponent<WeaponView>();
         weaponProperties.Id = weaponId;
         weaponProperties.IconUI.sprite = weaponData[weaponId].Icon;
+        weaponProperties.damage = weaponData[weaponId].damage;
+        weaponProperties.atkSpeed = weaponData[weaponId].delayBetweenAttack;
+        weaponProperties.weaponStatsUI = weaponStatsUI;
     }
 
     #endregion
@@ -103,7 +91,7 @@ public class InventoryManager : MonoBehaviour
 
         List<WeaponView> weaponList = CreateAndFillWeaponList();
         string weaponsStringToSave = ConvertListToString(weaponList);
-        dataInterface.SaveWeapons(weaponsStringToSave);
+        DataInterface.SaveWeapons(weaponsStringToSave);
     }
 
     private List<WeaponView> CreateAndFillWeaponList()

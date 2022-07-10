@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class WeaponInfoMono : MonoBehaviour
 {
-    public int projectilePrefabNumber;
+    public Client.WeaponType weaponType; 
+    public int projectilePrefabNumber; 
     public int bulletSpeed;
     public int ammo;
     public float delayBetweenAttack;

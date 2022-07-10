@@ -19,6 +19,7 @@ public class EnemyInfo : MonoBehaviour
     public float delayBetweenAttackProgress;
     public float bulletSpeedProgress;
     public EnemyType enemyType;
+    public Client.WeaponType weaponType;
     public enum EnemyType
     {
         Range,

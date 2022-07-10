@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 38cd2c2595e0f0d47b285bbd78efcfda
 ModelImporter:
-  serializedVersion: 22102
+  serializedVersion: 21202
   internalIDToNameTable:
   - first:
       1: 100000
@@ -661,7 +661,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.5
+    globalScale: 3
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -693,7 +693,6 @@ ModelImporter:
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -715,7 +714,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.5
+    globalScale: 0.0762
     rootMotionBoneName: Bip001
     hasTranslationDoF: 0
     hasExtraRoot: 0
@@ -726,7 +725,6 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 0
-  importBlendShapeDeformPercent: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

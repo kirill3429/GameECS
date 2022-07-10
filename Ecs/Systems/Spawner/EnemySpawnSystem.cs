@@ -77,16 +77,13 @@ namespace Client
 
                 hitEffect.hitPrefab = prefabsData.hitEffectPrefabs[0];
 
-                // Статы крипа буду зависить от номера префаба и номера волны, будет подключена рантаймдата
-
                 equip.mainWeapon = world.NewEntity();
                 ref var weapon = ref equip.mainWeapon.Get<Weapon>();
                 ref var damage = ref equip.mainWeapon.Get<Damage>();
+                weapon.weaponType = enemyInfo.weaponType;
                 weapon.weaponTransform = objectLink.Object.transform.Find("weaponTransform");
                 weapon.weaponSocket = weapon.weaponTransform;
                 weapon.projectilePrefabNumber = enemyInfo.projectilePrefabNumber;
-                weapon.currentAmmo = 500;
-                weapon.magazineAmmo = 500;
                 weapon.bulletSpeed = enemyInfo.bulletSpeed + enemyInfo.bulletSpeedProgress * runtimeData.waveNumber;
                 weapon.delayBetweenAttack = enemyInfo.delayBetweenAttack + enemyInfo.bulletSpeedProgress * runtimeData.waveNumber;
                 weapon.projectileLifeTime = enemyInfo.projectileLifeTime;

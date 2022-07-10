@@ -26,6 +26,8 @@ namespace Client
                 {
                     hittedEntity.Replace(new Fire());
                     hittedEntity.Get<Fire>().burningStartTime = Time.time;
+                    hittedEntity.Get<Fire>().level = bulletEntity.Get<Fire>().level;
+                    hittedEntity.Get<Fire>().learnedLevel = bulletEntity.Get<Fire>().learnedLevel;
                 }
                 if (bulletEntity.Has<Ice>())
                 {
@@ -37,6 +39,7 @@ namespace Client
                 {
                     hittedEntity.Get<Explosion>().damage = bulletEntity.Get<Explosion>().damage;
                     hittedEntity.Get<Explosion>().level = bulletEntity.Get<Explosion>().level;
+                    hittedEntity.Get<Explosion>().learnedLevel = bulletEntity.Get<Explosion>().learnedLevel;
                 }
                 if (bulletEntity.Has<Lifesteal>())
                 {

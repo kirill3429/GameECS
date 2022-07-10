@@ -245,7 +245,7 @@ MonoBehaviour:
   delayBetweenAttack: 5
   projectileLifeTime: 2
   bulletSpeed: 10
-  projectilePrefabNumber: 1
+  projectilePrefabNumber: 3
   moveSpeedProgress: 0
   healthProgress: 30
   damageProgress: 30

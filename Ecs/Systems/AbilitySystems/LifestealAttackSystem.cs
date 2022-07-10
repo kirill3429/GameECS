@@ -20,7 +20,7 @@ namespace Client
                     ref var weaponLifesteal = ref playerFilter.GetEntity(j).Get<Equipment>().mainWeapon.Get<Lifesteal>();
                     if (playerHP.currentHealth < playerHP.maxHealth)
                     {
-                        playerFilter.GetEntity(j).Get<Heal>().heal = weaponLifesteal.level * 0.1f;
+                        playerFilter.GetEntity(j).Get<Heal>().heal = weaponLifesteal.level * 0.1f * weaponLifesteal.learnedLevel;
                     }
                 }
                 filter.GetEntity(i).Destroy();

@@ -13,12 +13,15 @@ namespace Client
             foreach (var i in filter)
             {
                 ref var weaponEntity = ref filter.GetEntity(i);
-                weaponEntity.Get<Damage>().value *= 1.1f;
+                ref var AddDamageInfo = ref filter.Get1(i);
+                ref var damage = ref weaponEntity.Get<Damage>();
+                damage.value = (float)(damage.value * (1.1f + (0.1 * AddDamageInfo.learnedLevel)));
+
                 weaponEntity.Del<AddDamage>();
 
                 if (weaponEntity.Has<Explosion>())
                 {
-                    weaponEntity.Get<Explosion>().damage = weaponEntity.Get<Damage>().value / 5;
+                    weaponEntity.Get<Explosion>().damage = weaponEntity.Get<Damage>().value / 10;
                 }
             }
         }

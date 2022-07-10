@@ -46,15 +46,13 @@ public class ShopManager : MonoBehaviour
         view.GetComponentInChildren<TMP_Text>().text = prefab.Description;
         view.GetComponentsInChildren<Image>()[1].sprite = prefab.Icon;
         view.GetComponent<SkillProperties>().Id = prefab.Id;
-        view.GetComponent<SkillProperties>().DefaultCost = prefab.DefaultCost;
         view.GetComponent<SkillProperties>().Icon = prefab.Icon;
     }
 
     private void LoadLearnedSkills()
     {
-        //string learnedSkillsString = dataInterface.GetLearnedSkills();
-        //Debug.Log(learnedSkillsString);
-        string learnedSkillsString = "-4:2-3:4-6:1-2:1";
+        string learnedSkillsString = dataInterface.GetLearnedSkills();
+        
         Dictionary<int, int> learnedSkillsDictionary = ConvertSkillsStringToDictionary(learnedSkillsString);
         ApplySkillPropertiesToSkillsViews(learnedSkillsDictionary);
     }

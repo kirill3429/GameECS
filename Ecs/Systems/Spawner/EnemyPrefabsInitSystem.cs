@@ -32,15 +32,12 @@ namespace Client
                 monsterArray.Add(Convert.ToInt32(str));
             }
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < monsterArray.Count; i++)
             {
                 allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
                 allWaveData.waves[i].waveInfo = new Dictionary<int, int>();
 
-                foreach(int monsterNum in monsterArray)
-                {
-                    allWaveData.waves[i].waveInfo.Add(monsterNum, 30 + i * 5);
-                }
+                allWaveData.waves[i].waveInfo.Add(monsterArray[i], 5);
             }
         }
     }

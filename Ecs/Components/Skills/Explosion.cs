@@ -4,5 +4,6 @@ namespace Client
     {
         public int level;
         public float damage;
+        public int learnedLevel;
     }
 }

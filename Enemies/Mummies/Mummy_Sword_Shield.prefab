@@ -2573,7 +2573,7 @@ Transform:
   m_GameObject: {fileID: 3897915548112452566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3897915548112069732}
@@ -2619,10 +2619,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.38
-  m_Height: 1.87
+  m_Radius: 1.2
+  m_Height: 4.1572704
   m_Direction: 1
-  m_Center: {x: 0, y: 0.94, z: 0}
+  m_Center: {x: 0, y: 2.31, z: -0}
 --- !u!54 &4568348926209349509
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2670,13 +2670,14 @@ MonoBehaviour:
   delayBetweenAttack: 0.5
   projectileLifeTime: 1
   bulletSpeed: 10
-  projectilePrefabNumber: 1
+  projectilePrefabNumber: 3
   moveSpeedProgress: 0
   healthProgress: 13
   damageProgress: 5
   delayBetweenAttackProgress: 0
   bulletSpeedProgress: 0
   enemyType: 1
+  weaponType: 0
 --- !u!1 &7650402532278698842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2703,7 +2704,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7650402532278698842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.225, z: 0.217}
+  m_LocalPosition: {x: 0, y: 1.225, z: 1.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2721,7 +2722,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.454928, y: 0.71633554, z: 0.78734064}
+  m_Size: {x: 0.454928, y: 1.7, z: 1.07}
   m_Center: {x: 0.025003355, y: -0.2, z: 0.43}
 --- !u!54 &5762107534491196149
 Rigidbody:

@@ -44,8 +44,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.8499987, y: 2.18, z: 1.6837966}
-  m_Center: {x: 0.002331955, y: 2.36, z: 2.27}
+  m_Size: {x: 2.8499987, y: 2.1799998, z: 21.240183}
+  m_Center: {x: 0.0023319721, y: 2.36, z: 12.048196}
 --- !u!54 &1588091474
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -468,7 +468,7 @@ MonoBehaviour:
   delayBetweenAttack: 5
   projectileLifeTime: 2
   bulletSpeed: 10
-  projectilePrefabNumber: 1
+  projectilePrefabNumber: 4
   moveSpeedProgress: 0
   healthProgress: 30
   damageProgress: 30

@@ -14,18 +14,29 @@ namespace Client
         {
             foreach (var i in filter)
             {
-                ref var spawner = ref filter.Get1(i);
-                spawner.creepsQueue = new Queue<int>();
-
-                foreach (var k in allWaveData.waves[runtimeData.waveNumber].waveInfo)
+                if ( allWaveData.waves.Count > runtimeData.waveNumber)
                 {
-                    for (int j = 0; j < k.Value; j++)
+                    ref var spawner = ref filter.Get1(i);
+                    spawner.creepsQueue = new Queue<int>();
+
+                    foreach (var k in allWaveData.waves[runtimeData.waveNumber].waveInfo)
                     {
-                        spawner.creepsQueue.Enqueue(k.Key);
+                        for (int j = 0; j < k.Value; j++)
+                        {
+                            spawner.creepsQueue.Enqueue(k.Key);
+                        }
                     }
+                    Debug.Log("Очередь заполнена");
+                    filter.GetEntity(i).Del<NeedToFill>();
                 }
-                Debug.Log("Очередь заполнена");
-                filter.GetEntity(i).Del<NeedToFill>();
+
+                else
+                {
+                    filter.GetEntity(i).Del<NeedToFill>();
+                    runtimeData.gameState = GameState.Win;
+                    world.NewEntity().Get<WinGame>();
+                }
+                
             }
 
         }

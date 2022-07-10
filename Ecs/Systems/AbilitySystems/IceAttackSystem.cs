@@ -13,15 +13,16 @@ namespace Client
             {
                 ref var ice = ref filter.Get1(i);
                 ref var targetEntity = ref filter.GetEntity(i);
+                ref var movable = ref targetEntity.Get<Movable>();
 
                 if (Time.time - ice.iceStartTime < ice.level)
                 {
-                    targetEntity.Get<Movable>().moveSpeed = targetEntity.Get<Movable>().defaultMoveSpeed / ice.level;
+                    movable.moveSpeed = movable.defaultMoveSpeed - ice.level * 0.05f * movable.defaultMoveSpeed;
 
                 }
                 else
                 {
-                    targetEntity.Get<Movable>().moveSpeed = targetEntity.Get<Movable>().defaultMoveSpeed;
+                    movable.moveSpeed = movable.defaultMoveSpeed;
                     targetEntity.Del<Ice>();
                 }
 

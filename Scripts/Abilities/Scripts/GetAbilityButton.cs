@@ -6,6 +6,7 @@ using Leopotam.Ecs;
 public class GetAbilityButton : MonoBehaviour
 {
     public string abilityString;
+    public int abilityLevel;
 
     private EcsStartup startUp;
 
@@ -19,7 +20,9 @@ public class GetAbilityButton : MonoBehaviour
     public void AddAbility()
     {
         startUp = GameObject.FindGameObjectWithTag("EcsStartUp").GetComponent<EcsStartup>();
-        startUp._world.NewEntity().Get<AddAbilityEvent>().abilityName = abilityString;
+        EcsEntity eventEntity = startUp._world.NewEntity();
+        eventEntity.Get<AddAbilityEvent>().abilityName = abilityString;
+        eventEntity.Get<AddAbilityEvent>().abilityLevel = abilityLevel;
     }
     public void CloseWindow()
     {

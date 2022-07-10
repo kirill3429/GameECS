@@ -63,7 +63,9 @@ namespace Client
                 .Add(new RewardSystem())
                 
                 .Add(new OpenAbilityWindowSystem())
+                .Add(new WinSystem())
                 .Add(new PauseSystem())
+                
 
                 .OneFramePhysics()
 

@@ -20,7 +20,7 @@ namespace Client
                     if (Time.time - fire.lastDamageTime > 1)
                     {
                         GameObject.Instantiate(allPrefabsData.hitEffectPrefabs[2], enemy.enemyTransform);
-                        filter.GetEntity(i).Get<TakeDamage>().value += fire.level + 1; // damage
+                        filter.GetEntity(i).Get<TakeDamage>().value += fire.level * fire.learnedLevel; // damage
                         fire.lastDamageTime = Time.time;
                     }
                 }

@@ -15,33 +15,40 @@ namespace Client
             {
                 foreach (var j in playerFilter)
                 {
-                    ref var weapon = ref playerFilter.GetEntity(j).Get<Equipment>().mainWeapon;
-                    ref var player = ref  playerFilter.GetEntity(i);
-                    ref var ability = ref filter.Get1(i).abilityName;
+                    ref var player = ref playerFilter.GetEntity(i);
+                    ref var weapon = ref player.Get<Equipment>().mainWeapon;
+                    ref var abilityName = ref filter.Get1(i).abilityName;
+                    ref var abilityLevel = ref filter.Get1(i).abilityLevel;
 
-                    switch (ability)
+
+                    switch (abilityName)
                     {
                         case "Fire":
                             weapon.Get<Fire>().level++;
+                            weapon.Get<Fire>().learnedLevel = abilityLevel;
+                            
                             break;
                         case "Ricochet":
                             weapon.Get<Ricochet>().level += 2;
+                            weapon.Get<Ricochet>().learnedLevel = abilityLevel;
                             break;
                         case "Ice":
-                            weapon.Get<Ice>().level +=2;
+                            weapon.Get<Ice>().level++;
                             break;
                         case "Damage":
-                            weapon.Get<AddDamage>();
+                            weapon.Get<AddDamage>().learnedLevel = abilityLevel;
                             break;
                         case "Lifesteal":
                             weapon.Get<Lifesteal>().level++;
+                            weapon.Get<Lifesteal>().learnedLevel = abilityLevel;
                             break;
                         case "Explosion":
                             weapon.Get<Explosion>().level++;
-                            weapon.Get<Explosion>().damage = weapon.Get<Damage>().value / 5;
+                            weapon.Get<Explosion>().learnedLevel = abilityLevel;
+                            weapon.Get<Explosion>().damage = weapon.Get<Damage>().value / 10;
                             break;
                         case "AddHealth":
-                            player.Get<AddHealth>();
+                            player.Get<AddHealth>().learnedLevel = abilityLevel;
                             break;
                     }
 

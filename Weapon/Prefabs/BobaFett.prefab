@@ -230,12 +230,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7043f40d68a085439f9789cd1a12370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponType: 0
   projectilePrefabNumber: 0
-  bulletSpeed: 100
+  bulletSpeed: 120
   ammo: 500
-  delayBetweenAttack: 0.3
+  delayBetweenAttack: 0.5
   projectileLifeTime: 10
-  damage: 5
+  damage: 7
   reloadSpeed: 0
   criticalDamageMultiplier: 0
   criticalDamageChance: 0

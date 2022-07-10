@@ -9,7 +9,7 @@ public class AbilityAsset : ScriptableObject
     public string Description;
     public string AdvancedDescription;
     public int Id;
-    public int DefaultCost;
+    public int Level;
     public Sprite Icon;
 
 }

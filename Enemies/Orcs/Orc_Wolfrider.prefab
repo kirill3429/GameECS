@@ -1094,9 +1094,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.862967
-  m_Height: 2.1715784
+  m_Height: 1.9242214
   m_Direction: 1
-  m_Center: {x: 0, y: 0.88683057, z: -0.020305395}
+  m_Center: {x: 0, y: 1.0105087, z: -0.020305427}
 --- !u!54 &2837917125489147878
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1144,13 +1144,14 @@ MonoBehaviour:
   delayBetweenAttack: 2
   projectileLifeTime: 1
   bulletSpeed: 10
-  projectilePrefabNumber: 1
+  projectilePrefabNumber: 3
   moveSpeedProgress: 0
   healthProgress: 10
   damageProgress: 10
   delayBetweenAttackProgress: 0
   bulletSpeedProgress: 10
   enemyType: 1
+  weaponType: 0
 --- !u!1 &153408
 GameObject:
   m_ObjectHideFlags: 0

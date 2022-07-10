@@ -13,6 +13,7 @@ namespace Client
         public float lastAttack;
         public float projectileLifeTime;
         public float projectileStartTime;
+        public WeaponType weaponType;
 
         public Transform weaponTransform;
         public Transform weaponSocket;
@@ -20,7 +21,12 @@ namespace Client
         public GameObject muzzleEffect;
         public EcsEntity ownerEntity;
 
-        public float magazineAmmo;
-        public float currentAmmo;
+    }
+
+    public enum WeaponType
+    {
+        Simple,
+        Shotgun,
+        Flame
     }
 }

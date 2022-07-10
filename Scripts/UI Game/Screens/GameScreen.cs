@@ -8,6 +8,7 @@ public class GameScreen : Client.Screen
     [SerializeField] private Slider _currentHealthSlider;
     public Image dashImage;
     public TMP_Text score;
+    public TMP_Text wave;
 
     public void SetHealth(float currentHealth, float maxHealth)
     {

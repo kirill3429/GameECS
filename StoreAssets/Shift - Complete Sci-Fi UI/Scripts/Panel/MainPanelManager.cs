@@ -51,7 +51,7 @@ namespace Michsky.UI.Shift
                     currentButtonAnimator.Play(buttonFadeIn);
                 }
 
-                else 
+                else
                 {
                     nextPanelAnimator.Play(panelFadeIn);
                     nextButtonAnimator.Play(buttonFadeIn);

@@ -1,5 +1,5 @@
-using UnityEngine;
 using Leopotam.Ecs;
+using UnityEngine;
 
 namespace Client
 {
@@ -15,11 +15,11 @@ namespace Client
             foreach (var i in filter)
             {
                 ref var eventInfo = ref filter.Get1(i);
-                
+
                 if (eventInfo.weapon != EcsEntity.Null)
                 {
                     ref var weapon = ref eventInfo.weapon.Get<Weapon>();
-                    
+
                     if (currentTime - weapon.lastAttack > weapon.delayBetweenAttack)
                     {
                         switch (weapon.weaponType)
@@ -38,7 +38,7 @@ namespace Client
                                 for (int j = 0; j < 3; j++)
                                 {
                                     EcsEntity projectile1 = eventInfo.weapon.Copy();
-                                    projectile1.Get<SpawnProjectile>().direction = eventInfo.mousePos + new Vector3(Random.Range(0,5), 0, Random.Range(0, 5));
+                                    projectile1.Get<SpawnProjectile>().direction = eventInfo.mousePos + new Vector3(Random.Range(0, 5), 0, Random.Range(0, 5));
                                     projectile1.Del<Name>();
                                     projectile1.Del<ObjectLink>();
                                 }
@@ -49,7 +49,7 @@ namespace Client
                                 break;
 
                             case WeaponType.Flame:
-                                for (int j = 0; j < Random.Range(1,4); j++)
+                                for (int j = 0; j < Random.Range(1, 4); j++)
                                 {
                                     EcsEntity projectile1 = eventInfo.weapon.Copy();
                                     projectile1.Get<SpawnProjectile>().direction = eventInfo.mousePos + new Vector3(Random.Range(0, 7), 0, Random.Range(0, 7));
@@ -62,13 +62,13 @@ namespace Client
                                 break;
                         }
 
-                        
+
 
                     }
 
-                    
+
                 }
-                
+
             }
         }
 

@@ -1,6 +1,5 @@
-using UnityEngine;
-using Leopotam.Ecs;
 using LeoEcsPhysics;
+using Leopotam.Ecs;
 
 namespace Client
 {
@@ -14,17 +13,17 @@ namespace Client
             foreach (var i in filter)
             {
                 ref var eventInfo = ref filter.Get1(i);
-                if(eventInfo.collider != null)
-                if(eventInfo.collider.tag == "EnemyAttackCollider" && eventInfo.senderGameObject.tag == "Player")
-                {
-                    ref var attackEvent = ref world.NewEntity().Get<AttackEvent>();
-                    attackEvent.eventSender = eventInfo.collider.transform.parent.GetComponent<EntityLink>().entity;
-                    attackEvent.weapon = attackEvent.eventSender.Get<Equipment>().mainWeapon;
-                    attackEvent.mousePos = attackEvent.eventSender.Get<InputHandlerComponent>().mouseVector;
-                    filter.GetEntity(i).Destroy();
-                }
-                
-                
+                if (eventInfo.collider != null)
+                    if (eventInfo.collider.tag == "EnemyAttackCollider" && eventInfo.senderGameObject.tag == "Player")
+                    {
+                        ref var attackEvent = ref world.NewEntity().Get<AttackEvent>();
+                        attackEvent.eventSender = eventInfo.collider.transform.parent.GetComponent<EntityLink>().entity;
+                        attackEvent.weapon = attackEvent.eventSender.Get<Equipment>().mainWeapon;
+                        attackEvent.mousePos = attackEvent.eventSender.Get<InputHandlerComponent>().mouseVector;
+                        filter.GetEntity(i).Destroy();
+                    }
+
+
             }
         }
 

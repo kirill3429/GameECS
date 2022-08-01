@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096242819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.82, z: 1.93}
+  m_LocalPosition: {x: 0, y: 1.27, z: 1.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,8 +44,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.8499987, y: 2.18, z: 1.6837966}
-  m_Center: {x: 0.002331955, y: 0.051622167, z: 0.44310036}
+  m_Size: {x: 2.8499987, y: 2.18, z: 0.77133065}
+  m_Center: {x: 0.002331955, y: 0.051622167, z: -0.0131325}
 --- !u!54 &1096242821
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -238,20 +238,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b18e44175e23724fbe83724e3dce1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: 40
+  reward: 10
   moveSpeed: 3
   health: 50
-  damage: 50
-  delayBetweenAttack: 5
-  projectileLifeTime: 2
-  bulletSpeed: 10
+  damage: 30
+  delayBetweenAttack: 3
+  projectileLifeTime: 5
+  bulletSpeed: 200
   projectilePrefabNumber: 3
   moveSpeedProgress: 0
-  healthProgress: 30
-  damageProgress: 30
+  healthProgress: 0
+  damageProgress: 0
   delayBetweenAttackProgress: 0
   bulletSpeedProgress: 0
   enemyType: 1
+  weaponType: 0
 --- !u!1 &1088256926929212
 GameObject:
   m_ObjectHideFlags: 0

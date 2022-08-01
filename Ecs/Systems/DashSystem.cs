@@ -13,14 +13,14 @@ namespace Client
                 ref var dash = ref filter.Get1(i);
                 ref var transform = ref filter.Get2(i).transform;
                 transform.position = Vector3.Lerp(transform.position, dash.point, 0.1f);
-                
-                if(Time.time - dash.dashTimeStamp > 0.35f)
+
+                if (Time.time - dash.dashTimeStamp > 0.35f)
                 {
                     filter.GetEntity(i).Del<DashEvent>();
                 }
 
             }
-            
+
         }
     }
 }

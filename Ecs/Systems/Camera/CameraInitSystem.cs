@@ -11,7 +11,7 @@ namespace Client
         {
             var cameraEntity = world.NewEntity();
             ref var camera = ref cameraEntity.Get<Camera>();
-            
+
             camera.cameraTransform = GameObject.FindGameObjectWithTag("MainCamera").transform;
             camera.targetTransform = GameObject.FindGameObjectWithTag("CameraTarget").transform;
             camera.playerTransform = GameObject.FindGameObjectWithTag("Player").transform;

@@ -595,7 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b18e44175e23724fbe83724e3dce1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: 2
+  reward: 1
   moveSpeed: 4
   health: 15
   damage: 2

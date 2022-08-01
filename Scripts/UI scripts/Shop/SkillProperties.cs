@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 public class SkillProperties : MonoBehaviour, IPointerClickHandler
 {
     public int Id;
     public int Level;
     public bool Learned;
     public Sprite Icon;
-    public int DefaultCost;
+    public int Cost;
 
     private SkillDiscriptionPanel discriptionPanel;
 

@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMoveSpeed: 3
   thresholdCamera: 4
-  enemySpawnRadius: 10
-  maxEnemies: 50
+  enemySpawnRadius: 50.5
+  maxEnemies: 30
   layerMask:
     serializedVersion: 2
     m_Bits: 64
-  spawnDispersion: 1
-  timeBetweenWaves: 3
+  spawnDispersion: 30
+  timeBetweenWaves: 0
   NewAbilityWindow: {fileID: 0}

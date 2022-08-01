@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponInfoMono : MonoBehaviour
 {
-    public Client.WeaponType weaponType; 
-    public int projectilePrefabNumber; 
+    public Client.WeaponType weaponType;
+    public int projectilePrefabNumber;
     public int bulletSpeed;
     public int ammo;
     public float delayBetweenAttack;

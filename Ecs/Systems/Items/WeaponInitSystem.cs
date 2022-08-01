@@ -1,6 +1,6 @@
 using Leopotam.Ecs;
-using UnityEngine;
 using System;
+using UnityEngine;
 namespace Client
 {
     sealed class WeaponInitSystem : IEcsInitSystem
@@ -12,8 +12,8 @@ namespace Client
         public void Init()
         {
             string activeWeaponString = PlayerPrefs.GetString("ActiveWeapon");
-            int prefabNumber = Convert.ToInt32(activeWeaponString);
 
+            int prefabNumber = Convert.ToInt32(activeWeaponString);
 
             GameObject weaponGameObject = GameObject.Instantiate(allPrefabsData.weaponPrefabs[prefabNumber], sceneData.playerTransform);
 
@@ -24,8 +24,8 @@ namespace Client
             weaponEntity.Get<Dropped>();
             weaponEntity.Get<Reloadable>();
 
-            
-                
+
+
             objectLink.Object = weaponGameObject;
             weapon.weaponSocket = weaponGameObject.transform.GetChild(0).transform;
             weapon.weaponTransform = weaponGameObject.transform;
@@ -40,10 +40,10 @@ namespace Client
             weapon.bulletSpeed = weaponStats.bulletSpeed;
             weapon.delayBetweenAttack = weaponStats.delayBetweenAttack;
             weapon.projectileLifeTime = weaponStats.projectileLifeTime;
-            damage.value = 5;
-                
+            damage.value = weaponStats.damage;
+
             objectLink.Object.AddComponent<EntityLink>().entity = weaponEntity;
-            
+
 
             if (weaponStats.weaponType == WeaponType.Flame)
             {

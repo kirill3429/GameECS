@@ -6,7 +6,7 @@ namespace Client
     sealed class IceAttackSystem : IEcsRunSystem
     {
         readonly EcsWorld _world = null;
-        readonly EcsFilter<Ice, EnemyTag> filter = null;
+        readonly EcsFilter<Ice>.Exclude<Weapon> filter = null;
         void IEcsRunSystem.Run()
         {
             foreach (var i in filter)
@@ -17,7 +17,7 @@ namespace Client
 
                 if (Time.time - ice.iceStartTime < ice.level)
                 {
-                    movable.moveSpeed = movable.defaultMoveSpeed - ice.level * 0.05f * movable.defaultMoveSpeed;
+                    movable.moveSpeed = movable.defaultMoveSpeed - ice.level * ice.learnedLevel * 0.05f * movable.defaultMoveSpeed;
 
                 }
                 else

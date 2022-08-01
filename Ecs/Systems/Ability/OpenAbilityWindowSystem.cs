@@ -1,5 +1,4 @@
 using Leopotam.Ecs;
-using UnityEngine;
 
 namespace Client
 {
@@ -10,7 +9,7 @@ namespace Client
         readonly SceneData sceneData;
         readonly EcsWorld _world = null;
         readonly EcsFilter<OpenAbilityWindowEvent> filter = null;
-        
+
         void IEcsRunSystem.Run()
         {
             foreach (var i in filter)

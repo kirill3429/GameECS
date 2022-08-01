@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Events;
-using TMPro;
 
 namespace Michsky.UI.Shift
 {
@@ -29,7 +28,7 @@ namespace Michsky.UI.Shift
         void Start()
         {
             //mixer.SetFloat("Master", Mathf.Log10(PlayerPrefs.GetFloat(masterSlider.sliderTag + "SliderValue")) * 20);
-            
+
 
             resolutions = Screen.resolutions;
 

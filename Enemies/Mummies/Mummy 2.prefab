@@ -595,11 +595,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b18e44175e23724fbe83724e3dce1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: 2
+  reward: 1
   moveSpeed: 7
   health: 15
-  damage: 2
-  delayBetweenAttack: 0.3
+  damage: 1
+  delayBetweenAttack: 0.8
   projectileLifeTime: 1
   bulletSpeed: 1
   projectilePrefabNumber: 3

@@ -1,16 +1,20 @@
-﻿using UnityEngine;
-using System.Linq;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 public class SkillDiscriptionPanel : MonoBehaviour
 {
     public int Id;
     public TextMeshProUGUI LevelUI;
+    public TextMeshProUGUI LevelUIText;
     public TextMeshProUGUI SkillPointsUI;
     public TextMeshProUGUI NameUI;
     public TextMeshProUGUI AbilityDescriptionUI;
+    public TextMeshProUGUI DamageDescriptionUI;
+    public TextMeshProUGUI CostUI;
+    public TextMeshProUGUI CostUIText;
     public Image IconUI;
-    public int DefaultCost;
+    public int Cost;
+    public int Score;
     private SkillProperties _skillProperties;
     private Button LevelUpButton;
 
@@ -26,20 +30,36 @@ public class SkillDiscriptionPanel : MonoBehaviour
         TextMeshProUGUI[] texts = gameObject.GetComponentsInChildren<TextMeshProUGUI>();
         IconUI = gameObject.GetComponentsInChildren<Image>()[2];
         LevelUI = texts[0];
+        LevelUIText = texts[1];
         NameUI = texts[2];
         AbilityDescriptionUI = texts[3];
-        SkillPointsUI = texts[5];
-        SetSkillPoints(2);
-        
+        DamageDescriptionUI = texts[4];
+        CostUI = texts[5];
+        CostUIText = texts[6];
+        Score = GetScore();
+        UpdateScore();
+
     }
     public void ShowAbilityDiscription(SkillProperties skillProperties)
     {
         _skillProperties = skillProperties;
-
         IconUI.sprite = _skillProperties.Icon;
         LevelUI.text = _skillProperties.Level.ToString();
-        NameUI.text = abilityData.abilityPrefabs[_skillProperties.Id].Description;
-        AbilityDescriptionUI.text = abilityData.abilityPrefabs[_skillProperties.Id].AdvancedDescription;
+        NameUI.text = abilityData.abilityPrefabs[_skillProperties.Id].Name;
+        AbilityDescriptionUI.text = abilityData.abilityPrefabs[_skillProperties.Id].Description;
+        DamageDescriptionUI.text = abilityData.abilityPrefabs[_skillProperties.Id].DamageDescription;
+        Cost = (int)(_skillProperties.Cost * (1 + (_skillProperties.Level * 0.4f)));
+        CostUI.text = Cost.ToString();
+        CostUIText.text = "cost";
+        LevelUIText.text = "level";
+
+        foreach (Transform t in transform)
+        {
+            if (t.TryGetComponent(out LocalizedText text))
+            {
+                text.LocalizeAgain();
+            }
+        }
     }
 
 
@@ -51,27 +71,28 @@ public class SkillDiscriptionPanel : MonoBehaviour
     }
 
 
-    private int GetSkillPoints()
+    private int GetScore()
     {
-        return PlayerPrefs.GetInt("SkillPoints");
+        return DataInterface.GetPlayerScore();
     }
-    private void SetSkillPoints(int skillPoints)
+    private void SetScore(int skillPoints)
     {
-        PlayerPrefs.SetInt("SkillPoints", skillPoints);
+        DataInterface.SetPlayerScore(skillPoints);
         SkillPointsUI.text = skillPoints.ToString();
     }
 
     public void LevelUpSkill()
     {
-        int skillPoints = GetSkillPoints();
-        if (skillPoints > 0 && LevelUI.text != "5")
+        if (Score >= Cost && LevelUI.text != "5")
         {
             if (_skillProperties != null)
             {
                 LearnSkill();
                 LevelUI.text = _skillProperties.Level.ToString();
-                skillPoints--;
-                SetSkillPoints(skillPoints);
+                Score = Score - Cost;
+                UpdateCost();
+                SetScore(Score);
+                UpdateScore();
             }
         }
     }
@@ -81,5 +102,15 @@ public class SkillDiscriptionPanel : MonoBehaviour
         _skillProperties.Level++;
         _skillProperties.Learned = true;
         _skillProperties.LearnedView();
+    }
+
+    private void UpdateCost()
+    {
+        Cost = (int)(_skillProperties.Cost * (1 + (_skillProperties.Level * 0.4f)));
+        CostUI.text = Cost.ToString();
+    }
+    private void UpdateScore()
+    {
+        SkillPointsUI.text = Score.ToString();
     }
 }

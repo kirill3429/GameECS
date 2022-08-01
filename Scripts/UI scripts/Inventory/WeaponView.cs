@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using TMPro;
 
-public class WeaponView : MonoBehaviour, IPointerClickHandler 
+public class WeaponView : MonoBehaviour, IPointerClickHandler
 {
     public int Id;
     public Image IconUI;

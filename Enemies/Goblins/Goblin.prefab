@@ -44,8 +44,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.76927835, y: 3.770142, z: 1.3120364}
-  m_Center: {x: -0.0056558317, y: -0.035198033, z: 0.65494454}
+  m_Size: {x: 2.0829897, y: 3.770142, z: 3.1091506}
+  m_Center: {x: -0.030213177, y: -0.035197973, z: 1.5535017}
 --- !u!54 &2163389571813448957
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -986,20 +986,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b18e44175e23724fbe83724e3dce1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: 0
-  moveSpeed: 10
+  reward: 5
+  moveSpeed: 7
   health: 10
-  damage: 3
-  delayBetweenAttack: 0.1
+  damage: 1
+  delayBetweenAttack: 1
   projectileLifeTime: 1
-  bulletSpeed: 5
+  bulletSpeed: 20
   projectilePrefabNumber: 3
   moveSpeedProgress: 0.7
   healthProgress: 0.1
   damageProgress: 1
-  delayBetweenAttackProgress: 0.01
-  bulletSpeedProgress: 1
+  delayBetweenAttackProgress: 0
+  bulletSpeedProgress: 0
   enemyType: 1
+  weaponType: 0
 --- !u!1001 &132059390
 PrefabInstance:
   m_ObjectHideFlags: 0

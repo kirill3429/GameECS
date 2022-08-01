@@ -1,5 +1,4 @@
 using Leopotam.Ecs;
-using UnityEngine;
 
 namespace Client
 {
@@ -18,7 +17,7 @@ namespace Client
 
                 float hp = health.currentHealth / health.maxHealth;
 
-                health.maxHealth = (float)(health.maxHealth * (1.1f + (0.1 * AddHealthInfo.learnedLevel)));
+                health.maxHealth = (float)(health.maxHealth * (1 + (0.1 * AddHealthInfo.learnedLevel)));
                 health.currentHealth = health.maxHealth * hp;
 
                 if (entity.Has<PlayerTag>())

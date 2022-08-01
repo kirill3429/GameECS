@@ -1,21 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using TMPro;
 
 namespace Michsky.UI.Shift
 {
     public class HorizontalSelector : MonoBehaviour
     {
         [Header("Settings")]
-        public int defaultIndex = LocalizationManager.SelectedLanguage;
+        public int defaultIndex;
         public bool invokeAtStart;
         public bool invertAnimation;
         public bool loopSelection;
         [HideInInspector] public int index = 0;
-		
-	    [Header("Saving")]
+
+        [Header("Saving")]
         public bool saveValue;
         public string selectorTag = "Tag Text";
 
@@ -41,6 +40,7 @@ namespace Michsky.UI.Shift
 
         void Start()
         {
+            defaultIndex = LocalizationManager.SelectedLanguage;
             selectorAnimator = gameObject.GetComponent<Animator>();
             label = transform.Find("Text").GetComponent<TextMeshProUGUI>();
             labeHelper = transform.Find("Text Helper").GetComponent<TextMeshProUGUI>();
@@ -57,14 +57,14 @@ namespace Michsky.UI.Shift
             labeHelper.text = label.text;
             index = defaultIndex;
 
-            if(enableIndicators == true)
+            if (enableIndicators == true)
             {
                 foreach (Transform child in indicatorParent)
                     Destroy(child.gameObject);
 
                 for (int i = 0; i < itemList.Count; ++i)
                 {
-                    GameObject go = Instantiate(indicatorObject, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    GameObject go = Instantiate(indicatorObject, new Vector3(0, 0, 0), Quaternion.identity);
                     go.transform.SetParent(indicatorParent, false);
                     go.name = itemList[i].itemTitle;
 
@@ -290,7 +290,7 @@ namespace Michsky.UI.Shift
 
                 for (int i = 0; i < itemList.Count; ++i)
                 {
-                    GameObject go = Instantiate(indicatorObject, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    GameObject go = Instantiate(indicatorObject, new Vector3(0, 0, 0), Quaternion.identity);
                     go.transform.SetParent(indicatorParent, false);
                     go.name = itemList[i].itemTitle;
 

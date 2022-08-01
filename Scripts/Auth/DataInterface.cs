@@ -1,24 +1,17 @@
-using UnityEngine;
-using System.Runtime.InteropServices;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 public class DataInterface : MonoBehaviour
 {
-    private static bool auth;
-    public YandexSDK yandexSDK;
-    private void PreInit()
+
+    public static string GetActiveWeapon()
     {
-        yandexSDK.AuthSuccess += YandexSDK_AuthSuccess; ;
+        return PlayerPrefs.GetString("ActiveWeapon");
     }
 
-    private void YandexSDK_AuthSuccess()
-    {
-        auth = true;
-    }
-
-    public void SetActiveWeapon(string activeWeapon)
+    public static void SetActiveWeapon(string activeWeapon)
     {
         PlayerPrefs.SetString("ActiveWeapon", activeWeapon);
     }
@@ -27,7 +20,7 @@ public class DataInterface : MonoBehaviour
     {
         PlayerPrefs.SetString("Weapons", stringToSave);
     }
-    public void SaveLearnedSkills(string stringToSave)
+    public static void SaveLearnedSkills(string stringToSave)
     {
         PlayerPrefs.SetString("LearnedSkills", stringToSave);
     }
@@ -55,21 +48,22 @@ public class DataInterface : MonoBehaviour
 
     public static void AddScore(int Score)
     {
-        PlayerPrefs.SetInt("Score",GetPlayerScore() + Score); 
+        PlayerPrefs.SetInt("Score", GetPlayerScore() + Score);
     }
-    public string GetActiveWeapon()
-    {
-        return PlayerPrefs.GetString("ActiveWeapon");
-    }
-    public string GetLearnedSkills()
+    public static string GetLearnedSkills()
     {
         return PlayerPrefs.GetString("LearnedSkills");
     }
 
-    
+
     public static int GetPlayerScore()
     {
         return PlayerPrefs.GetInt("Score");
+    }
+
+    public static void SetPlayerScore(int score)
+    {
+        PlayerPrefs.SetInt("Score", score);
     }
 
 
@@ -87,22 +81,6 @@ public class DataInterface : MonoBehaviour
         PlayerPrefs.SetInt("lastLevel", level);
     }
 
-    public void SaveToServer()
-    {
-        if (auth)
-        {
-
-            UserGameData UGD = new UserGameData();
-
-            UGD.Inventory = GetInventoryWeapons();
-            UGD.ActiveWeapon = GetActiveWeapon();
-            UGD.Coins = GetPlayerScore().ToString();
-            UGD.Abilities = GetLearnedSkills();
-            UGD.LastEnter = GetLastEnter();
-
-            yandexSDK.DataSet(JsonUtility.ToJson(UGD));
-
-        }
-    }
+   
 
 }

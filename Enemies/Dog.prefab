@@ -236,7 +236,6 @@ GameObject:
   - component: {fileID: 31598890100314874}
   - component: {fileID: 31598890100314868}
   - component: {fileID: 31598890100314869}
-  - component: {fileID: 31598890100314870}
   - component: {fileID: 31598890100314871}
   - component: {fileID: 31598890100314872}
   m_Layer: 6
@@ -312,18 +311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913184fb6f98a46408892a0e1d972599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &31598890100314870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914559289617870765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 913184fb6f98a46408892a0e1d972599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &31598890100314871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,9 +323,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b18e44175e23724fbe83724e3dce1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: 2
-  moveSpeed: 4
-  health: 15
+  reward: 30
+  moveSpeed: 5
+  health: 17
   damage: 2
   delayBetweenAttack: 0.3
   projectileLifeTime: 1

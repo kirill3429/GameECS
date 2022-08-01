@@ -43,7 +43,7 @@ public class WeaponDragSystem : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             transform.SetParent(inventoryTransform);
         }
 
-        else if (ElementDraggedInto(rectThisCell.position, rectWeapon)) 
+        else if (ElementDraggedInto(rectThisCell.position, rectWeapon))
         {
             if (inventoryManager.weaponContainer.childCount == 0)
             {
@@ -60,6 +60,7 @@ public class WeaponDragSystem : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         {
             AttachToElementSlot(startDragTransform);
         }
+        inventoryManager.UpdatePlayerView();
     }
 
     private bool ElementDraggedInto(Vector2 Element, RectTransform Container)

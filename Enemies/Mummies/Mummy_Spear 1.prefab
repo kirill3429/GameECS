@@ -44,8 +44,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1096737, y: 2.2851808, z: 0.44214308}
-  m_Center: {x: 0.015404259, y: 0.5983807, z: 0.21999978}
+  m_Size: {x: 1.1096737, y: 2.2851808, z: 2.8204672}
+  m_Center: {x: 0.015404387, y: 0.5983807, z: 1.4091599}
 --- !u!54 &8584879813550702154
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -793,10 +793,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b18e44175e23724fbe83724e3dce1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: 0
+  reward: 2
   moveSpeed: 5
   health: 15
-  damage: 2
+  damage: 10
   delayBetweenAttack: 0.3
   projectileLifeTime: 1
   bulletSpeed: 10

@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class RuntimeData
 {
     public int[] spawnedCreeps;
@@ -8,7 +6,7 @@ public class RuntimeData
     public bool isAbilityWindowOpen = false;
     public GameState gameState;
     public int scoreInGame;
-    
+
 }
 public enum GameState
 {

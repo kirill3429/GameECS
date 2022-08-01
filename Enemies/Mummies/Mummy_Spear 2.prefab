@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2798226242648379023
+--- !u!1 &5831067860943508383
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7778995098941218470}
-  - component: {fileID: 5864544506373386109}
-  - component: {fileID: 7509500898101454985}
+  - component: {fileID: 3386992486009490573}
+  - component: {fileID: 2393062230824653369}
+  - component: {fileID: 2778401511189907980}
   m_Layer: 9
   m_Name: weaponTransform
   m_TagString: EnemyAttackCollider
@@ -18,41 +18,41 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7778995098941218470
+--- !u!4 &3386992486009490573
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2798226242648379023}
+  m_GameObject: {fileID: 5831067860943508383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00999999, y: 1.2060001, z: 1.2400002}
+  m_LocalPosition: {x: -0.00999999, y: 1.2060001, z: 1.2400005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7238350203197630314}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5864544506373386109
+--- !u!65 &2393062230824653369
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2798226242648379023}
+  m_GameObject: {fileID: 5831067860943508383}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1096737, y: 2.2851808, z: 0.44214308}
-  m_Center: {x: 0.015404259, y: 0.5983807, z: 0.21999978}
---- !u!54 &7509500898101454985
+  m_Size: {x: 1.1096737, y: 2.2851808, z: 2.8204672}
+  m_Center: {x: 0.015404387, y: 0.5983807, z: 1.4091599}
+--- !u!54 &2778401511189907980
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2798226242648379023}
+  m_GameObject: {fileID: 5831067860943508383}
   serializedVersion: 2
   m_Mass: 0.0000001
   m_Drag: 0
@@ -715,7 +715,7 @@ Transform:
   - {fileID: 7238350203197598274}
   - {fileID: 7238350203197680042}
   - {fileID: 7238350203197596950}
-  - {fileID: 7778995098941218470}
+  - {fileID: 3386992486009490573}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 219.64, z: 0}
@@ -793,10 +793,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b18e44175e23724fbe83724e3dce1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: 0
+  reward: 2
   moveSpeed: 5
-  health: 10
-  damage: 2
+  health: 20
+  damage: 13
   delayBetweenAttack: 0.3
   projectileLifeTime: 1
   bulletSpeed: 10

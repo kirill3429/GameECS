@@ -2,8 +2,8 @@
 <Keys xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Key Name="score">
 		<Translates>
-			<en-us>score</en-us>
-			<ru>счет</ru>
+			<en-us>Points</en-us>
+			<ru>Очки</ru>
 			<tr>Puanı</tr>
 		</Translates>
 	</Key>
@@ -49,16 +49,16 @@
 			<tr>Kaybettin</tr>
 		</Translates>
 	</Key>
-	<Key Name="revive">
+	<Key Name="addattackSpeed">
 		<Translates>
-			<en-us>Revive</en-us>
-			<ru>Возродиться</ru>
-			<tr>Diriliş</tr>
+			<en-us>Increase attack speed</en-us>
+			<ru>Увеличить скорость атаки</ru>
+			<tr>Saldırı hızını artırın</tr>
 		</Translates>
 	</Key>
 	<Key Name="adddamage">
 		<Translates>
-			<en-us>Add damage</en-us>
+			<en-us>Increase damage</en-us>
 			<ru>Добавить урон</ru>
 			<tr>Hasar ekle</tr>
 		</Translates>
@@ -66,27 +66,27 @@
 	<Key Name="addhealth">
 		<Translates>
 			<en-us>Add health</en-us>
-			<ru>Добавить жизек</ru>
+			<ru>Добавить очки здоровья</ru>
 			<tr>Sağlık ekle</tr>
 		</Translates>
 	</Key>
 	<Key Name="addexplosion">
 		<Translates>
-			<en-us>Add explosion</en-us>
+			<en-us>Add explosion bullets</en-us>
 			<ru>Взрывные пули</ru>
 			<tr>Patlayıcı mermiler</tr>
 		</Translates>
 	</Key>
 	<Key Name="addfire">
 		<Translates>
-			<en-us>Add fire</en-us>
+			<en-us>Add fire bullets</en-us>
 			<ru>Поджигающие пули</ru>
 			<tr>Ateş eden mermiler</tr>
 		</Translates>
 	</Key>
 	<Key Name="addice">
 		<Translates>
-			<en-us>Add ice</en-us>
+			<en-us>Add ice bullets</en-us>
 			<ru>Замедляющие пули</ru>
 			<tr>Yavaşlayan mermiler</tr>
 		</Translates>
@@ -121,7 +121,7 @@
 	</Key>
 	<Key Name="settings">
 		<Translates>
-			<en-us>Setting</en-us>
+			<en-us>Settings</en-us>
 			<ru>Настройки</ru>
 			<tr>Ayarlar</tr>
 		</Translates>
@@ -133,11 +133,11 @@
 			<tr>Ekipman</tr>
 		</Translates>
 	</Key>
-	<Key Name="shop">
+	<Key Name="abilityshop">
 		<Translates>
-			<en-us>Shop</en-us>
-			<ru>Магазин</ru>
-			<tr>dükkanı</tr>
+			<en-us>Ability Shop</en-us>
+			<ru>Магазин способностей</ru>
+			<tr>Dükkanı</tr>
 		</Translates>
 	</Key>
 	<Key Name="chapter1">
@@ -170,8 +170,8 @@
 	</Key>
 	<Key Name="chapter5">
 		<Translates>
-			<en-us>Goblin Attack</en-us>
-			<ru>Нападение гоблинов</ru>
+			<en-us>Orc Attack</en-us>
+			<ru>Нападение орков</ru>
 			<tr>Bölüm 5</tr>
 		</Translates>
 	</Key>
@@ -191,15 +191,15 @@
 	</Key>
 	<Key Name="chapter8">
 		<Translates>
-			<en-us>Orc Attack</en-us>
-			<ru>Нападение орков</ru>
+			<en-us>Horde Attack</en-us>
+			<ru>Нападение Орды</ru>
 			<tr>Bölüm 8</tr>
 		</Translates>
 	</Key>
 	<Key Name="chapter9">
 		<Translates>
-			<en-us>Undead Alliance</en-us>
-			<ru>Союз нежити</ru>
+			<en-us>Final Battle</en-us>
+			<ru>Последняя битва</ru>
 			<tr>Bölüm 9</tr>
 		</Translates>
 	</Key>
@@ -212,16 +212,177 @@
 	</Key>
 	<Key Name="level">
 		<Translates>
-			<en-us>level</en-us>
-			<ru>уровень</ru>
-			<tr>Düzey</tr>
+			<en-us>Level:</en-us>
+			<ru>Уровень:</ru>
+			<tr>Düzey:</tr>
 		</Translates>
 	</Key>
-	<Key Name="welcome">
+	<Key Name="damage">
 		<Translates>
-			<en-us>Welcome,</en-us>
-			<ru>Добро пожаловать,</ru>
-			<tr>Hoş geldiniz</tr>
+			<en-us>Damage</en-us>
+			<ru>Урон</ru>
+			<tr>Hasar</tr>
+		</Translates>
+	</Key>
+	<Key Name="attackspeed">
+		<Translates>
+			<en-us>Attack speed</en-us>
+			<ru>Скорость атаки</ru>
+			<tr>Saldırı hızı</tr>
+		</Translates>
+	</Key>
+	<Key Name="addattackspeeddicsr">
+		<Translates>
+			<en-us>Increases weapon attack speed:</en-us>
+			<ru>Увеличить скорострельность на:</ru>
+			<tr>Silah saldırı hızını artırır:</tr>
+		</Translates>
+	</Key>
+	<Key Name="adddamagedicsr">
+		<Translates>
+			<en-us>Increases bullet damage:</en-us>
+			<ru>Увеличить урон от пуль на:</ru>
+			<tr>Hasarı arttırır:</tr>
+		</Translates>
+	</Key>
+	<Key Name="addhealthdicsr">
+		<Translates>
+			<en-us>Increases health points:</en-us>
+			<ru>Увеличить здоровье на:</ru>
+			<tr>Sağlık puanlarını artırır:</tr>
+		</Translates>
+	</Key>
+	<Key Name="addexplosiondicsr">
+		<Translates>
+			<en-us>Add explosion modificator on bullets, damage nearby monstres</en-us>
+			<ru>Добавить модификатор взрыва к пулям, наносит урон ближайшим монстрам</ru>
+			<tr>Mermilere patlama değiştirici ekleyin, yakındaki canavarlara zarar verin</tr>
+		</Translates>
+	</Key>
+	<Key Name="addfiredicsr">
+		<Translates>
+			<en-us>Add fire bullets modificator, deals periodic damage</en-us>
+			<ru>Добавить модификатор огня к пулям, наносит периодичный урон</ru>
+			<tr>Ateş mermisi değiştirici ekleyin, periyodik hasar verir</tr>
+		</Translates>
+	</Key>
+	<Key Name="addicedicsr">
+		<Translates>
+			<en-us>Add slow bullets modificator, slows move monsters move speed</en-us>
+			<ru>Добавить модификатор замедления к пулям, замедляет монстров</ru>
+			<tr>Yavaş mermi değiştirici ekleyin, canavarları yavaşlatır</tr>
+		</Translates>
+	</Key>
+	<Key Name="addlifestealdicsr">
+		<Translates>
+			<en-us>Add lifesteal, restrore hp</en-us>
+			<ru>Восстанавливает здоровье при попадании во врагов</ru>
+			<tr>Lifesteal'i ekleyin, hp'yi geri yükleyin</tr>
+		</Translates>
+	</Key>
+	<Key Name="bulletthroughdicsr">
+		<Translates>
+			<en-us>Bullets went through monsters</en-us>
+			<ru>Пули проходят свкозь врагов</ru>
+			<tr>Mermiler canavarlardan geçti</tr>
+		</Translates>
+	</Key>
+	<Key Name="addattackspeeddicsr1">
+		<Translates>
+			<en-us>5% * Bought level</en-us>
+			<ru>5% * Купленный уровень</ru>
+			<tr>5% * Satın alınan seviye</tr>
+		</Translates>
+	</Key>
+	<Key Name="adddamagedicsr1">
+		<Translates>
+			<en-us>10% * Bought level</en-us>
+			<ru>10% * Купленный уровень</ru>
+			<tr>10% * Satın alınan seviye</tr>
+		</Translates>
+	</Key>
+	<Key Name="addhealthdicsr1">
+		<Translates>
+			<en-us>10% * Bought level</en-us>
+			<ru>10% * Купленный уровень</ru>
+			<tr>10% * Satın alınan seviye</tr>
+		</Translates>
+	</Key>
+	<Key Name="addexplosiondicsr1">
+		<Translates>
+			<en-us>10% * of damage + Bought level * level in game</en-us>
+			<ru>10% от урона + Купленный уровень * уровень в игре</ru>
+			<tr>hasarın% 10'u  * Satın alınan seviye * oyundaki seviye</tr>
+		</Translates>
+	</Key>
+	<Key Name="addfiredicsr1">
+		<Translates>
+			<en-us>Bought level * level in game (dmg/sec)</en-us>
+			<ru>Купленный уровень * уровень в игре (урона в секунду)</ru>
+			<tr>Satın alınan seviye * oyundaki seviye (saniyede hasar)</tr>
+		</Translates>
+	</Key>
+	<Key Name="addicedicsr1">
+		<Translates>
+			<en-us>-5% * Bought level * level in game</en-us>
+			<ru>-5% * Купленный уровень * уровень в игре</ru>
+			<tr>-5% * Satın alınan seviye * oyundaki seviye</tr>
+		</Translates>
+	</Key>
+	<Key Name="addlifestealdicsr1">
+		<Translates>
+			<en-us>0.1 * Bought level * level in game</en-us>
+			<ru>0.1 * Купленный уровень * уровень в игре</ru>
+			<tr>0.1 * Satın alınan seviye * oyundaki seviye</tr>
+		</Translates>
+	</Key>
+	<Key Name="bulletthroughdicsr1">
+		<Translates>
+			<en-us>1 * Bought level</en-us>
+			<ru>1 * Купленный уровень</ru>
+			<tr>1 * Satın alınan seviye</tr>
+		</Translates>
+	</Key>
+	<Key Name="cost">
+		<Translates>
+			<en-us>Cost:</en-us>
+			<ru>Стоимость:</ru>
+			<tr>Mliyet:</tr>
+		</Translates>
+	</Key>
+	<Key Name="refresh">
+		<Translates>
+			<en-us>Refresh</en-us>
+			<ru>Обновить</ru>
+			<tr>Yenilemek</tr>
+		</Translates>
+	</Key>
+	<Key Name="dietip">
+		<Translates>
+			<en-us>Don't forget buy abilities in ability shop</en-us>
+			<ru>Не забудьте купить способности в магазине способностей</ru>
+			<tr>Yetenek dükkanında yetenek satın almayı unutma</tr>
+		</Translates>
+	</Key>
+	<Key Name="reward">
+		<Translates>
+			<en-us>Reward</en-us>
+			<ru>Награда</ru>
+			<tr>Ödül</tr>
+		</Translates>
+	</Key>
+	<Key Name="languageSettings">
+		<Translates>
+			<en-us>Choose language</en-us>
+			<ru>Выберете язык</ru>
+			<tr>Dil seç</tr>
+		</Translates>
+	</Key>
+	<Key Name="Language">
+		<Translates>
+			<en-us>Language</en-us>
+			<ru>Язык</ru>
+			<tr>Dilli</tr>
 		</Translates>
 	</Key>
 </Keys>

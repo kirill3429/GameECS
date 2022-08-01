@@ -18,7 +18,7 @@ namespace Michsky.UI.Shift
                     virtualCursor = vCursor;
                 }
 
-                catch { this.enabled = false; }         
+                catch { this.enabled = false; }
             }
         }
 

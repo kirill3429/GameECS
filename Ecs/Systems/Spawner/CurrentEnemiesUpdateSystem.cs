@@ -4,8 +4,8 @@ namespace Client
     sealed class CurrentEnemiesUpdateSystem : IEcsRunSystem
     {
         readonly EcsWorld world = null;
-        readonly EcsFilter<Spawner> filter; 
-        readonly EcsFilter<EnemyTag> filter_enemies; 
+        readonly EcsFilter<Spawner> filter;
+        readonly EcsFilter<EnemyTag> filter_enemies;
 
         public void Run()
         {

@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.Video;
-using TMPro;
 
 namespace Michsky.UI.Shift
 {

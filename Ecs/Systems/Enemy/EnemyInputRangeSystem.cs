@@ -1,4 +1,3 @@
-using UnityEngine;
 using Leopotam.Ecs;
 
 namespace Client
@@ -27,7 +26,7 @@ namespace Client
 
                 input.mouseVector = input.movementInput + enemyTransform.position;
                 input.mouseVector.z += 1.4f;
-                
+
             }
         }
 

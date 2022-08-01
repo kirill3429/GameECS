@@ -1,5 +1,4 @@
 using Leopotam.Ecs;
-using UnityEngine;
 
 namespace Client
 {
@@ -15,7 +14,7 @@ namespace Client
                 ref var weaponEntity = ref filter.GetEntity(i);
                 ref var AddDamageInfo = ref filter.Get1(i);
                 ref var damage = ref weaponEntity.Get<Damage>();
-                damage.value = (float)(damage.value * (1.1f + (0.1 * AddDamageInfo.learnedLevel)));
+                damage.value = (float)(damage.value * (1 + (0.1 * AddDamageInfo.learnedLevel)));
 
                 weaponEntity.Del<AddDamage>();
 

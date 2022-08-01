@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Michsky.UI.Shift;
+using UnityEngine;
 public class LevelOpen : MonoBehaviour
 {
     private int lastLevel;
@@ -30,7 +28,7 @@ public class LevelOpen : MonoBehaviour
                     levelView.statusItem = ChapterButton.StatusItem.Locked;
                 }
             }
-            
+
         }
     }
 

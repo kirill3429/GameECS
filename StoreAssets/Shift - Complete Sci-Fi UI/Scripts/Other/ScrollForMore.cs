@@ -21,7 +21,7 @@ namespace Michsky.UI.Shift
 
         public void CheckValue()
         {
-            if(invertValue == false)
+            if (invertValue == false)
             {
                 if (SFMAnimator != null && listScrollbar.value >= fadeOutValue)
                     SFMAnimator.Play("SFM In");
@@ -29,7 +29,7 @@ namespace Michsky.UI.Shift
                 else if (SFMAnimator != null && listScrollbar.value <= fadeOutValue)
                     SFMAnimator.Play("SFM Out");
             }
-            
+
             else
             {
                 if (SFMAnimator != null && listScrollbar.value <= fadeOutValue)

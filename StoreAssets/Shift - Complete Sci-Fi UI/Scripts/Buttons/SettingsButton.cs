@@ -1,7 +1,7 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using TMPro;
 
 namespace Michsky.UI.Shift
 {
@@ -33,7 +33,7 @@ namespace Michsky.UI.Shift
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            if(enableIconPreview == true)
+            if (enableIconPreview == true)
             {
                 detailImage.gameObject.SetActive(false);
                 detailIcon.gameObject.SetActive(true);
@@ -51,7 +51,11 @@ namespace Michsky.UI.Shift
             }
 
             detailTitle.text = title;
-            detailDescription.text = description;
+            if (detailDescription != null)
+            {
+                detailDescription.text = description;
+            }
+           
         }
 
         public void OnPointerExit(PointerEventData eventData)

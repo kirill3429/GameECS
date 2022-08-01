@@ -7,7 +7,7 @@ namespace Client
         readonly UI ui;
         float lastDashTime;
         bool dashReady;
-        float dashCooldown = 1f;
+        float dashCooldown = 5f;
         readonly EcsWorld world = null;
         readonly EcsFilter<InputHandlerComponent> filter = null;
         public void Run()
@@ -32,9 +32,9 @@ namespace Client
                 }
                 else
                 {
-                    ui.gameScreen.dashImage.fillAmount = timePast / dashCooldown; 
+                    ui.gameScreen.dashImage.fillAmount = timePast / dashCooldown;
                 }
-                
+
             }
         }
 

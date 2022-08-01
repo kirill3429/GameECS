@@ -2797,8 +2797,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b18e44175e23724fbe83724e3dce1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: 2
-  moveSpeed: 5
+  reward: 20
+  moveSpeed: 10
   health: 5
   damage: 10
   delayBetweenAttack: 2

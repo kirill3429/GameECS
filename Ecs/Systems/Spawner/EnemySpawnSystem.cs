@@ -1,5 +1,5 @@
-using UnityEngine;
 using Leopotam.Ecs;
+using UnityEngine;
 
 namespace Client
 {
@@ -27,7 +27,7 @@ namespace Client
                 ref var enemyTag = ref enemyEntity.Get<EnemyTag>();
                 ref var rigidBody = ref enemyEntity.Get<RigidBodyComponent>();
                 ref var hitEffect = ref enemyEntity.Get<HitEffect>();
-                
+
 
                 #region spawnPoint
                 ref var radius = ref staticPlayerData.enemySpawnRadius;
@@ -41,12 +41,12 @@ namespace Client
 
                 float delta = Random.Range(0, staticPlayerData.spawnDispersion);
 
-                spawnPoint.x = x0 + ((radius+delta) * Mathf.Cos(ToRadians(alpha)));
-                spawnPoint.z = z0 + ((radius+delta) * Mathf.Sin(ToRadians(alpha)));
+                spawnPoint.x = x0 + ((radius + delta) * Mathf.Cos(ToRadians(alpha)));
+                spawnPoint.z = z0 + ((radius + delta) * Mathf.Sin(ToRadians(alpha)));
                 spawnPoint.y = 0;
                 #endregion
 
-                
+
 
                 objectLink.Object = GameObject.Instantiate(prefabsData.enemiesPrefabs[eventInfo.prefabNumber], spawnPoint, rotationSpawn);
                 objectLink.Object.GetComponent<EntityLink>().entity = enemyEntity;
@@ -73,7 +73,7 @@ namespace Client
                 health.currentHealth = health.maxHealth;
                 enemyTag.enemyTransform = objectLink.Object.transform;
 
-                
+
 
                 hitEffect.hitPrefab = prefabsData.hitEffectPrefabs[0];
 

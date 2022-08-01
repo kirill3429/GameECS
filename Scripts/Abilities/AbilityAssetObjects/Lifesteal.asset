@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97b4f8cdb2777b47813381f757ed8d8, type: 3}
   m_Name: Lifesteal
   m_EditorClassIdentifier: 
-  Name: Lifesteal
-  Description: addlifesteal
-  AdvancedDescription: addlifestealadvanced
+  Name: addlifesteal
+  Description: addlifestealdicsr
+  DamageDescription: addlifestealdicsr1
   Id: 6
-  DefaultCost: 0
+  Level: 5
+  Cost: 600
   Icon: {fileID: 21300000, guid: dd11807c775e1874b975d1d3d75196ff, type: 3}

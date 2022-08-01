@@ -1,5 +1,5 @@
-using UnityEngine;
 using Leopotam.Ecs;
+using UnityEngine;
 
 namespace Client
 {

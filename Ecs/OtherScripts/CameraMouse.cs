@@ -12,7 +12,7 @@ public class CameraMouse : MonoBehaviour
     {
         Vector3 mosPos = cam.ScreenToWorldPoint(Input.mousePosition);
         mosPos.y = 0;
-        Vector3 targetPos = (player.position + mosPos)/2;
+        Vector3 targetPos = (player.position + mosPos) / 2;
 
         targetPos.x = Mathf.Clamp(targetPos.x, -threshold + player.position.x, threshold + player.position.x);
         targetPos.z = Mathf.Clamp(targetPos.z, -threshold + player.position.z, threshold + player.position.z);

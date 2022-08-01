@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97b4f8cdb2777b47813381f757ed8d8, type: 3}
   m_Name: AddDamage
   m_EditorClassIdentifier: 
-  Name: Damage
-  Description: adddamage
-  AdvancedDescription: adddamageadvanced
+  Name: adddamage
+  Description: adddamagedicsr
+  DamageDescription: adddamagedicsr1
   Id: 0
-  Level: 3
+  Level: 1
+  Cost: 150
   Icon: {fileID: 21300000, guid: d5f63b8eb8a5f8c46a49890b960dc405, type: 3}

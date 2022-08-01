@@ -1,6 +1,7 @@
 using LeoEcsPhysics;
 using Leopotam.Ecs;
 using UnityEngine;
+using Agava.YandexGames;
 
 
 namespace Client
@@ -12,6 +13,8 @@ namespace Client
         EcsSystems _abilitySystems;
         EcsSystems _fixedSystems;
 
+
+        public JoySticksMassive joysticks;
         public SceneData sceneData;
         public TerrainMaterialsData materialsData;
         public StaticPlayerData staticPlayerData;
@@ -19,10 +22,17 @@ namespace Client
         public AllWaveData allWaveData;
         public UI ui;
         public RuntimeData runtimeData = new RuntimeData();
-        
+        public Agava.YandexGames.DeviceType deviceType;
+
         void Start()
         {
-            LocalizationManager.SetLanguage(1);
+#if !UNITY_EDITOR
+            if (YandexGamesSdk.IsInitialized)
+            {
+                deviceType = Device.Type;
+            }
+#endif
+           
             runtimeData.gameState = GameState.Running;
             _world = new EcsWorld();
             _systems = new EcsSystems(_world);
@@ -36,13 +46,14 @@ namespace Client
             Leopotam.Ecs.UnityIntegration.EcsSystemsObserver.Create(_fixedSystems);
 #endif
             _systems
+                .Add(new InterfaceInit())
                 .Add(new LevelInitSystem())
-                
+
                 .Add(new PlayerInitSystem())
-                
+
                 .Add(new PlayerInputSystem())
                 .Add(new PlayerMoveSystem())
-                
+
                 .Add(new PickUpSystem())
 
                 .Add(new EventGeneratorSystem())
@@ -57,15 +68,15 @@ namespace Client
                 .Add(new ProjectileHitEventSystem())
                 .Add(new ProjectileHitSystem())
                 .Add(new TakeDamageSystem())
-                
+
                 .Add(new DashInputSystem())
-                
+
                 .Add(new RewardSystem())
-                
+
                 .Add(new OpenAbilityWindowSystem())
                 .Add(new WinSystem())
                 .Add(new PauseSystem())
-                
+
 
                 .OneFramePhysics()
 
@@ -80,6 +91,8 @@ namespace Client
                 .Inject(runtimeData)
                 .Inject(materialsData)
                 .Inject(ui)
+                .Inject(deviceType)
+                .Inject(joysticks)
                 .Init();
 
             _abilitySystems
@@ -89,6 +102,7 @@ namespace Client
                 .Add(new ExplosionAttackSystem())
                 .Add(new LifestealAttackSystem())
                 .Add(new AddHealthSystem())
+                .Add(new AddAttackSpeedSystem())
                 .Inject(ui)
                 .Inject(prefabsData)
                 .Init();

@@ -1,13 +1,13 @@
 using Leopotam.Ecs;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
-using System;
 
 namespace Client
 {
     sealed class EnemyPrefabsInitSystem : IEcsInitSystem
     {
+        UI ui;
         readonly AllWaveData allWaveData;
         readonly EcsWorld world = null;
 
@@ -37,7 +37,7 @@ namespace Client
                 allWaveData.waves.Add(ScriptableObject.CreateInstance<WaveData>());
                 allWaveData.waves[i].waveInfo = new Dictionary<int, int>();
 
-                allWaveData.waves[i].waveInfo.Add(monsterArray[i], 5);
+                allWaveData.waves[i].waveInfo.Add(monsterArray[i], 50);
             }
         }
     }

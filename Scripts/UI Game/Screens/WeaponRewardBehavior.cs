@@ -1,9 +1,7 @@
-using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
-using System.Collections.Generic;
-using System.Linq;
-using System;
+using Leopotam.Ecs;
+using Client;
 
 public class WeaponRewardBehavior : RewardBehavior
 {
@@ -15,6 +13,7 @@ public class WeaponRewardBehavior : RewardBehavior
     {
         weaponPrefabNumber = prefabNumber;
         rewardIcon = Icon;
+        prefabsData = GameObject.FindGameObjectWithTag("EcsStartUp").GetComponent<EcsStartup>().prefabsData;
     }
 
     public void GiveReward()
@@ -22,7 +21,7 @@ public class WeaponRewardBehavior : RewardBehavior
         Show();
         DataInterface.AddWeapon(weaponPrefabNumber);
     }
-    
+
     public void Show()
     {
         rewardIcon.sprite = prefabsData.weaponPrefabs[weaponPrefabNumber].GetComponent<WeaponInfoMono>().Icon;

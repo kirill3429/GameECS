@@ -1,4 +1,3 @@
-using LeoEcsPhysics;
 using Leopotam.Ecs;
 using UnityEngine;
 
@@ -20,7 +19,7 @@ namespace Client
                     if (equip.mainWeapon == EcsEntity.Null && equip.secondWeapon == EcsEntity.Null)
                     {
                         Debug.Log("Никакого оружия нет");
-                        
+
                     }
                     else if (equip.mainWeapon != EcsEntity.Null)
                     {
@@ -33,9 +32,9 @@ namespace Client
                         equip.mainWeapon = equip.secondWeapon;
                         equip.mainWeapon.Get<ObjectLink>().Object.SetActive(true);
                         equip.secondWeapon = EcsEntity.Null;
-                        
-                        
-                    } 
+
+
+                    }
                 }
 
 

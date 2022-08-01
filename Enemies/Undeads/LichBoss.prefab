@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 8908286869949789201}
   - component: {fileID: 7430832086295701379}
   - component: {fileID: 3939431490115905354}
+  - component: {fileID: -8055100763073743046}
   m_Layer: 6
   m_Name: LichBoss
   m_TagString: Enemy
@@ -468,13 +469,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b18e44175e23724fbe83724e3dce1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: 2
+  reward: 20
   moveSpeed: 5
   health: 5
   damage: 10
-  delayBetweenAttack: 2
+  delayBetweenAttack: 0.4
   projectileLifeTime: 15
-  bulletSpeed: 7
+  bulletSpeed: 10
   projectilePrefabNumber: 2
   moveSpeedProgress: 0
   healthProgress: 0
@@ -510,9 +511,21 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.8716887
-  m_Height: 2.4410405
+  m_Height: 4.4660645
   m_Direction: 1
-  m_Center: {x: -0.05170667, y: 0.72052026, z: 0}
+  m_Center: {x: -0.05170667, y: 1.7330322, z: 0}
+--- !u!114 &-8055100763073743046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500939411536426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec45f381082d77446a6997c264d0a722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1537370055453520
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,8 +995,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25401756, y: 0.86412334, z: 15.77}
-  m_Center: {x: 0.021887165, y: -0.11214806, z: 8.18}
+  m_Size: {x: 4.8933315, y: 0.86412334, z: 20.521267}
+  m_Center: {x: -0.3465773, y: -0.11214805, z: 10.555634}
 --- !u!54 &5202370135725590440
 Rigidbody:
   m_ObjectHideFlags: 0

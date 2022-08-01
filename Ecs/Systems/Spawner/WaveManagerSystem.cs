@@ -8,7 +8,7 @@ namespace Client
         readonly UI ui;
         readonly StaticPlayerData staticPlayerData;
         readonly EcsWorld world = null;
-        readonly EcsFilter<Spawner> filter = null; 
+        readonly EcsFilter<Spawner> filter = null;
 
         public void Run()
         {
@@ -21,15 +21,15 @@ namespace Client
                     if (Time.time - spawner.endWaveTime > staticPlayerData.timeBetweenWaves)
                     {
                         runtimeData.waveNumber++;
-                        ui.gameScreen.wave.text = runtimeData.waveNumber.ToString();
+                        ui.gameScreen.wave.text = (runtimeData.waveNumber + 1).ToString();
                         filter.GetEntity(i).Get<NeedToFill>();
                         spawner.isWork = true;
                         Debug.Log("Началасть следущая волна");
                     }
-                    // Добавить связь с UI таймером
-                    
+                  
+
                 }
-                
+
             }
 
         }

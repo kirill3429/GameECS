@@ -13,7 +13,7 @@ namespace Client
                 ref var HP = ref filter.Get2(i);
                 ref var damage = ref filter.Get1(i);
                 HP.currentHealth -= damage.value;
-                
+
                 if (filter.GetEntity(i).Has<HealthView>())
                 {
                     ui.gameScreen.SetHealth(HP.currentHealth, HP.maxHealth);

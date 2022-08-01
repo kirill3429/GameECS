@@ -1,4 +1,3 @@
-using LeoEcsPhysics;
 using Leopotam.Ecs;
 using UnityEngine;
 namespace Client
@@ -49,7 +48,7 @@ namespace Client
                 if (bulletEntity.Has<Ricochet>())
                 {
                     bulletEntity.Get<Ricochet>().level--;
-                    if (bulletEntity.Get<Ricochet>().level == 0)
+                    if (bulletEntity.Get<Ricochet>().level < 0)
                     {
                         bulletEntity.Get<DeathEvent>();
                     }

@@ -1,5 +1,4 @@
 using Leopotam.Ecs;
-using UnityEngine;
 namespace Client
 {
     public sealed class RewardSystem : IEcsRunSystem
@@ -16,7 +15,7 @@ namespace Client
                 uI.gameScreen.score.text = runtimeData.scoreInGame.ToString();
                 filter.GetEntity(i).Destroy();
             }
-            
+
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 namespace Michsky.UI.Shift
 {
@@ -28,7 +28,7 @@ namespace Michsky.UI.Shift
                 titleText = gameObject.transform.Find("Content/Title").GetComponent<TextMeshProUGUI>();
                 descriptionText = gameObject.transform.Find("Content/Description").GetComponent<TextMeshProUGUI>();
 
-                titleText.text = buttonTitle; 
+                titleText.text = buttonTitle;
                 descriptionText.text = buttonDescription;
             }
 

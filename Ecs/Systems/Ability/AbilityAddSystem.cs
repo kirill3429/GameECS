@@ -1,5 +1,4 @@
 using Leopotam.Ecs;
-using UnityEngine;
 
 namespace Client
 {
@@ -23,32 +22,35 @@ namespace Client
 
                     switch (abilityName)
                     {
-                        case "Fire":
+                        case "addfire":
                             weapon.Get<Fire>().level++;
                             weapon.Get<Fire>().learnedLevel = abilityLevel;
-                            
+
                             break;
-                        case "Ricochet":
-                            weapon.Get<Ricochet>().level += 2;
-                            weapon.Get<Ricochet>().learnedLevel = abilityLevel;
+                        case "bulletthrough":
+                            weapon.Get<Ricochet>().level += abilityLevel;
                             break;
-                        case "Ice":
+                        case "addice":
                             weapon.Get<Ice>().level++;
+                            weapon.Get<Ice>().learnedLevel = abilityLevel;
                             break;
-                        case "Damage":
+                        case "adddamage":
                             weapon.Get<AddDamage>().learnedLevel = abilityLevel;
                             break;
-                        case "Lifesteal":
+                        case "addlifesteal":
                             weapon.Get<Lifesteal>().level++;
                             weapon.Get<Lifesteal>().learnedLevel = abilityLevel;
                             break;
-                        case "Explosion":
+                        case "addexplosion":
                             weapon.Get<Explosion>().level++;
                             weapon.Get<Explosion>().learnedLevel = abilityLevel;
                             weapon.Get<Explosion>().damage = weapon.Get<Damage>().value / 10;
                             break;
-                        case "AddHealth":
+                        case "addhealth":
                             player.Get<AddHealth>().learnedLevel = abilityLevel;
+                            break;
+                        case "addattackSpeed":
+                            weapon.Get<AddAttackSpeed>().learnedLevel = abilityLevel;
                             break;
                     }
 

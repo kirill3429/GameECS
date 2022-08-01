@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 // An FPS counter.
 // It calculates frames/second over each updateInterval,

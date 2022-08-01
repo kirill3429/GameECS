@@ -1,7 +1,3 @@
- using TMPro;
-using UnityEngine.UI;
-using UnityEngine;
-
 public class DeathScreen : Client.Screen
 {
     public bool deathFlag = false;

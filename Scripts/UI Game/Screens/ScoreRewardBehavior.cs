@@ -17,5 +17,5 @@ public class ScoreRewardBehavior : RewardBehavior
     {
         DataInterface.AddScore(score);
     }
-    
+
 }

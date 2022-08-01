@@ -1,5 +1,4 @@
 using Leopotam.Ecs;
-using UnityEngine;
 namespace Client
 {
     public sealed class WinSystem : IEcsRunSystem
@@ -16,7 +15,7 @@ namespace Client
                 world.NewEntity().Get<PauseEvent>();
                 filter.GetEntity(i).Destroy();
             }
-            
+
         }
     }
 }

@@ -4,7 +4,7 @@ namespace Client
 {
     sealed class EnemyMoveSystem : IEcsRunSystem
     {
-        
+
         readonly int horizontal = Animator.StringToHash("Horizontal");
 
         readonly EcsWorld _world = null;

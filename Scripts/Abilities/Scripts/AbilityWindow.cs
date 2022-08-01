@@ -1,33 +1,34 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using System.Collections.Generic;
-using System.Text;
 using UnityEngine.UI;
+using Agava.YandexGames;
+
 
 public class AbilityWindow : MonoBehaviour
 {
     [SerializeField] private GameObject abilityView;
-    [SerializeField] private AbilityAsset[] abilityPrefabs;
-    public List<AbilityAsset> avaibleAbilities = new List<AbilityAsset>();
-    private DataInterface dataInterface;
+    [SerializeField] private AudioSource music;
+    [SerializeField] private AbilityData abilityPrefabs;
+
+    private float soundVolume;
+    private List<AbilityAsset> avaibleAbilities = new List<AbilityAsset>();
+
 
 
     private void Awake()
     {
-        dataInterface = FindObjectOfType<DataInterface>();
-        string learnedSkillsString = dataInterface.GetLearnedSkills();
-        
-        Dictionary<int, int> learnedSkillsDictionary = ConvertSkillsStringToDictionary(learnedSkillsString);
 
-        Debug.Log(learnedSkillsDictionary.Count);
+        string learnedSkillsString = DataInterface.GetLearnedSkills();
+
+
+        Dictionary<int, int> learnedSkillsDictionary = ConvertSkillsStringToDictionary(learnedSkillsString);
 
         foreach (var skill in learnedSkillsDictionary)
         {
-            var ability = abilityPrefabs[skill.Key - 1];
+            var ability = abilityPrefabs.abilityPrefabs[skill.Key];
             ability.Level = skill.Value;
             avaibleAbilities.Add(ability);
-            Debug.Log(skill.Key-1);
-            Debug.Log(skill.Value);
         }
     }
 
@@ -53,15 +54,16 @@ public class AbilityWindow : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log(avaibleAbilities.Count);
         for (int i = 0; i < 4; i++)
         {
             int abilityNum = Random.Range(0, avaibleAbilities.Count);
             GameObject view = Instantiate(abilityView, gameObject.transform);
             view.GetComponent<GetAbilityButton>().abilityString = avaibleAbilities[abilityNum].Name;
             view.GetComponent<GetAbilityButton>().abilityLevel = avaibleAbilities[abilityNum].Level;
-            view.GetComponentInChildren<TMP_Text>().text = avaibleAbilities[abilityNum].Description;
-            //view.GetComponentInChildren<TMP_Text>().text = avaibleAbilities[abilityNum].Level.ToString();
+
+            view.GetComponentInChildren<TMP_Text>().text = avaibleAbilities[abilityNum].Name;
+            view.GetComponentsInChildren<TMP_Text>()[1].text = avaibleAbilities[abilityNum].Description;
+            view.GetComponentsInChildren<TMP_Text>()[2].text = avaibleAbilities[abilityNum].DamageDescription;
             view.GetComponentsInChildren<Image>()[1].sprite = avaibleAbilities[abilityNum].Icon;
         }
     }
@@ -71,5 +73,24 @@ public class AbilityWindow : MonoBehaviour
         {
             Destroy(i.gameObject);
         }
+    }
+
+    public void Refresh()
+    {
+        gameObject.SetActive(false);
+        gameObject.SetActive(true);
+        SoundOff();
+
+    }
+    private void SoundOn()
+    {
+        music.volume = soundVolume;
+    }
+    private void SoundOff()
+    {
+        soundVolume = music.volume;
+        music.volume = 0;
+        if (YandexGamesSdk.IsInitialized)
+        VideoAd.Show(null, null, SoundOn);
     }
 }

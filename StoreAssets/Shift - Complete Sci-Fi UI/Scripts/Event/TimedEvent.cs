@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,7 +15,7 @@ namespace Michsky.UI.Shift
 
         void Start()
         {
-            if(enableAtStart == true)
+            if (enableAtStart == true)
             {
                 StartCoroutine("TimedEventStart");
             }
@@ -28,12 +27,12 @@ namespace Michsky.UI.Shift
             timerAction.Invoke();
         }
 
-        public void StartIEnumerator ()
+        public void StartIEnumerator()
         {
             StartCoroutine("TimedEventStart");
         }
 
-        public void StopIEnumerator ()
+        public void StopIEnumerator()
         {
             StopCoroutine("TimedEventStart");
         }

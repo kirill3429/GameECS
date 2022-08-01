@@ -8,13 +8,13 @@ namespace Client
         readonly RuntimeData runtimeData;
         readonly AllWaveData allWaveData;
         readonly EcsWorld world = null;
-        readonly EcsFilter<Spawner, NeedToFill> filter = null; 
+        readonly EcsFilter<Spawner, NeedToFill> filter = null;
 
         public void Run()
         {
             foreach (var i in filter)
             {
-                if ( allWaveData.waves.Count > runtimeData.waveNumber)
+                if (allWaveData.waves.Count > runtimeData.waveNumber)
                 {
                     ref var spawner = ref filter.Get1(i);
                     spawner.creepsQueue = new Queue<int>();
@@ -36,7 +36,7 @@ namespace Client
                     runtimeData.gameState = GameState.Win;
                     world.NewEntity().Get<WinGame>();
                 }
-                
+
             }
 
         }

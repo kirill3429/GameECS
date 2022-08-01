@@ -1137,19 +1137,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b18e44175e23724fbe83724e3dce1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: 10
+  reward: 5
   moveSpeed: 6
   health: 20
   damage: 15
-  delayBetweenAttack: 2
-  projectileLifeTime: 1
+  delayBetweenAttack: 1
+  projectileLifeTime: 15
   bulletSpeed: 10
   projectilePrefabNumber: 3
   moveSpeedProgress: 0
-  healthProgress: 10
-  damageProgress: 10
+  healthProgress: 0
+  damageProgress: 0
   delayBetweenAttackProgress: 0
-  bulletSpeedProgress: 10
+  bulletSpeedProgress: 0
   enemyType: 1
   weaponType: 0
 --- !u!1 &153408
@@ -1976,7 +1976,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229842346431552337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.058, y: 1.407, z: 1.095}
+  m_LocalPosition: {x: -0.058, y: 1.407, z: 0.216}
   m_LocalScale: {x: 2.4999998, y: 2.5, z: 2.4999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1994,8 +1994,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25401756, y: 0.80568236, z: 0.4421431}
-  m_Center: {x: 0.02188716, y: -0.14136854, z: 0.22}
+  m_Size: {x: 0.25401756, y: 0.80568254, z: 0.9078288}
+  m_Center: {x: 0.02188716, y: -0.14136855, z: 0.45284283}
 --- !u!54 &495091858968385835
 Rigidbody:
   m_ObjectHideFlags: 0

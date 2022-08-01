@@ -1,4 +1,3 @@
-using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -34,12 +33,19 @@ public class LocalizedText : MonoBehaviour
 
     public void Localize(string newKey = null)
     {
+        
         if (text == null)
             Init();
 
         if (newKey != null)
             key = newKey;
 
+        text.text = LocalizationManager.GetTranslate(key);
+    }
+    public void LocalizeAgain()
+    {
+
+        Init();
         text.text = LocalizationManager.GetTranslate(key);
     }
 

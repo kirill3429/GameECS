@@ -1,9 +1,8 @@
-using TMPro;
-using System.Text;
-using System.Collections.Generic;
-using UnityEngine;
 using System;
-
+using System.Collections.Generic;
+using System.Text;
+using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
@@ -21,14 +20,17 @@ public class ShopManager : MonoBehaviour
 
     private void OnEnable()
     {
+        GameInit.FirstEnterInit();
         RenderAllSkills();
         LoadLearnedSkills();
+        Debug.Log("shop on");
     }
 
     private void OnDisable()
     {
         SaveLearnedSkills();
         ClearSkillsPanel();
+        Debug.Log("shop off");
     }
 
     #region Load
@@ -43,16 +45,18 @@ public class ShopManager : MonoBehaviour
     private void CreateAbilityView(AbilityAsset prefab)
     {
         GameObject view = Instantiate(abilityView, shopPanel);
-        view.GetComponentInChildren<TMP_Text>().text = prefab.Description;
+        view.GetComponentInChildren<TMP_Text>().text = prefab.Name;
         view.GetComponentsInChildren<Image>()[1].sprite = prefab.Icon;
+
         view.GetComponent<SkillProperties>().Id = prefab.Id;
         view.GetComponent<SkillProperties>().Icon = prefab.Icon;
+        view.GetComponent<SkillProperties>().Cost = prefab.Cost;
     }
 
     private void LoadLearnedSkills()
     {
-        string learnedSkillsString = dataInterface.GetLearnedSkills();
-        
+        string learnedSkillsString = DataInterface.GetLearnedSkills();
+
         Dictionary<int, int> learnedSkillsDictionary = ConvertSkillsStringToDictionary(learnedSkillsString);
         ApplySkillPropertiesToSkillsViews(learnedSkillsDictionary);
     }
@@ -103,7 +107,7 @@ public class ShopManager : MonoBehaviour
     private void SaveLearnedSkills()
     {
         string learnedSkillString = BuildStringOfLearnedSkills();
-        dataInterface.SaveLearnedSkills(learnedSkillString);
+        DataInterface.SaveLearnedSkills(learnedSkillString);
     }
 
     private string BuildStringOfLearnedSkills()

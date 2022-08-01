@@ -1,5 +1,5 @@
-using UnityEngine;
 using Leopotam.Ecs;
+using UnityEngine;
 
 namespace Client
 {
@@ -18,7 +18,7 @@ namespace Client
                 #region toPlayerPositionInput
 
                 Vector3 playerDirection = sceneData.playerTransform.position - enemyTransform.position;
-                
+
                 input.movementInput = playerDirection;
                 Vector3.Normalize(input.movementInput);
 
@@ -26,7 +26,7 @@ namespace Client
 
                 input.mouseVector = input.movementInput + enemyTransform.position;
                 input.mouseVector.z += 1.4f;
-                
+
             }
         }
 

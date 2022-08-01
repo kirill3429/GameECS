@@ -1,5 +1,5 @@
-using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
@@ -17,13 +17,21 @@ public class Level : MonoBehaviour
     {
         if (_levelState != false)
         {
-            PlayerPrefs.SetInt("LevelNumber", levelNumber);
-            PlayerPrefs.SetString("MonsterSet", _monsterSet);
-            PlayerPrefs.SetInt("LevelGround", _levelGround);
+            if (DataInterface.GetActiveWeapon() != "")
+            {
+                PlayerPrefs.SetInt("LevelNumber", levelNumber);
+                PlayerPrefs.SetString("MonsterSet", _monsterSet);
+                PlayerPrefs.SetInt("LevelGround", _levelGround);
 
-            PlayerPrefs.SetString("RewardForWin", _levelReward);
+                PlayerPrefs.SetString("RewardForWin", _levelReward);
 
-            SceneManager.LoadScene(1);
+                SceneManager.LoadScene(1);
+            }
+            else
+            {
+                
+            }
+            
         }
     }
 

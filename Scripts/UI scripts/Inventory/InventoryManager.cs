@@ -1,11 +1,7 @@
-using System.Collections;
 using System;
-using System.Linq;
-using System.Text;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -20,17 +16,19 @@ public class InventoryManager : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log("Enabled Inventory");
         dataInterface = FindObjectOfType<DataInterface>();
         LoadWeapons();
         LoadActiveWeapon();
+        UpdatePlayerView();
     }
 
     private void OnDisable()
     {
+        Debug.Log("Disabled inventory");
         SaveWeapons();
         SaveActiveWeapon();
-        dataInterface.SaveToServer();
-
+        UpdatePlayerView();
         ClearPanel(inventoryPanel);
         ClearPanel(weaponContainer);
     }
@@ -74,13 +72,13 @@ public class InventoryManager : MonoBehaviour
     private void LoadActiveWeapon()
     {
 
-        string activeWeaponString = dataInterface.GetActiveWeapon();
+        string activeWeaponString = DataInterface.GetActiveWeapon();
         if (activeWeaponString != null && activeWeaponString != "")
         {
             GameObject weapon = SpawnWeaponView(weaponContainer);
             UpdateWeaponView(Convert.ToInt32(activeWeaponString), weapon);
         }
-        
+
     }
     #endregion
 
@@ -125,11 +123,11 @@ public class InventoryManager : MonoBehaviour
         {
             var info = weaponContainer.GetChild(0).GetComponent<WeaponView>();
             string activeWeapon = info.Id.ToString();
-            dataInterface.SetActiveWeapon(activeWeapon);
+            DataInterface.SetActiveWeapon(activeWeapon);
         }
         else
         {
-            dataInterface.SetActiveWeapon(null);
+            DataInterface.SetActiveWeapon(null);
         }
     }
     #endregion
@@ -141,6 +139,33 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void UpdatePlayerView()
+    {
+        GameObject[] PlayerModels = GameObject.FindGameObjectsWithTag("Player");
+
+        foreach (GameObject playerModel in PlayerModels)
+        {
+            Transform weaponHolder = playerModel.GetComponent<WeaponHolder>().weaponTransform;
+
+            if (weaponContainer.childCount != 0)
+            {
+                if (weaponHolder.childCount > 0)
+                {
+                    Destroy(weaponHolder.GetChild(0).gameObject);
+                }
+                int weaponToSpawn = weaponContainer.GetChild(0).GetComponent<WeaponView>().Id;
+                Instantiate(prefabsData.weaponPrefabs[weaponToSpawn], weaponHolder);
+
+            }
+            else
+            {
+                if (weaponHolder.childCount > 0)
+                {
+                    Destroy(weaponHolder.GetChild(0).gameObject);
+                }
+            }
+        }
+    }
 
     private void Awake()
     {

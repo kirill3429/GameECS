@@ -28,6 +28,7 @@ namespace Client
                 else if (runtimeData.gameState == GameState.GameOver)
                 {
                     ui.deathScreen.Show();
+                    runtimeData.gameState = GameState.Waiting;
                     ShowPauseBackground();
                 }
                 else if (runtimeData.gameState == GameState.AbilityWindow)

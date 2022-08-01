@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Leopotam.Ecs;
 using UnityEngine;
 
@@ -36,9 +35,9 @@ namespace Client
                     }
                 }
             }
-            
+
         }
-        
+
     }
 }
 

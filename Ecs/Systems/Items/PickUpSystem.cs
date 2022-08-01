@@ -1,6 +1,5 @@
 using LeoEcsPhysics;
 using Leopotam.Ecs;
-using UnityEngine;
 
 namespace Client
 {
@@ -28,9 +27,9 @@ namespace Client
                         }
                     }
                 }
-                
+
             }
-            
+
         }
 
     }

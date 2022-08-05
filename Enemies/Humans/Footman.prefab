@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2189104361982923108}
   m_Layer: 9
   m_Name: weaponTransform
-  m_TagString: EnemyAttackCollider
+  m_TagString: AttackCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,7 +219,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eed0f13a7184adf43b5caddd9973a998, type: 2}
+  - {fileID: 2100000, guid: e678c956bb237b04f83d81961ab373ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -510,6 +510,7 @@ GameObject:
   - component: {fileID: 4396142642802247510}
   - component: {fileID: 6448796909905573813}
   - component: {fileID: 1886333122342239823}
+  - component: {fileID: 90585427129304223}
   m_Layer: 6
   m_Name: Footman
   m_TagString: Enemy
@@ -621,6 +622,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 913184fb6f98a46408892a0e1d972599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &90585427129304223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2963627595190116945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6747df850ea2a2a4abec525086a14264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2963627595833580201
@@ -738,7 +751,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eed0f13a7184adf43b5caddd9973a998, type: 2}
+  - {fileID: 2100000, guid: 10f23a93fd70d194da2f28ee881f9d93, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1176,7 +1189,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eed0f13a7184adf43b5caddd9973a998, type: 2}
+  - {fileID: 2100000, guid: daefa2c46a7829a438421d85bf201e59, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

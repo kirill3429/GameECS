@@ -21,46 +21,28 @@ namespace Client
                 ref var input = ref enemyEntity.Get<InputHandlerComponent>();
                 ref var objectLink = ref enemyEntity.Get<ObjectLink>();
                 ref var equip = ref enemyEntity.Get<Equipment>();
-                //ref var name = ref enemyEntity.Get<Name>();
                 ref var moveable = ref enemyEntity.Get<Movable>();
                 ref var animator = ref enemyEntity.Get<AnimatorComponent>();
                 ref var enemyTag = ref enemyEntity.Get<EnemyTag>();
+                ref var transform = ref enemyEntity.Get<TransformComponent>();
                 ref var rigidBody = ref enemyEntity.Get<RigidBodyComponent>();
                 ref var hitEffect = ref enemyEntity.Get<HitEffect>();
 
 
-                #region spawnPoint
-                ref var radius = ref staticPlayerData.enemySpawnRadius;
-                float x0 = eventInfo.playerTransform.position.x;
-                float z0 = eventInfo.playerTransform.position.z;
-
-                Vector3 spawnPoint = new Vector3();
                 Quaternion rotationSpawn = new Quaternion();
 
-                float alpha = Random.Range(0, 360);
+                if (eventInfo.creepType == CreepType.Creep)
+                {
+                    objectLink.Object = GameObject.Instantiate(prefabsData.enemiesPrefabs[eventInfo.prefabNumber], eventInfo.spawnPoint, rotationSpawn);
+                }
+                else if (eventInfo.creepType == CreepType.Boss)
+                {
+                    objectLink.Object = GameObject.Instantiate(prefabsData.bossPrefabs[eventInfo.prefabNumber], eventInfo.spawnPoint, rotationSpawn);
+                }
 
-                float delta = Random.Range(0, staticPlayerData.spawnDispersion);
-
-                spawnPoint.x = x0 + ((radius + delta) * Mathf.Cos(ToRadians(alpha)));
-                spawnPoint.z = z0 + ((radius + delta) * Mathf.Sin(ToRadians(alpha)));
-                spawnPoint.y = 0;
-                #endregion
-
-
-
-                objectLink.Object = GameObject.Instantiate(prefabsData.enemiesPrefabs[eventInfo.prefabNumber], spawnPoint, rotationSpawn);
+                
                 objectLink.Object.GetComponent<EntityLink>().entity = enemyEntity;
                 var enemyInfo = objectLink.Object.GetComponent<EnemyInfo>();
-
-                switch (enemyInfo.enemyType)
-                {
-                    case EnemyInfo.EnemyType.Melee:
-                        enemyEntity.Get<Meele>();
-                        break;
-                    case EnemyInfo.EnemyType.Range:
-                        enemyEntity.Get<Range>();
-                        break;
-                }
 
                 reward.reward = enemyInfo.reward;
                 rigidBody.rigidBody = objectLink.Object.GetComponent<Rigidbody>();
@@ -71,7 +53,7 @@ namespace Client
                 moveable.canMove = true;
                 health.maxHealth = enemyInfo.health + enemyInfo.healthProgress * runtimeData.waveNumber;
                 health.currentHealth = health.maxHealth;
-                enemyTag.enemyTransform = objectLink.Object.transform;
+                transform.transform = objectLink.Object.transform;
 
 
 
@@ -92,10 +74,7 @@ namespace Client
 
             }
         }
-        private static float ToRadians(float angle)
-        {
-            return angle * Mathf.PI / 180;
-        }
+ 
 
     }
 }

@@ -29,13 +29,6 @@ namespace Client
                         attackEvent.weapon = equip.mainWeapon;
                     }
                 }
-                // DROP WEAPON EVENT
-
-                if (input.pause)
-                {
-                    world.NewEntity().Get<PauseEvent>();
-                }
-
             }
         }
 

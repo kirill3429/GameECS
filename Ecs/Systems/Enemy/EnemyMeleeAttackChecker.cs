@@ -14,7 +14,7 @@ namespace Client
             {
                 ref var eventInfo = ref filter.Get1(i);
                 if (eventInfo.collider != null)
-                    if (eventInfo.collider.tag == "EnemyAttackCollider" && eventInfo.senderGameObject.tag == "Player")
+                    if (eventInfo.collider.CompareTag("AttackCollider"))
                     {
                         ref var attackEvent = ref world.NewEntity().Get<AttackEvent>();
                         attackEvent.eventSender = eventInfo.collider.transform.parent.GetComponent<EntityLink>().entity;

@@ -39,7 +39,12 @@ ModelImporter:
   - first:
       74: 2526377878094105703
     second: Spider_Armature|Spider_Armature|Spider_Armature|WalkSpider|Spider_Armature|Walk
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spider_01
+    second: {fileID: 2100000, guid: 4c7656c3b86ea6b4aabf604caf4f5b74, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

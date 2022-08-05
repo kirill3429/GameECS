@@ -16,17 +16,14 @@ namespace Client
                 ref var explosion = ref filter.Get1(i);
                 ref var enemyGO = ref enemy.Get<ObjectLink>().Object;
 
-                Collider[] hitColliders = Physics.OverlapSphere(enemyGO.transform.position, 7);
+                Collider[] hitColliders = Physics.OverlapSphere(enemyGO.transform.position, 7, 6);
                 GameObject.Instantiate(allPrefabsData.hitEffectPrefabs[1], enemyGO.transform.position, Quaternion.identity);
 
                 foreach (var j in hitColliders)
                 {
                     if (j.gameObject.TryGetComponent(out EntityLink link))
                     {
-                        if (!link.entity.Has<PlayerTag>())
-                        {
-                            link.entity.Get<TakeDamage>().value += explosion.damage + explosion.level * explosion.learnedLevel;
-                        }
+                        link.entity.Get<TakeDamage>().value += explosion.damage + explosion.level * explosion.learnedLevel;
                     }
 
                 }

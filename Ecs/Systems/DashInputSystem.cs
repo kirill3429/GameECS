@@ -24,6 +24,7 @@ namespace Client
                 {
                     if (input.dash && input.movementInput != Vector3.zero)
                     {
+                        
                         inputEntity.Get<DashEvent>().point = inputEntity.Get<PlayerTag>().transform.position + input.movementInput * 5;
                         lastDashTime = Time.time;
                         inputEntity.Get<DashEvent>().dashTimeStamp = lastDashTime;

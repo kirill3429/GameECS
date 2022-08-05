@@ -24,7 +24,7 @@ namespace Client
                 objectLink.Object = GameObject.Instantiate(allPrefabsData.bulletPrefabs[weapon.projectilePrefabNumber], weapon.weaponSocket.position, weapon.weaponSocket.rotation);
                 objectLink.Object.transform.LookAt(direction);
                 objectLink.Object.GetComponent<EntityLink>().entity = projectileEntity;
-
+                Debug.DrawRay(weapon.weaponSocket.position, direction);
                 if (weapon.muzzleEffect != null)
                 {
                     weapon.muzzleEffect.SetActive(true);

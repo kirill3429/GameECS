@@ -50,12 +50,16 @@ namespace Client
 
 
                     Ray ray = sceneData.mainCamera.ScreenPointToRay(Input.mousePosition);
-                    if (Physics.Raycast(ray, out var hit, 100, staticData.layerMask))
+                    if (Physics.Raycast(ray, out var hit, 100, staticData.layerMaskForMouse))
                     {
                         playerInput.mouse = hit.point;
                     };
                 }
-                
+                if (playerInput.pause)
+                {
+                    _world.NewEntity().Get<PauseEvent>();
+                }
+
 
             }
         }

@@ -690,8 +690,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a25de3c0a8b95464983d851d2448e292, type: 2}
-  - {fileID: 2100000, guid: 20d58ed5d4b11024696104eca050d3c2, type: 2}
+  - {fileID: 2100000, guid: 579963ae21f89754bac08b8becc3ddc0, type: 2}
+  - {fileID: 2100000, guid: 321a79f681c65324db2c68deaefbcd83, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1038,6 +1038,7 @@ GameObject:
   - component: {fileID: 2837917125489147878}
   - component: {fileID: 8955969648130789989}
   - component: {fileID: 5477261524185550581}
+  - component: {fileID: 3295238780183559567}
   m_Layer: 6
   m_Name: Orc_Wolfrider
   m_TagString: Enemy
@@ -1152,6 +1153,18 @@ MonoBehaviour:
   bulletSpeedProgress: 0
   enemyType: 1
   weaponType: 0
+--- !u!114 &3295238780183559567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6747df850ea2a2a4abec525086a14264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &153408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,7 +1976,7 @@ GameObject:
   - component: {fileID: 495091858968385835}
   m_Layer: 9
   m_Name: weaponTransform
-  m_TagString: EnemyAttackCollider
+  m_TagString: AttackCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

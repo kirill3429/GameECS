@@ -34,6 +34,13 @@ namespace Client
                     hittedEntity.Get<Ice>().iceStartTime = Time.time;
                     hittedEntity.Get<Ice>().level = bulletEntity.Get<Ice>().level;
                 }
+                if (bulletEntity.Has<Push>())
+                {
+                    hittedEntity.Replace(new Push());
+                    hittedEntity.Get<Push>().pushStartTime = Time.time;
+                    hittedEntity.Get<Push>().level = bulletEntity.Get<Push>().level;
+                    hittedEntity.Get<Push>().learnedLevel = bulletEntity.Get<Push>().learnedLevel;
+                }
                 if (bulletEntity.Has<Explosion>())
                 {
                     hittedEntity.Get<Explosion>().damage = bulletEntity.Get<Explosion>().damage;

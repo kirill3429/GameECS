@@ -6,7 +6,7 @@ namespace Client
     sealed class QueueFillerSystem : IEcsRunSystem
     {
         readonly RuntimeData runtimeData;
-        readonly AllWaveData allWaveData;
+        readonly AllPrefabsData allPrefabsData;
         readonly EcsWorld world = null;
         readonly EcsFilter<Spawner, NeedToFill> filter = null;
 
@@ -14,28 +14,26 @@ namespace Client
         {
             foreach (var i in filter)
             {
-                if (allWaveData.waves.Count > runtimeData.waveNumber)
+                
+                ref var spawner = ref filter.Get1(i);
+                spawner.creepsQueue = new Queue<int>();
+
+                if (runtimeData.waveNumber % 10 != 0)
                 {
-                    ref var spawner = ref filter.Get1(i);
-                    spawner.creepsQueue = new Queue<int>();
-
-                    foreach (var k in allWaveData.waves[runtimeData.waveNumber].waveInfo)
+                    int creep = Random.Range(0, allPrefabsData.enemiesPrefabs.Length);
+                    for (int j = 0; j < 50; j++)
                     {
-                        for (int j = 0; j < k.Value; j++)
-                        {
-                            spawner.creepsQueue.Enqueue(k.Key);
-                        }
+                        spawner.creepsQueue.Enqueue(creep);
                     }
-                    Debug.Log("Очередь заполнена");
-                    filter.GetEntity(i).Del<NeedToFill>();
                 }
-
                 else
                 {
-                    filter.GetEntity(i).Del<NeedToFill>();
-                    runtimeData.gameState = GameState.Win;
-                    world.NewEntity().Get<WinGame>();
+                    spawner.creepsQueue.Enqueue(Random.Range(0, allPrefabsData.bossPrefabs.Length));
                 }
+                
+                Debug.Log("Очередь заполнена");
+                filter.GetEntity(i).Del<NeedToFill>();
+                
 
             }
 

@@ -52,6 +52,15 @@ namespace Client
                         case "addattackSpeed":
                             weapon.Get<AddAttackSpeed>().learnedLevel = abilityLevel;
                             break;
+                        case "addchicken":
+                            EcsEntity spawnAlly = _world.NewEntity();
+                            spawnAlly.Get<SpawnAllyAbility>().learnedLevel = abilityLevel;
+                            spawnAlly.Get<SpawnAllyAbility>().prefabNumber = 0;
+                            break;
+                        case "addpushbullets":
+                            weapon.Get<Push>().level++;
+                            weapon.Get<Push>().learnedLevel = abilityLevel;
+                            break;
                     }
 
                 }

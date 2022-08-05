@@ -8,7 +8,8 @@ public class StaticPlayerData : ScriptableObject
 
     public float enemySpawnRadius;
     public int maxEnemies;
-    public LayerMask layerMask;
+    public LayerMask layerMaskForMouse;
+    public LayerMask layerMaskForAlly;
     public float spawnDispersion;
 
     public float timeBetweenWaves;

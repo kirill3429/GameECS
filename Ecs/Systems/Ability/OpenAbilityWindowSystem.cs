@@ -4,9 +4,7 @@ namespace Client
 {
     sealed class OpenAbilityWindowSystem : IEcsRunSystem
     {
-        readonly UI ui;
         readonly RuntimeData runtimeData;
-        readonly SceneData sceneData;
         readonly EcsWorld _world = null;
         readonly EcsFilter<OpenAbilityWindowEvent> filter = null;
 

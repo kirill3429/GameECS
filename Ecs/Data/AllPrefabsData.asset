@@ -22,20 +22,18 @@ MonoBehaviour:
   muzzlePrefabs:
   - {fileID: 6672854350865327570, guid: 15c07c6ec39ea204d9979788ceb09bf9, type: 3}
   enemiesPrefabs:
-  - {fileID: 7355745405685541923, guid: caf154edf51d15f4f8951f8926b4267b, type: 3}
-  - {fileID: 7355745405685541923, guid: 12093c4a43a14cd4ca2764869bc81414, type: 3}
-  - {fileID: 7355745405685541923, guid: 83575ec117cfd1f4891e0b2c815b9adb, type: 3}
-  - {fileID: 7238350203197957672, guid: f17a34c40f02c2e48b8b40e5fa0fc41b, type: 3}
-  - {fileID: 7238350203197957672, guid: f2a5d1cb6388963468d0bc7a84f7c233, type: 3}
-  - {fileID: 7238350203197957672, guid: ebb6e4ff4f297bc48b2bf131d84eeb0f, type: 3}
-  - {fileID: 3897915548112452566, guid: d5420805ff6a70e458267fa3463279f4, type: 3}
-  - {fileID: 3897915548112452566, guid: 497029ed839c36742b35e035a9acbd37, type: 3}
-  - {fileID: 3897915548112452566, guid: 7c3d6d3b2f5abb04680e23a9d032161c, type: 3}
+  - {fileID: 7355745405685541923, guid: bac83fe1e8e982a4e8a981e11997cbae, type: 3}
+  - {fileID: 165424, guid: 1f6ed693f0396fd41891569f3e948d48, type: 3}
+  - {fileID: 1299959546001872786, guid: 7b62e6df9b854ee4bae23d1b5d54c771, type: 3}
+  - {fileID: 8701410760763699336, guid: 4970ff6fa14198e439a0d529a4d30182, type: 3}
+  - {fileID: 165424, guid: 1f6ed693f0396fd41891569f3e948d48, type: 3}
+  - {fileID: 165424, guid: 079aa9051a39f1848be0a4136652e011, type: 3}
+  - {fileID: 165424, guid: 9d8199a025b491048a1e0d9ff3f1abf2, type: 3}
   - {fileID: 7355745405685541923, guid: 4a39766e4b808fd4780535bdd36deac9, type: 3}
   - {fileID: 1438169871030806, guid: c9bc790a133e19c40b64d6db4cfb7a22, type: 3}
   - {fileID: 1067925524328404, guid: 6bbfea6690ef7724ba495c866081f855, type: 3}
   - {fileID: 2963627595190116945, guid: 27c003ed42f7dd749adc3cb6d83c0479, type: 3}
-  - {fileID: 153010, guid: 80afb8f52d27bae4f8ff4cf083945861, type: 3}
+  - {fileID: 1299959546001872786, guid: a7cf9789304fc1a48aa94faac352e41b, type: 3}
   - {fileID: 1299959546001872786, guid: ded9f78ddda21974e9f1f7b486da8c2f, type: 3}
   - {fileID: 165424, guid: 9f4313a771e05c64d8da7ae6bd19a19f, type: 3}
   - {fileID: 1500939411536426, guid: 274c4c35ed05ea14c87492064b3cadfd, type: 3}
@@ -43,6 +41,15 @@ MonoBehaviour:
   - {fileID: 8891162749044987168, guid: 681fa05bfac79c54bac11a2deabb22ac, type: 3}
   - {fileID: 6148018257024713269, guid: f81b2d61c3d8c1148a073f6f72103187, type: 3}
   - {fileID: 8701410760763699336, guid: 2130dfb9703c9f34088b397c5fbf4412, type: 3}
+  - {fileID: 1299959546001872786, guid: 4e45d9930406b874db579390176ebfd6, type: 3}
+  - {fileID: 1299959546001872786, guid: aba1857a6cd4e3f4e818caab9723264f, type: 3}
+  - {fileID: 1299959546001872786, guid: e4928d3c63d79814e961f6b6eaa87ea8, type: 3}
+  - {fileID: 8701410760763699336, guid: 2130dfb9703c9f34088b397c5fbf4412, type: 3}
+  - {fileID: 1067925524328404, guid: 48930098f9aa60b49a01ce8a1af24e13, type: 3}
+  bossPrefabs:
+  - {fileID: 8008450631199888170, guid: a8c0f62aa4613ce498bf2a0bd07f57a4, type: 3}
+  alliesPrefabs:
+  - {fileID: 6564556929644509970, guid: ff1e2c2d22e19ee48944148700f2dac8, type: 3}
   weaponPrefabs:
   - {fileID: 7846477175074941070, guid: d135819b04b8476459cc522e369527cb, type: 3}
   - {fileID: 6222255393979850024, guid: cdad4ca73e42b41448a5e701f8d1d88b, type: 3}

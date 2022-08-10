@@ -262,7 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reward: 30
   moveSpeed: 5
-  health: 17
+  health: 5
   damage: 2
   delayBetweenAttack: 0.3
   projectileLifeTime: 1

@@ -32,10 +32,10 @@ namespace Client
                         int creepToSpawn = spawner.creepsQueue.Dequeue();
                         ref var spawnEvent = ref world.NewEntity().Get<EnemySpawnEvent>();
 
-                        if (runtimeData.waveNumber % 10 == 0)
-                            spawnEvent.creepType = CreepType.Boss;
-                        else
+                        if (runtimeData.waveNumber % 10 != 0 || runtimeData.waveNumber == 0)
                             spawnEvent.creepType = CreepType.Creep;
+                        else
+                            spawnEvent.creepType = CreepType.Boss;
 
                         #region spawnPoint
                         ref var radius = ref staticPlayerData.enemySpawnRadius;

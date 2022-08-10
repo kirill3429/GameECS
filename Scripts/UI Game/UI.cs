@@ -7,7 +7,6 @@ public class UI : MonoBehaviour
     public MenuScreen menuScreen;
     public DeathScreen deathScreen;
     public AbilityScreen abilityScreen;
-    public WinScreen winScreen;
     public GameObject pauseBackground;
     
 }

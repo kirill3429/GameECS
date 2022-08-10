@@ -61,6 +61,7 @@ namespace Client
                 .Add(new CameraSystem())
                 .Add(new SpawnerInitSystem())
                 .Add(new EnemyInputMeleeSystem())
+                
                 .Add(new EnemyMeleeAttackChecker())
                 .Add(new AttackSystem())
                 .Add(new ProjectileSpawnSystem())
@@ -107,6 +108,7 @@ namespace Client
                 .Add(new PushBulletsSystem())
                 .Add(new BossCloneSystem())
                 
+                
                 .Inject(sceneData)
                 .Inject(ui)
                 .Inject(prefabsData)
@@ -121,6 +123,7 @@ namespace Client
                 .Add(new QueueFillerSystem())
                 .Add(new ProjectileMoveSystem())
                 .Add(new CreepsMoveSystem())
+                .Add(new BossShiftSystem())
                 .Add(new AllySpawnSystem())
                 .Add(new AlliesInputSystem())
                 .Add(new AlliesTargetSystem())

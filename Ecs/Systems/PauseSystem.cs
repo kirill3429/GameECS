@@ -37,12 +37,7 @@ namespace Client
                     runtimeData.gameState = GameState.Waiting;
                     ShowPauseBackground();
                 }
-                else if (runtimeData.gameState == GameState.Win)
-                {
-                    ui.winScreen.Show();
-                    runtimeData.gameState = GameState.Waiting;
-                    ShowPauseBackground();
-                }
+
                 else if (runtimeData.gameState == GameState.Waiting)
                 {
 

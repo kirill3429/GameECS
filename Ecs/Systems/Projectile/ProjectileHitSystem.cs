@@ -33,6 +33,7 @@ namespace Client
                     hittedEntity.Replace(new Ice());
                     hittedEntity.Get<Ice>().iceStartTime = Time.time;
                     hittedEntity.Get<Ice>().level = bulletEntity.Get<Ice>().level;
+                    hittedEntity.Get<Ice>().learnedLevel = bulletEntity.Get<Ice>().learnedLevel;
                 }
                 if (bulletEntity.Has<Push>())
                 {

@@ -18,7 +18,7 @@ namespace Client
                 ref var spawner = ref filter.Get1(i);
                 spawner.creepsQueue = new Queue<int>();
 
-                if (runtimeData.waveNumber % 10 != 0)
+                if (runtimeData.waveNumber % 10 != 0 || runtimeData.waveNumber == 0)
                 {
                     int creep = Random.Range(0, allPrefabsData.enemiesPrefabs.Length);
                     for (int j = 0; j < 50; j++)

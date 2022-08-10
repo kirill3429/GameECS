@@ -73,8 +73,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reward: 10
-  moveSpeed: 4
-  health: 15
+  moveSpeed: 5
+  health: 5
   damage: 10
   delayBetweenAttack: 1
   projectileLifeTime: 3

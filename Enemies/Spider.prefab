@@ -1060,6 +1060,7 @@ GameObject:
   - component: {fileID: -6990019983620519358}
   - component: {fileID: 4472783741310781142}
   - component: {fileID: 6596342255532258618}
+  - component: {fileID: 1886833043104742924}
   m_Layer: 6
   m_Name: Spider
   m_TagString: Enemy
@@ -1147,11 +1148,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reward: 20
   moveSpeed: 4
-  health: 15
+  health: 2
   damage: 2
-  delayBetweenAttack: 2
+  delayBetweenAttack: 4
   projectileLifeTime: 15
-  bulletSpeed: 13
+  bulletSpeed: 8
   projectilePrefabNumber: 5
   moveSpeedProgress: 0
   healthProgress: 0
@@ -1210,6 +1211,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JumpLevel: 5
+--- !u!114 &1886833043104742924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148018257024713269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde5f7326e79dd84d97520f62160e06e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 3
 --- !u!1 &6239088138210659191
 GameObject:
   m_ObjectHideFlags: 0

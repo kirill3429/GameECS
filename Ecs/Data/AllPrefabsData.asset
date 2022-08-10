@@ -48,6 +48,7 @@ MonoBehaviour:
   - {fileID: 1067925524328404, guid: 48930098f9aa60b49a01ce8a1af24e13, type: 3}
   bossPrefabs:
   - {fileID: 8008450631199888170, guid: a8c0f62aa4613ce498bf2a0bd07f57a4, type: 3}
+  - {fileID: 165424, guid: 69ccd78f9b1d7f744947fff0f1434f40, type: 3}
   alliesPrefabs:
   - {fileID: 6564556929644509970, guid: ff1e2c2d22e19ee48944148700f2dac8, type: 3}
   weaponPrefabs:

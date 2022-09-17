@@ -60,7 +60,7 @@ public class WeaponDragSystem : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         {
             AttachToElementSlot(startDragTransform);
         }
-        inventoryManager.UpdatePlayerView();
+        inventoryManager.UpdatePlayerModelView();
     }
 
     private bool ElementDraggedInto(Vector2 Element, RectTransform Container)

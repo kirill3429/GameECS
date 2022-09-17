@@ -116,16 +116,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b18e44175e23724fbe83724e3dce1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: 15
+  reward: 0
   moveSpeed: 7
-  health: 100
+  health: 200
   damage: 10
   delayBetweenAttack: 1
   projectileLifeTime: 5
   bulletSpeed: 20
   projectilePrefabNumber: 5
-  moveSpeedProgress: 0
-  healthProgress: 0
+  moveSpeedProgress: 3
+  healthProgress: 6
   damageProgress: 0
   delayBetweenAttackProgress: 0
   bulletSpeedProgress: 0

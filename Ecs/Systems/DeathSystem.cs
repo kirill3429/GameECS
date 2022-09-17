@@ -5,6 +5,7 @@ namespace Client
     public sealed class DeathSystem : IEcsRunSystem
     {
         readonly RuntimeData runtimeData;
+        readonly UI ui;
         readonly EcsWorld world = null;
         readonly EcsFilter<DeathEvent, EnemyTag> enemyFilter = null;
         readonly EcsFilter<DeathEvent, Projectile> projectileFilter = null;
@@ -20,11 +21,16 @@ namespace Client
             }
             foreach (var i in enemyFilter)
             {
+                if (enemyFilter.GetEntity(i).Has<BossTag>())
+                {
+                    ui.gameScreen.rewardForBoss.gameObject.SetActive(true);
+                }
                 ref var objectToDeath = ref enemyFilter.GetEntity(i).Get<ObjectLink>().Object;
                 if (enemyFilter.GetEntity(i).Has<Equipment>())
                 {
                     enemyFilter.GetEntity(i).Get<Equipment>().mainWeapon.Destroy();
                 }
+                
                 world.NewEntity().Get<RewardEvent>().reward = enemyFilter.GetEntity(i).Get<Reward>().reward;
                 GameObject.Destroy(objectToDeath);
                 enemyFilter.GetEntity(i).Destroy();

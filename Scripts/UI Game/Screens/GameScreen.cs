@@ -7,6 +7,7 @@ public class GameScreen : Client.Screen
 {
     [SerializeField] private TMP_Text _currentHealth;
     [SerializeField] private Slider _currentHealthSlider;
+    public RewardForBoss rewardForBoss;
     public Image dashImage;
     public TMP_Text score;
     public TMP_Text wave;

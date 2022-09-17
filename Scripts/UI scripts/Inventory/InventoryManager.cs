@@ -20,7 +20,7 @@ public class InventoryManager : MonoBehaviour
         dataInterface = FindObjectOfType<DataInterface>();
         LoadWeapons();
         LoadActiveWeapon();
-        UpdatePlayerView();
+        UpdatePlayerModelView();
     }
 
     private void OnDisable()
@@ -28,7 +28,7 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("Disabled inventory");
         SaveWeapons();
         SaveActiveWeapon();
-        UpdatePlayerView();
+        UpdatePlayerModelView();
         ClearPanel(inventoryPanel);
         ClearPanel(weaponContainer);
     }
@@ -139,7 +139,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void UpdatePlayerView()
+    public void UpdatePlayerModelView()
     {
         GameObject[] PlayerModels = GameObject.FindGameObjectsWithTag("Player");
 

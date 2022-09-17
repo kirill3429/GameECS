@@ -576,8 +576,8 @@ MonoBehaviour:
   projectileLifeTime: 1
   bulletSpeed: 5
   projectilePrefabNumber: 3
-  moveSpeedProgress: 0
-  healthProgress: 5
+  moveSpeedProgress: 0.2
+  healthProgress: 0.7
   damageProgress: 5
   delayBetweenAttackProgress: 0
   bulletSpeedProgress: 0

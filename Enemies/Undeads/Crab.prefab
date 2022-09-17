@@ -123,7 +123,7 @@ MonoBehaviour:
   bulletSpeed: 10
   projectilePrefabNumber: 3
   moveSpeedProgress: 0
-  healthProgress: 0
+  healthProgress: 2
   damageProgress: 0
   delayBetweenAttackProgress: 0
   bulletSpeedProgress: 0

@@ -40,9 +40,9 @@ public class LeaderboardScript : Client.Screen
 
             Leaderboard.GetPlayerEntry(leaderboadName, (result) =>
             {
-                if (result.score < (runtimeData.waveNumber + 1))
+                if (result.score < (runtimeData.waveNumber))
                 {
-                    Leaderboard.SetScore(leaderboadName, runtimeData.waveNumber + 1);
+                    Leaderboard.SetScore(leaderboadName, runtimeData.waveNumber);
                 }
             });
             

@@ -38,6 +38,7 @@ namespace Client
                 else if (eventInfo.creepType == CreepType.Boss)
                 {
                     objectLink.Object = GameObject.Instantiate(prefabsData.bossPrefabs[eventInfo.prefabNumber], eventInfo.spawnPoint, rotationSpawn);
+                    enemyEntity.Get<BossTag>();
                 }
 
                 

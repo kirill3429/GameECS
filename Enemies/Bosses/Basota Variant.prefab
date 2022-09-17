@@ -15,12 +15,27 @@ PrefabInstance:
     - target: {fileID: -2178250405098077517, guid: 48930098f9aa60b49a01ce8a1af24e13,
         type: 3}
       propertyPath: health
-      value: 200
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: -2178250405098077517, guid: 48930098f9aa60b49a01ce8a1af24e13,
+        type: 3}
+      propertyPath: reward
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2178250405098077517, guid: 48930098f9aa60b49a01ce8a1af24e13,
         type: 3}
       propertyPath: moveSpeed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -2178250405098077517, guid: 48930098f9aa60b49a01ce8a1af24e13,
+        type: 3}
+      propertyPath: damageProgress
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2178250405098077517, guid: 48930098f9aa60b49a01ce8a1af24e13,
+        type: 3}
+      propertyPath: healthProgress
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1096242819, guid: 48930098f9aa60b49a01ce8a1af24e13, type: 3}
       propertyPath: m_TagString

@@ -21,7 +21,7 @@ namespace Client
                     if (Time.time - spawner.endWaveTime > staticPlayerData.timeBetweenWaves)
                     {
                         runtimeData.waveNumber++;
-                        ui.gameScreen.wave.text = (runtimeData.waveNumber + 1).ToString();
+                        ui.gameScreen.wave.text = (runtimeData.waveNumber).ToString();
                         filter.GetEntity(i).Get<NeedToFill>();
                         spawner.isWork = true;
                         Debug.Log("Началасть следущая волна");

@@ -471,10 +471,10 @@ MonoBehaviour:
   bulletSpeed: 5
   projectilePrefabNumber: 4
   moveSpeedProgress: 0
-  healthProgress: 0
-  damageProgress: 0
+  healthProgress: 0.1
+  damageProgress: 0.1
   delayBetweenAttackProgress: 0
-  bulletSpeedProgress: 0
+  bulletSpeedProgress: 0.1
   enemyType: 1
   weaponType: 0
 --- !u!114 &411133878967938648

@@ -105,6 +105,13 @@
 			<tr>Kurşun patlayacak</tr>
 		</Translates>
 	</Key>
+	<Key Name="addpushbullets">
+		<Translates>
+			<en-us>Repulsive bullets</en-us>
+			<ru>Отталкивающие пули</ru>
+			<tr>Itici mermiler</tr>
+		</Translates>
+	</Key>
 	<Key Name="home">
 		<Translates>
 			<en-us>Home</en-us>
@@ -224,6 +231,13 @@
 			<tr>Hasar</tr>
 		</Translates>
 	</Key>
+	<Key Name="addchicken">
+		<Translates>
+			<en-us>Chicken</en-us>
+			<ru>Курица</ru>
+			<tr>Tavuk</tr>
+		</Translates>
+	</Key>
 	<Key Name="attackspeed">
 		<Translates>
 			<en-us>Attack speed</en-us>
@@ -236,6 +250,13 @@
 			<en-us>Increases weapon attack speed:</en-us>
 			<ru>Увеличить скорострельность на:</ru>
 			<tr>Silah saldırı hızını artırır:</tr>
+		</Translates>
+	</Key>
+	<Key Name="addpushbulletsdicsr">
+		<Translates>
+			<en-us>Bullets push enemy back</en-us>
+			<ru>Пули отталкивают врагов</ru>
+			<tr>Mermiler düşmanı geri itiyor</tr>
 		</Translates>
 	</Key>
 	<Key Name="adddamagedicsr">
@@ -257,6 +278,13 @@
 			<en-us>Add explosion modificator on bullets, damage nearby monstres</en-us>
 			<ru>Добавить модификатор взрыва к пулям, наносит урон ближайшим монстрам</ru>
 			<tr>Mermilere patlama değiştirici ekleyin, yakındaki canavarlara zarar verin</tr>
+		</Translates>
+	</Key>
+	<Key Name="addchickendicsr">
+		<Translates>
+			<en-us>Summon ally chicken</en-us>
+			<ru>Призвать дружественного птенчика</ru>
+			<tr>Tavuğu çağır</tr>
 		</Translates>
 	</Key>
 	<Key Name="addfiredicsr">
@@ -336,6 +364,20 @@
 			<tr>0.1 * Satın alınan seviye * oyundaki seviye</tr>
 		</Translates>
 	</Key>
+	<Key Name="addpushbulletsdicsr1">
+		<Translates>
+			<en-us>0.1 * Bought level * level in game</en-us>
+			<ru>0.1 * Купленный уровень * уровень в игре</ru>
+			<tr>0.1 * Satın alınan seviye * oyundaki seviye</tr>
+		</Translates>
+	</Key>
+	<Key Name="addchickendicsr1">
+		<Translates>
+			<en-us>1 * Bought level</en-us>
+			<ru>1 * Купленный уровень</ru>
+			<tr>1 * Satın alınan seviye</tr>
+		</Translates>
+	</Key>
 	<Key Name="bulletthroughdicsr1">
 		<Translates>
 			<en-us>1 * Bought level</en-us>
@@ -383,6 +425,13 @@
 			<en-us>Language</en-us>
 			<ru>Язык</ru>
 			<tr>Dilli</tr>
+		</Translates>
+	</Key>
+	<Key Name="rewardForBoss">
+		<Translates>
+			<en-us>Reward for Boss</en-us>
+			<ru>Награда за босса</ru>
+			<tr>Patronun yok edilmesi için ödül</tr>
 		</Translates>
 	</Key>
 </Keys>
